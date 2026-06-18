@@ -2,6 +2,25 @@
 
 CTurtle is a constant-time C program generator that generates random programs following configurable constant-time programming rules. TurboTurtle uses CTurtle to fuzz High-Level Synthesis (HLS) compiler toolchains with the goal of detecting timing side channels that were inserted by the HLS synthesis flow.
 
+This project is maintained at https://github.com/comsec-group/turboturtle/.
+
+The paper can be found at https://comsec.ethz.ch/research/hardware-design-security/turboturtle.
+
+Please cite as
+
+```
+@inproceedings{2024_ceesay-seitz_mucfi,
+title="It's About Time: Detecting Timing Side-Channel Vulnerabilities in High-Level Synthesis Designs",
+author="Zuppiger, Denis and Ceesay-Seitz, Katharina and Xu, Jiahui and Josipović, Lana and Razavi, Kaveh",
+booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on Computer and Communications Security},
+year = {2026},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+location = {The Hague, The Netherlands},
+series = {CCS '26},
+}
+```
+
 ## Artifact evaluation
 
 ### Installation
