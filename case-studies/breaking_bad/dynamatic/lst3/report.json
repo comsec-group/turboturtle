@@ -1,0 +1,1 @@
+{"test_status": "FAIL", "simulator": "verilator", "synthesis_duration": 1.3866257667541504, "verilation_duration": 4.053113698959351, "verification_duration": 0.20667123794555664, "design_a_done_count": 4, "design_b_done_count": 4, "has_sim_timeout": false, "has_subprocess_timeout": false, "is_combinational": false}

@@ -1,0 +1,478 @@
+COMPILER_VERSION: "GCC 8.4.0"
+PLUGIN_VERSION: "0.12"
+NODE_COUNT:        284
+
+;; Function myfunc (myfunc)
+
+;; myfunc (double var_0, double var_1, float var_2_secret, double var_3_secret)
+@1      function_decl    name: @2       type: @3       scpe: @4      
+                         srcp: "../myfunc.c":3:8      
+                         uid : 1552     arg : @5       arg : @6      
+                         arg : @7       arg : @8       body: @9      
+@2      identifier_node  strg: "myfunc"lngt: 6       
+@3      function_type    size: @10      algn: 8        retn: @11     
+                         prms: @12     
+@4      translation_unit_decl name: @13      srcp: "<built-in>":0:0 
+                         uid : 1611    
+@5      parm_decl        name: @14      type: @11      scpe: @1      
+                         srcp: "../myfunc.c":3:22     
+                         uid : 1548     argt: @11      size: @15     
+                         algn: 64       used: 1       
+@6      parm_decl        name: @16      type: @11      scpe: @1      
+                         srcp: "../myfunc.c":3:36     
+                         uid : 1549     argt: @11      size: @15     
+                         algn: 64       used: 1       
+@7      parm_decl        name: @17      type: @18      scpe: @1      
+                         srcp: "../myfunc.c":3:49     
+                         uid : 1550     argt: @18      size: @19     
+                         algn: 32       used: 1       
+@8      parm_decl        name: @20      type: @11      scpe: @1      
+                         srcp: "../myfunc.c":3:70     
+                         uid : 1551     argt: @11      size: @15     
+                         algn: 64       used: 1       
+@9      statement_list   
+                         bloc: 2        loop_id: 0        pred: ENTRY 
+                         succ: 4        succ: 3        true_edge: 4       
+                         false_edge: 3        stmt: @21      stmt: @22     
+                         stmt: @23     
+                         bloc: 3        loop_id: 0        pred: 2       
+                         succ: 4       
+                         bloc: 4        loop_id: 0        pred: 2       
+                         pred: 3        succ: EXIT  phi : @24     
+                         stmt: @25      stmt: @26      stmt: @27     
+                         stmt: @28      stmt: @29      stmt: @30     
+                         stmt: @31      stmt: @32      stmt: @33     
+                         stmt: @34      stmt: @35      stmt: @36     
+                         stmt: @37      stmt: @38      stmt: @39     
+                         stmt: @40      stmt: @41      stmt: @42     
+                         stmt: @43      stmt: @44      stmt: @45     
+                         stmt: @46      stmt: @47      stmt: @48     
+                         stmt: @49      stmt: @50      stmt: @51     
+                         stmt: @52      stmt: @53      stmt: @54     
+                         stmt: @55      stmt: @56      stmt: @57     
+                         stmt: @58      stmt: @59      stmt: @60     
+                         stmt: @61      stmt: @62      stmt: @63     
+                         stmt: @64      stmt: @65      stmt: @66     
+                         stmt: @67      stmt: @68      stmt: @69     
+                         stmt: @70      stmt: @71      stmt: @72     
+                         stmt: @73      stmt: @74      stmt: @75     
+                         stmt: @76      stmt: @77      stmt: @78     
+                         stmt: @79      stmt: @80      stmt: @81     
+@10     integer_cst      type: @82      value: 8
+@11     real_type        name: @83      size: @15      algn: 64      
+                         prec: 64      
+@12     tree_list        valu: @11      chan: @84     
+@13     identifier_node  strg: "../myfunc.c"          lngt: 11      
+@14     identifier_node  strg: "var_0" lngt: 5       
+@15     integer_cst      type: @82      value: 64
+@16     identifier_node  strg: "var_1" lngt: 5       
+@17     identifier_node  strg: "var_2_secret"         lngt: 12      
+@18     real_type        name: @85      size: @19      algn: 32      
+                         prec: 32      
+@19     integer_cst      type: @82      value: 32
+@20     identifier_node  strg: "var_3_secret"         lngt: 12      
+@21     gimple_assign    scpe: @1       bb_index: 2        srcp: "../myfunc.c":65:35     
+                         time_weight: 0        size_weight: 0        op  : @86     
+                         op  : @87     
+@22     gimple_assign    scpe: @1       bb_index: 2        srcp: "../myfunc.c":65:35     
+                         time_weight: 1        size_weight: 1        op  : @88     
+                         op  : @89     
+@23     gimple_cond      scpe: @1       bb_index: 2        srcp: "../myfunc.c":66:20     
+                         time_weight: 2        size_weight: 2        op  : @90     
+@24     gimple_phi       scpe: @1       bb_index: 4        time_weight: 0       
+                         size_weight: 0        res : @91      def : @92     
+                         edge: 2        def : @93      edge: 3       
+@25     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:16     
+                         time_weight: 1        size_weight: 1        op  : @94     
+                         op  : @95     
+@26     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:24     
+                         time_weight: 1        size_weight: 1        op  : @96     
+                         op  : @97     
+@27     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:39     
+                         time_weight: 1        size_weight: 1        op  : @98     
+                         op  : @99     
+@28     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:54     
+                         time_weight: 1        size_weight: 1        op  : @100    
+                         op  : @101    
+@29     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:65     
+                         time_weight: 1        size_weight: 1        op  : @102    
+                         op  : @103    
+@30     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:76     
+                         time_weight: 1        size_weight: 1        op  : @104    
+                         op  : @105    
+@31     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:87     
+                         time_weight: 1        size_weight: 1        op  : @106    
+                         op  : @107    
+@32     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:98     
+                         time_weight: 1        size_weight: 1        op  : @108    
+                         op  : @109    
+@33     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:107    
+                         time_weight: 1        size_weight: 1        op  : @110    
+                         op  : @111    
+@34     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:123    
+                         time_weight: 1        size_weight: 1        op  : @112    
+                         op  : @113    
+@35     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:135    
+                         time_weight: 1        size_weight: 1        op  : @114    
+                         op  : @115    
+@36     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:147    
+                         time_weight: 1        size_weight: 1        op  : @116    
+                         op  : @117    
+@37     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:159    
+                         time_weight: 1        size_weight: 1        op  : @118    
+                         op  : @119    
+@38     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:171    
+                         time_weight: 1        size_weight: 1        op  : @120    
+                         op  : @121    
+@39     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:190    
+                         time_weight: 1        size_weight: 1        op  : @122    
+                         op  : @123    
+@40     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:209    
+                         time_weight: 1        size_weight: 1        op  : @124    
+                         op  : @125    
+@41     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:228    
+                         time_weight: 1        size_weight: 1        op  : @126    
+                         op  : @127    
+@42     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:248    
+                         time_weight: 1        size_weight: 1        op  : @128    
+                         op  : @129    
+@43     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:267    
+                         time_weight: 1        size_weight: 1        op  : @130    
+                         op  : @131    
+@44     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:286    
+                         time_weight: 1        size_weight: 1        op  : @132    
+                         op  : @133    
+@45     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:306    
+                         time_weight: 1        size_weight: 1        op  : @134    
+                         op  : @135    
+@46     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:326    
+                         time_weight: 1        size_weight: 1        op  : @136    
+                         op  : @137    
+@47     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:346    
+                         time_weight: 1        size_weight: 1        op  : @138    
+                         op  : @139    
+@48     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:358    
+                         time_weight: 1        size_weight: 1        op  : @140    
+                         op  : @141    
+@49     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:370    
+                         time_weight: 1        size_weight: 1        op  : @142    
+                         op  : @143    
+@50     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:383    
+                         time_weight: 1        size_weight: 1        op  : @144    
+                         op  : @145    
+@51     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:402    
+                         time_weight: 1        size_weight: 1        op  : @146    
+                         op  : @147    
+@52     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:421    
+                         time_weight: 1        size_weight: 1        op  : @148    
+                         op  : @149    
+@53     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:440    
+                         time_weight: 1        size_weight: 1        op  : @150    
+                         op  : @151    
+@54     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:452    
+                         time_weight: 1        size_weight: 1        op  : @152    
+                         op  : @153    
+@55     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:464    
+                         time_weight: 1        size_weight: 1        op  : @154    
+                         op  : @155    
+@56     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:476    
+                         time_weight: 1        size_weight: 1        op  : @156    
+                         op  : @157    
+@57     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:489    
+                         time_weight: 1        size_weight: 1        op  : @158    
+                         op  : @159    
+@58     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:498    
+                         time_weight: 1        size_weight: 1        op  : @160    
+                         op  : @161    
+@59     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:511    
+                         time_weight: 1        size_weight: 1        op  : @162    
+                         op  : @163    
+@60     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:524    
+                         time_weight: 1        size_weight: 1        op  : @164    
+                         op  : @165    
+@61     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:536    
+                         time_weight: 1        size_weight: 1        op  : @166    
+                         op  : @167    
+@62     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:548    
+                         time_weight: 1        size_weight: 1        op  : @168    
+                         op  : @169    
+@63     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:560    
+                         time_weight: 1        size_weight: 1        op  : @170    
+                         op  : @171    
+@64     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:572    
+                         time_weight: 1        size_weight: 1        op  : @172    
+                         op  : @173    
+@65     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:591    
+                         time_weight: 1        size_weight: 1        op  : @174    
+                         op  : @175    
+@66     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:610    
+                         time_weight: 1        size_weight: 1        op  : @176    
+                         op  : @177    
+@67     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:629    
+                         time_weight: 1        size_weight: 1        op  : @178    
+                         op  : @179    
+@68     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:648    
+                         time_weight: 1        size_weight: 1        op  : @180    
+                         op  : @181    
+@69     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:664    
+                         time_weight: 1        size_weight: 1        op  : @182    
+                         op  : @183    
+@70     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:683    
+                         time_weight: 1        size_weight: 1        op  : @184    
+                         op  : @185    
+@71     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:702    
+                         time_weight: 1        size_weight: 1        op  : @186    
+                         op  : @187    
+@72     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:721    
+                         time_weight: 1        size_weight: 1        op  : @188    
+                         op  : @189    
+@73     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:733    
+                         time_weight: 1        size_weight: 1        op  : @190    
+                         op  : @191    
+@74     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:745    
+                         time_weight: 1        size_weight: 1        op  : @192    
+                         op  : @193    
+@75     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:757    
+                         time_weight: 1        size_weight: 1        op  : @194    
+                         op  : @195    
+@76     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:769    
+                         time_weight: 1        size_weight: 1        op  : @196    
+                         op  : @197    
+@77     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:781    
+                         time_weight: 1        size_weight: 1        op  : @198    
+                         op  : @199    
+@78     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:800    
+                         time_weight: 1        size_weight: 1        op  : @200    
+                         op  : @201    
+@79     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:816    
+                         time_weight: 1        size_weight: 1        op  : @202    
+                         op  : @203    
+@80     gimple_assign    scpe: @1       bb_index: 4        srcp: "../myfunc.c":108:828    
+                         time_weight: 1        size_weight: 1        op  : @204    
+                         op  : @205    
+@81     gimple_return    scpe: @1       bb_index: 4        memuse: @206    
+                         vuse: @206     srcp: "../myfunc.c":108:828    
+                         time_weight: 2        size_weight: 1        op  : @204    
+@82     integer_type     name: @207     size: @15      algn: 64      
+                         prec: 64       unsigned       min : @208    
+                         max : @209    
+@83     type_decl        name: @210     type: @11      srcp: "<built-in>":0:0 
+                         uid : 23      
+@84     tree_list        valu: @11      chan: @211    
+@85     type_decl        name: @212     type: @18      srcp: "<built-in>":0:0 
+                         uid : 22      
+@86     ssa_name         type: @11      vers: 1        def_stmt: @21     
+@87     nop_expr         type: @11      op  : @213    
+@88     ssa_name         type: @11      vers: 2        def_stmt: @22     
+@89     minus_expr       type: @11      op  : @86      op  : @214    
+@90     lt_expr          type: @215     op  : @88      op  : @214    
+@91     ssa_name         type: @216     vers: 58       def_stmt: @24     
+@92     real_cst         type: @216     valr: "1.0e+0" valx: "0x0.800000000000000000000000000000000000000000000000p+1"
+@93     real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@94     ssa_name         type: @11      vers: 3        def_stmt: @25     
+@95     plus_expr        type: @11      op  : @217     op  : @218    
+@96     ssa_name         type: @11      vers: 4        def_stmt: @26     
+@97     plus_expr        type: @11      op  : @86      op  : @94     
+@98     ssa_name         type: @11      vers: 5        def_stmt: @27     
+@99     plus_expr        type: @11      op  : @96      op  : @214    
+@100    ssa_name         type: @11      vers: 6        def_stmt: @28     
+@101    plus_expr        type: @11      op  : @98      op  : @219    
+@102    ssa_name         type: @11      vers: 7        def_stmt: @29     
+@103    plus_expr        type: @11      op  : @100     op  : @220    
+@104    ssa_name         type: @11      vers: 8        def_stmt: @30     
+@105    plus_expr        type: @11      op  : @102     op  : @221    
+@106    ssa_name         type: @11      vers: 9        def_stmt: @31     
+@107    plus_expr        type: @11      op  : @104     op  : @222    
+@108    ssa_name         type: @216     vers: 10       def_stmt: @32     
+@109    plus_expr        type: @216     op  : @106     op  : @223    
+@110    ssa_name         type: @216     vers: 11       def_stmt: @33     
+@111    plus_expr        type: @216     op  : @108     op  : @224    
+@112    ssa_name         type: @216     vers: 12       def_stmt: @34     
+@113    plus_expr        type: @216     op  : @110     op  : @225    
+@114    ssa_name         type: @216     vers: 13       def_stmt: @35     
+@115    plus_expr        type: @216     op  : @112     op  : @226    
+@116    ssa_name         type: @216     vers: 14       def_stmt: @36     
+@117    plus_expr        type: @216     op  : @114     op  : @227    
+@118    ssa_name         type: @216     vers: 15       def_stmt: @37     
+@119    plus_expr        type: @216     op  : @116     op  : @228    
+@120    ssa_name         type: @216     vers: 16       def_stmt: @38     
+@121    plus_expr        type: @216     op  : @118     op  : @229    
+@122    ssa_name         type: @216     vers: 17       def_stmt: @39     
+@123    plus_expr        type: @216     op  : @120     op  : @230    
+@124    ssa_name         type: @216     vers: 18       def_stmt: @40     
+@125    plus_expr        type: @216     op  : @122     op  : @231    
+@126    ssa_name         type: @216     vers: 19       def_stmt: @41     
+@127    plus_expr        type: @216     op  : @124     op  : @232    
+@128    ssa_name         type: @216     vers: 20       def_stmt: @42     
+@129    plus_expr        type: @216     op  : @126     op  : @91     
+@130    ssa_name         type: @216     vers: 21       def_stmt: @43     
+@131    plus_expr        type: @216     op  : @128     op  : @233    
+@132    ssa_name         type: @216     vers: 22       def_stmt: @44     
+@133    plus_expr        type: @216     op  : @130     op  : @234    
+@134    ssa_name         type: @216     vers: 23       def_stmt: @45     
+@135    plus_expr        type: @216     op  : @132     op  : @235    
+@136    ssa_name         type: @216     vers: 24       def_stmt: @46     
+@137    plus_expr        type: @216     op  : @134     op  : @236    
+@138    ssa_name         type: @216     vers: 25       def_stmt: @47     
+@139    plus_expr        type: @216     op  : @136     op  : @237    
+@140    ssa_name         type: @216     vers: 26       def_stmt: @48     
+@141    plus_expr        type: @216     op  : @138     op  : @238    
+@142    ssa_name         type: @216     vers: 27       def_stmt: @49     
+@143    plus_expr        type: @216     op  : @140     op  : @239    
+@144    ssa_name         type: @216     vers: 28       def_stmt: @50     
+@145    plus_expr        type: @216     op  : @142     op  : @240    
+@146    ssa_name         type: @216     vers: 29       def_stmt: @51     
+@147    plus_expr        type: @216     op  : @144     op  : @241    
+@148    ssa_name         type: @216     vers: 30       def_stmt: @52     
+@149    plus_expr        type: @216     op  : @88      op  : @146    
+@150    ssa_name         type: @216     vers: 31       def_stmt: @53     
+@151    plus_expr        type: @216     op  : @148     op  : @242    
+@152    ssa_name         type: @216     vers: 32       def_stmt: @54     
+@153    plus_expr        type: @216     op  : @150     op  : @243    
+@154    ssa_name         type: @216     vers: 33       def_stmt: @55     
+@155    plus_expr        type: @216     op  : @152     op  : @244    
+@156    ssa_name         type: @216     vers: 34       def_stmt: @56     
+@157    plus_expr        type: @216     op  : @154     op  : @245    
+@158    ssa_name         type: @216     vers: 35       def_stmt: @57     
+@159    plus_expr        type: @216     op  : @156     op  : @246    
+@160    ssa_name         type: @216     vers: 36       def_stmt: @58     
+@161    plus_expr        type: @216     op  : @158     op  : @247    
+@162    ssa_name         type: @216     vers: 37       def_stmt: @59     
+@163    plus_expr        type: @216     op  : @160     op  : @248    
+@164    ssa_name         type: @216     vers: 38       def_stmt: @60     
+@165    plus_expr        type: @216     op  : @162     op  : @249    
+@166    ssa_name         type: @216     vers: 39       def_stmt: @61     
+@167    plus_expr        type: @216     op  : @164     op  : @250    
+@168    ssa_name         type: @216     vers: 40       def_stmt: @62     
+@169    plus_expr        type: @216     op  : @166     op  : @251    
+@170    ssa_name         type: @216     vers: 41       def_stmt: @63     
+@171    plus_expr        type: @216     op  : @168     op  : @252    
+@172    ssa_name         type: @216     vers: 42       def_stmt: @64     
+@173    plus_expr        type: @216     op  : @170     op  : @253    
+@174    ssa_name         type: @216     vers: 43       def_stmt: @65     
+@175    plus_expr        type: @216     op  : @172     op  : @254    
+@176    ssa_name         type: @216     vers: 44       def_stmt: @66     
+@177    plus_expr        type: @216     op  : @174     op  : @255    
+@178    ssa_name         type: @216     vers: 45       def_stmt: @67     
+@179    plus_expr        type: @216     op  : @176     op  : @256    
+@180    ssa_name         type: @216     vers: 46       def_stmt: @68     
+@181    plus_expr        type: @216     op  : @178     op  : @257    
+@182    ssa_name         type: @216     vers: 47       def_stmt: @69     
+@183    plus_expr        type: @216     op  : @180     op  : @91     
+@184    ssa_name         type: @216     vers: 48       def_stmt: @70     
+@185    plus_expr        type: @216     op  : @182     op  : @258    
+@186    ssa_name         type: @216     vers: 49       def_stmt: @71     
+@187    plus_expr        type: @216     op  : @184     op  : @259    
+@188    ssa_name         type: @216     vers: 50       def_stmt: @72     
+@189    plus_expr        type: @216     op  : @186     op  : @260    
+@190    ssa_name         type: @216     vers: 51       def_stmt: @73     
+@191    plus_expr        type: @216     op  : @188     op  : @261    
+@192    ssa_name         type: @216     vers: 52       def_stmt: @74     
+@193    plus_expr        type: @216     op  : @190     op  : @262    
+@194    ssa_name         type: @216     vers: 53       def_stmt: @75     
+@195    plus_expr        type: @216     op  : @192     op  : @263    
+@196    ssa_name         type: @216     vers: 54       def_stmt: @76     
+@197    plus_expr        type: @216     op  : @194     op  : @264    
+@198    ssa_name         type: @216     vers: 55       def_stmt: @77     
+@199    plus_expr        type: @216     op  : @196     op  : @265    
+@200    ssa_name         type: @216     vers: 56       def_stmt: @78     
+@201    plus_expr        type: @216     op  : @198     op  : @266    
+@202    ssa_name         type: @216     vers: 57       def_stmt: @79     
+@203    plus_expr        type: @216     op  : @200     op  : @267    
+@204    ssa_name         type: @11      vers: 64       def_stmt: @80     
+@205    plus_expr        type: @11      op  : @202     op  : @268    
+@206    ssa_name         type: @269     var : @270     vers: 59      
+                         def_stmt: @271     virtual        default       
+@207    identifier_node  strg: "bitsizetype"          lngt: 11      
+@208    integer_cst      type: @82      value: 0
+@209    integer_cst      type: @82      value: -1
+@210    identifier_node  strg: "double"lngt: 6       
+@211    tree_list        valu: @18      chan: @272    
+@212    identifier_node  strg: "float" lngt: 5       
+@213    ssa_name         type: @18      var : @7       vers: 60      
+                         def_stmt: @273     default       
+@214    ssa_name         type: @11      var : @8       vers: 61      
+                         def_stmt: @274     default       
+@215    boolean_type     name: @275     size: @10      algn: 8       
+@216    real_type        name: @276     size: @15      algn: 64      
+                         prec: 64      
+@217    ssa_name         type: @11      var : @5       vers: 62      
+                         def_stmt: @277     default       
+@218    ssa_name         type: @11      var : @6       vers: 63      
+                         def_stmt: @278     default       
+@219    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@220    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@221    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@222    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@223    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@224    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@225    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@226    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@227    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@228    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@229    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@230    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@231    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@232    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@233    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@234    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@235    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@236    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@237    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@238    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@239    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@240    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@241    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@242    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@243    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@244    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@245    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@246    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@247    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@248    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@249    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@250    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@251    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@252    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@253    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@254    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@255    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@256    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@257    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@258    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@259    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@260    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@261    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@262    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@263    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@264    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@265    real_cst         type: @216     valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@266    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@267    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@268    real_cst         type: @11      valr: "0.0" valx: "0x0.000000000000000000000000000000000000000000000000p+0"
+@269    void_type        name: @279     algn: 8       
+@270    var_decl         name: @280     type: @269     srcp: "<built-in>":0:0      
+                         artificial     uid : 1619     extern        
+                         algn: 8        used: 1        addr_not_taken 
+@271    gimple_nop       scpe: @1       bb_index: 0        time_weight: 0       
+                         size_weight: 0       
+@272    tree_list        valu: @11      chan: @281    
+@273    gimple_nop       scpe: @1       bb_index: 0        time_weight: 0       
+                         size_weight: 0       
+@274    gimple_nop       scpe: @1       bb_index: 0        time_weight: 0       
+                         size_weight: 0       
+@275    type_decl        name: @282     type: @215     srcp: "<built-in>":0:0 
+                         uid : 1540    
+@276    type_decl        name: @283     type: @216     srcp: "<built-in>":0:0 
+                         uid : 24      
+@277    gimple_nop       scpe: @1       bb_index: 0        time_weight: 0       
+                         size_weight: 0       
+@278    gimple_nop       scpe: @1       bb_index: 0        time_weight: 0       
+                         size_weight: 0       
+@279    type_decl        name: @284     type: @269     srcp: "<built-in>":0:0 
+                         uid : 42      
+@280    identifier_node  strg: ".MEM" lngt: 4       
+@281    tree_list        valu: @269    
+@282    identifier_node  strg: "_Bool" lngt: 5       
+@283    identifier_node  strg: "long double"          lngt: 11      
+@284    identifier_node  strg: "void" lngt: 4       

@@ -1,0 +1,6 @@
+set-dynamatic-path /opt/dynamatic
+set-src ../mysecretfunction.c
+set-clock-period 10
+compile --buffer-algorithm fpga20
+write-hdl --hdl verilog
+exit

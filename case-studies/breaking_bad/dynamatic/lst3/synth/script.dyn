@@ -1,0 +1,6 @@
+set-dynamatic-path /data/user/workspace/dynamatic
+set-src ../myfunc.c
+set-clock-period 4
+compile   --buffer-algorithm fpl22
+write-hdl --hdl verilog
+exit

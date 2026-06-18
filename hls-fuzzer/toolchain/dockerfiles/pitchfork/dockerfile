@@ -1,0 +1,75 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:20.04
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        curl \
+        wget \
+        tar \
+        build-essential \
+        zlib1g \
+        zlib1g-dev \
+        xz-utils \
+        git \
+        make \
+        cmake \
+        gcc \
+        g++ \
+        m4 \
+        llvm-12 \
+        llvm-12-dev \
+        llvm-12-tools \
+        clang-12 \
+        libclang-common-12-dev \
+        libclang-12-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /tmp
+
+# install boolector
+# RUN git clone https://github.com/boolector/boolector && \
+#     cd boolector && \
+#     git checkout 3.2.4 && \
+#     ./contrib/setup-lingeling.sh && \
+#     ./contrib/setup-btor2tools.sh && \
+#     ./configure.sh && cd build && make && \
+#     cd .. && \
+#     mkdir /opt/boolector && \
+#     cp -r build/bin /opt/boolector && \
+#     cp -r build/lib /opt/boolector && \
+#     cd .. && \
+#     rm -r boolector
+
+WORKDIR /tmp
+
+# install csmith
+RUN git clone https://github.com/csmith-project/csmith.git && \
+    cd csmith && \
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/csmith . && \
+    make -j$(nproc) && make install && \
+    cd .. && \
+    rm -r csmith
+
+WORKDIR /tmp
+
+# install rust
+RUN wget https://static.rust-lang.org/dist/rust-1.84.1-x86_64-unknown-linux-gnu.tar.gz && \
+    tar -xvf rust-1.84.1-x86_64-unknown-linux-gnu.tar.gz && \
+    cp -r rust-1.84.1-x86_64-unknown-linux-gnu /opt && \
+    mv /opt/rust-1.84.1-x86_64-unknown-linux-gnu /opt/rust && \
+    rm -r rust-1.84.1-x86_64-unknown-linux-gnu && \
+    rm rust-1.84.1-x86_64-unknown-linux-gnu.tar.gz && \
+    cd /opt/rust && \
+    ./install.sh
+
+COPY utils/rootwrap.sh /usr/local/bin/rootwrap.sh
+COPY pitchfork/userwrap.sh /usr/local/bin/userwrap.sh
+RUN chmod +x /usr/local/bin/rootwrap.sh
+RUN chmod +x /usr/local/bin/userwrap.sh
+
+WORKDIR /work
+
+ENTRYPOINT [ "/usr/local/bin/rootwrap.sh" ]

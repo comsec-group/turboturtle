@@ -1,0 +1,14 @@
+venv
+.venv
+hls_tests
+fuzzing
+sim
+datavis/plots
+
+configs
+config.toml
+
+.vscode
+.DS_Store
+
+__pycache__

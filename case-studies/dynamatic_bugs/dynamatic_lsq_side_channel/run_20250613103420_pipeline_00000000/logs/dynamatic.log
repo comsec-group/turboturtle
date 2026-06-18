@@ -1,0 +1,23 @@
+[INFO] Compiled source to affine
+[INFO] Ran memory analysis
+[INFO] Compiled affine to scf
+[INFO] Compiled scf to cf
+[INFO] Applied standard transformations to cf
+[INFO] Applied Dynamatic transformations to cf
+[INFO] Compiled cf to handshake
+[INFO] Applied transformations to handshake
+[INFO] Built kernel for profiling
+[INFO] Ran kernel for profiling
+[INFO] Profiled cf-level
+[INFO] Running smart buffer placement with CP = 10.000 and algorithm = 'fpga20'
+[FATAL] Failed to place smart buffers
+================================================================================
+============== Dynamatic | Dynamic High-Level Synthesis Compiler ===============
+======================== EPFL-LAP - v2.0.0 | March 2024 ========================
+================================================================================
+
+
+dynamatic> set-dynamatic-path /opt/dynamatic
+dynamatic> set-src ../mysecretfunction.c
+dynamatic> set-clock-period 10
+dynamatic> compile --buffer-algorithm fpga20

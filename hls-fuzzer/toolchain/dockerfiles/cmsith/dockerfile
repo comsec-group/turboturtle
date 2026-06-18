@@ -1,0 +1,29 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:24.10
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt install -y \
+        git \
+        g++ \
+        make \
+        cmake \
+        m4 \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /tmp
+
+# build csmith
+RUN git clone https://github.com/csmith-project/csmith.git && \
+    cd csmith && \
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/csmith . && \
+    make -j$(nproc) && \
+    make install && \
+    cd .. && \
+    rm -r csmith
+
+WORKDIR /work
+
+ENTRYPOINT [ "/opt/csmith/bin/csmith" ]

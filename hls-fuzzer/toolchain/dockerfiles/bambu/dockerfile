@@ -1,0 +1,98 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:20.04
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        git \
+        autoconf \
+        autoconf-archive \
+        automake \
+        bison \
+        clang-10 \
+        clang-11 \
+        clang-12 \
+        clang-6.0 \
+        clang-7 \
+        clang-8 \
+        clang-9 \
+        doxygen \
+        flex \
+        g++ \
+        g++-7 \
+        g++-7-multilib \
+        g++-8 \
+        g++-8-multilib \
+        gcc-7 \
+        gcc-7-multilib \
+        gcc-7-plugin-dev \
+        gcc-8 \
+        gcc-8-plugin-dev \
+        gfortran-7 \
+        gfortran-7-multilib \
+        gfortran-8 \
+        gfortran-8-multilib \
+        graphviz \
+        libbdd-dev \
+        libboost-all-dev \
+        libclang-10-dev \
+        libclang-11-dev \
+        libclang-12-dev \
+        libclang-6.0-dev \
+        libclang-7-dev \
+        libclang-8-dev \
+        libclang-9-dev \
+        libglpk-dev \
+        libicu-dev \
+        liblzma-dev \
+        libmpc-dev \
+        libmpfi-dev \
+        libmpfr-dev \
+        libsuitesparse-dev \
+        libtool \
+        libxml2-dev \
+        make \
+        pkg-config \
+        zlib1g-dev \
+        cmake \
+        m4 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
+WORKDIR /tmp
+
+# build bambu
+ARG REPO=https://github.com/ferrandi/PandA-bambu.git
+ARG SOURCE_COMMIT=2024.10
+
+RUN git clone "${REPO}" && \
+    cd PandA-bambu && \
+    git checkout "${SOURCE_COMMIT}" && \
+    git submodule update --init && \
+    make -f Makefile.init && \
+    mkdir obj && \
+    cd obj && \
+    ../configure --prefix=/opt/panda --enable-flopoco --enable-opt --enable-release && \
+    make -j8 && \
+    make install && \
+    cd ../.. && \
+    rm -r PandA-bambu
+
+# install csmith
+RUN git clone https://github.com/csmith-project/csmith.git && \
+    cd csmith && \
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/csmith . && \
+    make -j8 && make install && \
+    cd .. && \
+    rm -r csmith
+
+COPY utils/rootwrap.sh /usr/local/bin/rootwrap.sh
+COPY bambu/userwrap.sh /usr/local/bin/userwrap.sh
+RUN chmod +x /usr/local/bin/rootwrap.sh
+RUN chmod a+rx /usr/local/bin/userwrap.sh
+
+WORKDIR /work
+
+ENTRYPOINT [ "/usr/local/bin/rootwrap.sh" ]

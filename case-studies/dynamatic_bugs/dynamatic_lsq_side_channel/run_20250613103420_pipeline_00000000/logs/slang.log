@@ -1,0 +1,50 @@
+[
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/mysecretfunction.v:1:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:2:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:3801:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:23492:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:23600:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:23635:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:23661:8",
+    "symbolPath": "\\$root "
+  },
+  {
+    "severity": "error",
+    "message": "design element does not have a time scale defined but others in the design do",
+    "location": "fuzzing/run_20250613103420/run_20250613103420_pipeline_00000000/verif/rtl/handshake_lsq_lsq1.v:23687:8",
+    "symbolPath": "\\$root "
+  }
+]

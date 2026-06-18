@@ -1,0 +1,54 @@
+# Turboturtle configuration
+
+debug = false
+multiprocessing = true
+num_processes = 6
+synth_only = false
+
+# if random_fuzzing_args is true, turboturtle will randomly choose fuzzer arguments for each new c-file.
+random_fuzzer_args = false
+random_hls_args = false
+# fuzzer_args = ["--adds", "--subs", "--divs", "--mults", "--mods", "--for-loops", "--if-statements", "--secret-conditionals"]
+
+# SUPPORTED RUN TYPES:
+# - random_c_programs
+# - simple_operations
+run_type = "random_c_programs"
+
+fuzzer_args = [
+    "--operations=add,sub",
+    "--datatypes=uint8_t",
+    "--num-secrets=1",
+    # "--linearization",
+    # "--input-arrays",
+    "--output-arrays",
+    # "--secret-memory-accesses",
+    # "--if-statements",
+    # "--for-loops",
+    # "--secret-conditionals",
+]
+
+num_cfiles_per_run = 1
+num_arg_sets_per_cfile = 1
+
+backup = false
+cleanup = true
+
+solver = "JASPER"
+
+# SUPPORTED HLS TOOLS:
+#   BAMBU_2024_10
+#   DYNAMATIC_B0F8A59
+hls_tools = ["DYNAMATIC_B0F8A59"]
+
+[hls_configs]
+
+[hls_configs.dynamatic]
+base = []
+
+[hls_configs.bambu]
+base = ["--compiler=I386_GCC8", "-O0", "--parametric-list-based=0"]
+spec = ["--compiler=I386_GCC8", "-O0", "--speculative-sdc-scheduling"]
+base_clang = ["--compiler=I386_CLANG12", "-O0", "--parametric-list-based=0"]
+spec_clang = ["--compiler=I386_CLANG12", "-O0", "--speculative-sdc-scheduling"]
+

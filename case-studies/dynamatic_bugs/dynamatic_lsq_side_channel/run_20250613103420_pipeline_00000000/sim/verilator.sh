@@ -1,0 +1,1 @@
+docker run --rm -it -e PUID=$(id -u) -e PGID=$(id -g) -v /local/home/zdenis/turboturtle/fuzzing/dynamatic_lsq_side_channel/run_20250613103420_pipeline_00000000/sim:/work verilator 'verilator --timing -Wno-WIDTHTRUNC -Wno-PINMISSING -Wno-TIMESCALEMOD -Wno-ASCRANGE --top tb --exe --trace --build -j $(nproc) --cc sim_main.cpp tb_sim.sv rtl/*.v'

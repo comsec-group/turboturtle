@@ -1,0 +1,51 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:24.04
+
+ENV VERSION=9204faf
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt install -y \
+        git \
+        clang lld ccache cmake ninja-build python3 openjdk-21-jdk graphviz git curl gzip libreadline-dev libboost-all-dev pkg-config coinor-cbc coinor-libcbc-dev \
+        wget \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt
+
+# install scala
+RUN curl -fL "https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz" | gzip -d > cs && chmod +x cs && ./cs setup --yes --install-dir /opt/scala
+
+# update Path
+ENV PATH="$PATH:/opt/scala"
+
+# install Gurobi
+RUN wget https://packages.gurobi.com/12.0/gurobi12.0.2_linux64.tar.gz && \
+    tar -xzf gurobi12.0.2_linux64.tar.gz && \
+    rm gurobi12.0.2_linux64.tar.gz
+
+COPY dynamatic/gurobi.lic /opt/gurobi1202
+RUN chmod a+r /opt/gurobi1202/gurobi.lic
+
+ENV GUROBI_HOME="/opt/gurobi1202/linux64"
+ENV PATH="${GUROBI_HOME}/bin:${PATH}"
+ENV LD_LIBRARY_PATH="${GUROBI_HOME}/lib"
+
+# build dynamatic
+RUN git clone --recurse-submodules https://github.com/EPFL-LAP/dynamatic.git && \
+    cd dynamatic && \
+    git checkout $VERSION && \
+    git submodule update --recursive && \
+    chmod +x ./build.sh && \
+    ./build.sh --release
+
+COPY utils/rootwrap.sh /usr/local/bin/rootwrap.sh
+COPY dynamatic/userwrap.sh /usr/local/bin/userwrap.sh
+RUN chmod +x /usr/local/bin/rootwrap.sh
+RUN chmod a+rx /usr/local/bin/userwrap.sh
+
+WORKDIR /work
+
+ENTRYPOINT [ "/usr/local/bin/rootwrap.sh" ]

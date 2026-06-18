@@ -1,0 +1,1 @@
+cd /home/user/turboturtle/fuzzing/myfunc/verif/sim;myseed=$1;timeout --kill-after=5m 60m ./obj_dir/Vtb +verilator+seed+$myseed;echo [seed] $myseed

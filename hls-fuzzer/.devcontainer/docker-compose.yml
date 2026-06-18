@@ -1,0 +1,7 @@
+services:
+  devcontainer:
+    image: turboturtle
+    volumes:
+      - ../..:/workspaces:cached
+      - ~/.ssh:/root/.ssh:ro
+    command: sleep infinity

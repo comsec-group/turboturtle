@@ -1,0 +1,93 @@
+[tasks]
+cover
+prove proveA proveB proveC
+
+[options]
+cover: mode cover
+cover: depth 500
+cover: timeout 1800
+prove: mode prove
+prove: depth 500
+prove: timeout 1800
+
+[engines]
+cover: smtbmc yices
+proveA: abc pdr
+proveB: aiger avy
+proveC: smtbmc --progress --nopresat --unroll yices
+
+[script]
+read -formal tb.sv
+read -formal handshake_cmpi_0.v
+read -formal store.v
+read -formal handshake_constant_2.v
+read -formal elastic_fifo_inner_dataless.v
+read -formal cond_br.v
+read -formal tfifo.v
+read -formal fork_type.v
+read -formal mysecretfunction.v
+read -formal handshake_lsq_lsq1.v
+read -formal fork_dataless.v
+read -formal elastic_fifo_inner.v
+read -formal cond_br_dataless.v
+read -formal extsi.v
+read -formal join_type.v
+read -formal tehb.v
+read -formal oehb.v
+read -formal sink.v
+read -formal handshake_constant_0.v
+read -formal eager_fork_register_block.v
+read -formal logic.v
+read -formal trunci.v
+read -formal tfifo_dataless.v
+read -formal addi.v
+read -formal control_merge_dataless.v
+read -formal mux.v
+read -formal mem_to_bram.v
+read -formal source.v
+read -formal merge_dataless.v
+read -formal tehb_dataless.v
+read -formal handshake_constant_1.v
+read -formal oehb_dataless.v
+read -formal load.v
+prep -top tb
+memory_map -rom-only -formal
+
+[autotune]
+mem on
+parallel 2
+
+[files]
+tb.sv
+rtl/handshake_cmpi_0.v
+rtl/store.v
+rtl/handshake_constant_2.v
+rtl/elastic_fifo_inner_dataless.v
+rtl/cond_br.v
+rtl/tfifo.v
+rtl/fork_type.v
+rtl/mysecretfunction.v
+rtl/handshake_lsq_lsq1.v
+rtl/fork_dataless.v
+rtl/elastic_fifo_inner.v
+rtl/cond_br_dataless.v
+rtl/extsi.v
+rtl/join_type.v
+rtl/tehb.v
+rtl/oehb.v
+rtl/sink.v
+rtl/handshake_constant_0.v
+rtl/eager_fork_register_block.v
+rtl/logic.v
+rtl/trunci.v
+rtl/tfifo_dataless.v
+rtl/addi.v
+rtl/control_merge_dataless.v
+rtl/mux.v
+rtl/mem_to_bram.v
+rtl/source.v
+rtl/merge_dataless.v
+rtl/tehb_dataless.v
+rtl/handshake_constant_1.v
+rtl/oehb_dataless.v
+rtl/load.v

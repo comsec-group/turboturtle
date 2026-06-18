@@ -1,0 +1,50 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:22.04
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        git
+
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y help2man \
+        perl \
+        python3 \
+        make \
+        autoconf \
+        g++ \
+        flex \
+        bison \
+        ccache \
+        libgoogle-perftools-dev \
+        numactl \
+        perl-doc \
+        libfl2 \
+        libfl-dev \
+        zlib1g \
+        zlib1g-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
+WORKDIR /tmp
+
+ARG REPO=https://github.com/verilator/verilator
+ARG SOURCE_COMMIT=v5.040
+
+RUN git clone "${REPO}" && \
+    cd verilator && \
+    git checkout "${SOURCE_COMMIT}" && \
+    autoconf && \
+    ./configure && \
+    make -j `nproc` && \
+    make install
+
+COPY utils/rootwrap.sh /usr/local/bin/rootwrap.sh
+COPY verilator/userwrap.sh /usr/local/bin/userwrap.sh
+RUN chmod +x /usr/local/bin/rootwrap.sh
+RUN chmod a+rx /usr/local/bin/userwrap.sh
+
+WORKDIR /work
+
+ENTRYPOINT [ "/usr/local/bin/rootwrap.sh" ]

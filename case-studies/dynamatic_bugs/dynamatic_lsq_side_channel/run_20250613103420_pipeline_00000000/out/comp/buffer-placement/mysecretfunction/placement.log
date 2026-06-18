@@ -1,0 +1,357 @@
+# ===== #
+# Archs #
+# ===== #
+
+1 -> 1 with 7 executions (backedge)
+1 -> 2 with 1 executions
+0 -> 1 with 1 executions
+
+# ================ #
+# Extracted CFDFCs #
+# ================ #
+
+CFDFC #0: 1
+  - Number of executions: 7
+  - Number of units: 38
+  - Number of channels: 53
+  - Number of backedges: 5
+
+# ========================== #
+# Buffer Placement Decisions #
+# ========================== #
+
+fork2_outs_0_ins_extsi12:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 8 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  8 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+extsi9_outs_addrIn_load0:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 1, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  1 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+mux1_outs_lhs_addi3:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  1 OneSlotDV slot(s)
+  1 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  0 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+mux2_outs_ins_fork3:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  1 OneSlotDV slot(s)
+  1 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  0 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork3_outs_0_rhs_addi0:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 3 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  3 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork3_outs_1_rhs_addi2:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 7 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  7 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+mux3_outs_ins_fork4:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  1 OneSlotDV slot(s)
+  1 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  0 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork4_outs_0_rhs_addi1:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 7 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  7 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork5_outs_3_index_mux1:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 7 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  7 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork6_outs_1_data_cond_br5:
+  - Buffering constraints: {
+  	transparent slots: [1, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 2 slot(s)
+  - Placement decision: 
+  1 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  1 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork7_outs_0_addrIn_load3:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 1, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  1 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork7_outs_1_addrIn_store1:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 1, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  1 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+addi4_result_dataIn_store1:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 1, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  1 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+addi5_result_ins_fork9:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 1 slot(s)
+  - Placement decision: 
+  1 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  0 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+fork10_outs_1_condition_cond_br2:
+  - Buffering constraints: {
+  	transparent slots: [0, inf]
+  	opaque slots: [0, inf]
+  	Total slots: 0, 
+  	in/out delays: (0, 0)
+  	total delay: 0
+  }
+
+  - MILP decision: 7 slot(s)
+  - Placement decision: 
+  0 OneSlotDV slot(s)
+  0 OneSlotR slot(s)
+  0 FifoDV slot(s)
+  7 FifoNone slot(s)
+  0 OneSlotDVR slot(s)
+  0 ShiftRegDV slot(s)
+
+# ================= #
+# CFDFC Throughputs #
+# ================= #
+
+Throughput of CFDFC #0: 1.000000e+00
+
+# =================== #
+# Channel Throughputs #
+# =================== #
+
+Per-channel throughputs of CFDFC #0:
+  mux0_outs_ins_fork2: 0.000000e+00
+  fork2_outs_0_ins_extsi12: 8.000000e+00
+  fork2_outs_1_ins_extsi9: 0.000000e+00
+  fork2_outs_2_ins_extsi13: 0.000000e+00
+  extsi12_outs_lhs_addi4: 0.000000e+00
+  extsi9_outs_addrIn_load0: 0.000000e+00
+  extsi13_outs_lhs_addi5: 0.000000e+00
+  mux1_outs_lhs_addi3: 1.000000e+00
+  mux2_outs_ins_fork3: 1.000000e+00
+  fork3_outs_0_rhs_addi0: 3.000000e+00
+  fork3_outs_1_rhs_addi2: 7.000000e+00
+  fork3_outs_2_data_cond_br3: 0.000000e+00
+  mux3_outs_ins_fork4: 1.000000e+00
+  fork4_outs_0_rhs_addi1: 7.000000e+00
+  fork4_outs_1_data_cond_br4: 0.000000e+00
+  control_merge0_outs_ins_fork6: 0.000000e+00
+  control_merge0_index_ins_fork5: 0.000000e+00
+  fork5_outs_0_index_mux0: 0.000000e+00
+  fork5_outs_1_index_mux2: 0.000000e+00
+  fork5_outs_2_index_mux3: 0.000000e+00
+  fork5_outs_3_index_mux1: 7.000000e+00
+  fork6_outs_1_data_cond_br5: 1.000000e+00
+  source0_outs_ctrl_constant3: 0.000000e+00
+  constant3_outs_ins_extsi14: 0.000000e+00
+  extsi14_outs_rhs_addi5: 0.000000e+00
+  source1_outs_ctrl_constant6: 0.000000e+00
+  constant6_outs_rhs_cmpi0: 0.000000e+00
+  load0_dataOut_lhs_addi0: 0.000000e+00
+  addi0_result_ins_fork7: 0.000000e+00
+  fork7_outs_0_addrIn_load3: 0.000000e+00
+  fork7_outs_1_addrIn_store1: 0.000000e+00
+  load3_dataOut_lhs_addi1: 0.000000e+00
+  addi1_result_lhs_addi2: 0.000000e+00
+  addi2_result_rhs_addi3: 0.000000e+00
+  addi3_result_ins_fork8: 0.000000e+00
+  fork8_outs_0_rhs_addi4: 0.000000e+00
+  fork8_outs_1_data_cond_br2: 0.000000e+00
+  addi4_result_dataIn_store1: 0.000000e+00
+  addi5_result_ins_fork9: 1.000000e+00
+  fork9_outs_0_ins_trunci3: 0.000000e+00
+  fork9_outs_1_lhs_cmpi0: 0.000000e+00
+  trunci3_outs_data_cond_br1: 0.000000e+00
+  cmpi0_result_ins_fork10: 0.000000e+00
+  fork10_outs_0_condition_cond_br1: 0.000000e+00
+  fork10_outs_1_condition_cond_br2: 7.000000e+00
+  fork10_outs_2_condition_cond_br5: 0.000000e+00
+  fork10_outs_3_condition_cond_br4: 0.000000e+00
+  fork10_outs_4_condition_cond_br3: 0.000000e+00
+  cond_br1_trueOut_ins_1_mux0: 0.000000e+00
+  cond_br2_trueOut_ins_1_mux1: 0.000000e+00
+  cond_br3_trueOut_ins_1_mux2: 0.000000e+00
+  cond_br4_trueOut_ins_1_mux3: 0.000000e+00
+  cond_br5_trueOut_ins_1_control_merge0: 0.000000e+00
+

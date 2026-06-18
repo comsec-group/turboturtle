@@ -1,0 +1,138 @@
+backup = false
+cleanup = false
+# allowed design types:
+# - BambuDesign
+
+
+# - DynamaticDesign
+design_types = ["BambuDesign"]
+num_designs = 1
+top_fn_name = "myfunc"
+disable_reduction = true
+
+num_processes = 8
+num_processes_proggen = 12
+
+working_dir = "/home/user/turboturtle/fuzzing"
+backup_dir = "/data/user/turboturtle_backup"
+
+# EDA CONFIG
+# eda_server_remote = "username@host-address"
+eda_server_remote = "user@eda_server"
+eda_server_remote_python_version = "python3.10"
+eda_server_remote_dir_base = "/data/user/turboturtle_bot"
+
+######################
+## ~  CTURTLE V4  ~ ##
+######################
+
+# allowed generation strategies"
+# - "RANDOM"
+# - "RANDOM_RESOLVE"
+# - "DEPENDENCY_CHAIN"
+generation_strategy = "RANDOM"
+
+# allowed dataflow strategies
+# - "SEPARATED"
+# - "MIXED"
+dataflow_strategy = "SEPARATED"
+
+min_num_statements = 50
+max_num_statements = 50
+secret_control_flow = false
+secret_memory_accesses = false
+allow_sub_functions = true
+internal_arrays = true
+linearization = true
+
+# allowed data types:
+# - CHAR
+# - U_CHAR
+# - SHORT_INT
+# - U_SHORT_INT
+# - INT
+# - U_INT
+# - LONG_INT
+# - U_LONG_INT
+# - LONG_LONG_INT
+# - U_LONG_LONG_INT
+# - FLOAT
+# - DOUBLE
+# - LONG_DOUBLE
+all_data_types = [
+    # "CHAR",
+    # "U_CHAR",
+    # "SHORT_INT",
+    # "U_SHORT_INT",
+    "INT",
+    # "U_INT",
+    # "LONG_INT",
+    # "U_LONG_INT",
+    # "LONG_LONG_INT",
+    # "U_LONG_LONG_INT",
+    # "FLOAT",
+    # "DOUBLE",
+    # "LONG_DOUBLE",
+]
+
+allowed_expressions = [
+    "EmptyExpression",
+    "FnCallExpression",
+    "CastExpression",
+    "MultOperationExpression",
+    "DivOperationExpression",
+    "ModOperationExpression",
+    "AddOperationExpression",
+    "SubOperationExpression",
+    "ShiftLeftOperationExpression",
+    "ShiftRightOperationExpression",
+    "LessThanOperationExpression",
+    "GreaterThanOperationExpression",
+    "LessEqualThanOperationExpression",
+    "GreaterEqualThanOperationExpression",
+    "EqualOperationExpression",
+    "NotEqualOperationExpression",
+    "ANDOperationExpression",
+    "XOROperationExpression",
+    "OROperationExpression",
+    "LogicalANDOperationExpression",
+    "LogicalOROperationExpression",
+    "AssignmentExpression",
+    "LinearizedExpression",
+]
+
+[[all_statements_and_weigths]]
+name = "ExpressionStatement"
+weight = 10
+
+[[all_statements_and_weigths]]
+name = "CompoundStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "IfSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "IfElseSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "SwitchSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "WhileIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "DoWhileIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "ForLoopIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "ReturnJumpStatement"
+weight = 1

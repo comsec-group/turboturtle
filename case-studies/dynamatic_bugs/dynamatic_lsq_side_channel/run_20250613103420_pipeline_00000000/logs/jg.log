@@ -1,0 +1,1336 @@
+# ----------------------------------------
+# Jasper Version Info
+# tool      : Jasper 2025.03
+# platform  : Linux 3.10.0-1160.119.1.el7.x86_64
+# version   : 2025.03 FCS 64 bits
+# build date: 2025.03.27 17:54:14 UTC
+# ----------------------------------------
+# started   : 2025-06-17 17:34:38 CEST
+# hostname  : ee-tik-eda3.(none)
+# pid       : 10949
+# arguments : '-style' 'windows' '-label' 'session_0' '-console' '//127.0.0.1:36167' '-nowindow' '-data' 'AAAAmHicY2BgYLCp////PwMYMD6A0Aw2jAyoAMRnQhUJbEChGRhYYVLMQMzHoMuQx5DPEM+QzlDKkAkUEYCLlDMkAkVKgGJCDGUMqQxFQF4agx5QJJkhB2wCAHuSEA8=' '-proj' '/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/jgproject/.tmp/.initCmds.tcl' 'verif.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2025 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc.
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+Jasper Apps Analysis Session - /home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_interactive" and "jasper_fao".
+INFO: reading configuration file "/home/zdenis/.config/cadence/jasper.conf".
+% # auto exit on error
+% proc exit_if_error {} {
+if [get_message -number error] {
+    exit 1 -force
+}
+    after 10000 exit_if_error
+}
+% exit_if_error
+after#0
+% 
+% # start with a clean project
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% set_reset_effort high
+% set_cmd_time_limit 30m
+% set_elab_time_limit 30m
+% set_prove_time_limit 30m
+% 
+% # analyze and elaborate the design
+% analyze -sv17 -ignore_embedded_psl  rtl/handshake_cmpi_0.v
+[-- (VERI-1482)] Analyzing Verilog file '/usr/pack/cadence_jasper-25.03.000-dz/lnx86/lib/verilog/packages/std/std.sv' into library 'std'
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/handshake_cmpi_0.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/store.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/store.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/handshake_constant_2.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/handshake_constant_2.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/elastic_fifo_inner_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/elastic_fifo_inner_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/cond_br.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/cond_br.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/tfifo.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/tfifo.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/fork_type.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/fork_type.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/mysecretfunction.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/mysecretfunction.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/handshake_lsq_lsq1.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/handshake_lsq_lsq1.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/fork_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/fork_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/elastic_fifo_inner.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/elastic_fifo_inner.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/cond_br_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/cond_br_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/extsi.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/extsi.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/join_type.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/join_type.v'
+[WARN (VERI-2522)] rtl/join_type.v(8): non-net output port 'ins_ready' cannot be initialized at declaration in SystemVerilog mode
+% analyze -sv17 -ignore_embedded_psl  rtl/tehb.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/tehb.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/oehb.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/oehb.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/sink.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/sink.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/handshake_constant_0.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/handshake_constant_0.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/eager_fork_register_block.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/eager_fork_register_block.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/logic.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/logic.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/trunci.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/trunci.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/tfifo_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/tfifo_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/addi.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/addi.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/control_merge_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/control_merge_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/mux.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/mux.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/mem_to_bram.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/mem_to_bram.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/source.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/source.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/merge_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/merge_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/tehb_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/tehb_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/handshake_constant_1.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/handshake_constant_1.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/oehb_dataless.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/oehb_dataless.v'
+% analyze -sv17 -ignore_embedded_psl  rtl/load.v
+[-- (VERI-1482)] Analyzing Verilog file 'rtl/load.v'
+% analyze -sv17 tb.sv
+[-- (VERI-1482)] Analyzing Verilog file 'tb.sv'
+% elaborate -top tb -disable_auto_bbox 
+INFO (ISW003): Top module name is "tb".
+[INFO (HIER-8002)] tb.sv(117): Disabling old hierarchical reference handler
+[INFO (VERI-1018)] rtl/logic.v(29): compiling module 'or_n:(SIZE=3)'
+[INFO (VERI-1018)] rtl/eager_fork_register_block.v(2): compiling module 'eager_fork_register_block'
+[INFO (VERI-1018)] rtl/fork_dataless.v(2): compiling module 'fork_dataless:(SIZE=3)'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(2): compiling module 'STORE_QUEUE_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(3801): compiling module 'LOAD_QUEUE_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(23492): compiling module 'GROUP_ALLOCATOR_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(23600): compiling module 'LOAD_PORT_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(23635): compiling module 'STORE_DATA_PORT_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(23661): compiling module 'STORE_ADDR_PORT_handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_lsq_lsq1.v(23687): compiling module 'handshake_lsq_lsq1'
+[INFO (VERI-1018)] rtl/handshake_constant_0.v(2): compiling module 'handshake_constant_0:(DATA_WIDTH=1)'
+[INFO (VERI-1018)] rtl/logic.v(29): compiling module 'or_n'
+[INFO (VERI-1018)] rtl/fork_dataless.v(2): compiling module 'fork_dataless'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/extsi.v(2): compiling module 'extsi:(INPUT_TYPE=1,OUTPUT_TYPE=4)'
+[INFO (VERI-1018)] rtl/extsi.v(2): compiling module 'extsi:(INPUT_TYPE=1,OUTPUT_TYPE=8)'
+[INFO (VERI-1018)] rtl/mux.v(2): compiling module 'mux:(DATA_TYPE=4,SELECT_TYPE=1)'
+[INFO (VERI-1018)] rtl/tehb_dataless.v(2): compiling module 'tehb_dataless'
+[INFO (VERI-1018)] rtl/tehb.v(2): compiling module 'tehb:(DATA_TYPE=4)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(SIZE=3,DATA_TYPE=4)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner.v(2): compiling module 'elastic_fifo_inner:(NUM_SLOTS=8,DATA_TYPE=4)'
+[WARN (VERI-1060)] rtl/elastic_fifo_inner.v(37): 'initial' construct is ignored
+[WARN (VERI-1209)] rtl/elastic_fifo_inner.v(53): expression size 32 truncated to fit in target size 3
+[WARN (VERI-1209)] rtl/elastic_fifo_inner.v(64): expression size 32 truncated to fit in target size 3
+[INFO (VERI-1018)] rtl/tfifo.v(2): compiling module 'tfifo:(NUM_SLOTS=8,DATA_TYPE=4)'
+[INFO (VERI-1018)] rtl/extsi.v(2): compiling module 'extsi:(INPUT_TYPE=4,OUTPUT_TYPE=8)'
+[INFO (VERI-1018)] rtl/extsi.v(2): compiling module 'extsi:(INPUT_TYPE=4,OUTPUT_TYPE=5)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner.v(2): compiling module 'elastic_fifo_inner:(NUM_SLOTS=7,DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/tfifo.v(2): compiling module 'tfifo:(NUM_SLOTS=7,DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/mux.v(2): compiling module 'mux:(DATA_TYPE=8,SELECT_TYPE=1)'
+[INFO (VERI-1018)] rtl/oehb_dataless.v(2): compiling module 'oehb_dataless'
+[INFO (VERI-1018)] rtl/oehb.v(2): compiling module 'oehb:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/tehb.v(2): compiling module 'tehb:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(SIZE=3,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/merge_dataless.v(2): compiling module 'merge_dataless'
+[INFO (VERI-1018)] rtl/tehb.v(2): compiling module 'tehb:(DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/control_merge_dataless.v(2): compiling module 'control_merge_dataless'
+[INFO (VERI-1018)] rtl/logic.v(29): compiling module 'or_n:(SIZE=4)'
+[INFO (VERI-1018)] rtl/fork_dataless.v(2): compiling module 'fork_dataless:(SIZE=4)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(SIZE=4,DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/source.v(2): compiling module 'source'
+[INFO (VERI-1018)] rtl/handshake_constant_1.v(2): compiling module 'handshake_constant_1:(DATA_WIDTH=2)'
+[INFO (VERI-1018)] rtl/extsi.v(2): compiling module 'extsi:(INPUT_TYPE=2,OUTPUT_TYPE=5)'
+[INFO (VERI-1018)] rtl/handshake_constant_2.v(2): compiling module 'handshake_constant_2:(DATA_WIDTH=5)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner.v(2): compiling module 'elastic_fifo_inner:(NUM_SLOTS=1,DATA_TYPE=8)'
+[WARN (VERI-9005)] rtl/elastic_fifo_inner.v(30): 2-bit index expression 'Head' is larger than the required 1 bits. This might lead to an out-of-bound access
+[WARN (VERI-9005)] rtl/elastic_fifo_inner.v(43): 2-bit index expression 'Tail' is larger than the required 1 bits. This might lead to an out-of-bound access
+[INFO (VERI-1018)] rtl/tfifo.v(2): compiling module 'tfifo:(NUM_SLOTS=1,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/load.v(2): compiling module 'load:(DATA_TYPE=8,ADDR_TYPE=8)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner.v(2): compiling module 'elastic_fifo_inner:(NUM_SLOTS=3,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/tfifo.v(2): compiling module 'tfifo:(NUM_SLOTS=3,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/join_type.v(2): compiling module 'join_type'
+[INFO (VERI-1018)] rtl/addi.v(2): compiling module 'addi:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner.v(2): compiling module 'elastic_fifo_inner:(NUM_SLOTS=7,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/tfifo.v(2): compiling module 'tfifo:(NUM_SLOTS=7,DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/store.v(2): compiling module 'store:(DATA_TYPE=8,ADDR_TYPE=8)'
+[INFO (VERI-1018)] rtl/addi.v(2): compiling module 'addi:(DATA_TYPE=5)'
+[INFO (VERI-1018)] rtl/oehb.v(2): compiling module 'oehb:(DATA_TYPE=5)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(DATA_TYPE=5)'
+[INFO (VERI-1018)] rtl/trunci.v(2): compiling module 'trunci:(INPUT_TYPE=5,OUTPUT_TYPE=4)'
+[INFO (VERI-1018)] rtl/handshake_cmpi_0.v(2): compiling module 'handshake_cmpi_0:(DATA_TYPE=5)'
+[INFO (VERI-1018)] rtl/logic.v(29): compiling module 'or_n:(SIZE=5)'
+[INFO (VERI-1018)] rtl/fork_dataless.v(2): compiling module 'fork_dataless:(SIZE=5)'
+[INFO (VERI-1018)] rtl/fork_type.v(2): compiling module 'fork_type:(SIZE=5,DATA_TYPE=1)'
+[INFO (VERI-1018)] rtl/cond_br_dataless.v(5): compiling module 'cond_br_dataless'
+[INFO (VERI-1018)] rtl/cond_br.v(2): compiling module 'cond_br:(DATA_TYPE=4)'
+[INFO (VERI-1018)] rtl/sink.v(2): compiling module 'sink:(DATA_TYPE=4)'
+[INFO (VERI-1018)] rtl/cond_br.v(2): compiling module 'cond_br:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/sink.v(2): compiling module 'sink:(DATA_TYPE=8)'
+[INFO (VERI-1018)] rtl/elastic_fifo_inner_dataless.v(2): compiling module 'elastic_fifo_inner_dataless:(NUM_SLOTS=1)'
+[WARN (VERI-1209)] rtl/elastic_fifo_inner_dataless.v(31): expression size 32 truncated to fit in target size 2
+[WARN (VERI-1209)] rtl/elastic_fifo_inner_dataless.v(42): expression size 32 truncated to fit in target size 2
+[INFO (VERI-1018)] rtl/tfifo_dataless.v(2): compiling module 'tfifo_dataless:(NUM_SLOTS=1)'
+[INFO (VERI-1018)] rtl/mysecretfunction.v(1): compiling module 'mysecretfunction'
+[INFO (VERI-1018)] tb.sv(2): compiling module 'tb'
+INFO (INL208): Elaboration synthesis summary:
+  Number of synthesized netlists          69 (0 packages)
+  Single run mode                         On
+  Pipeline                                On (69 pipelined netlists)
+  Late hierarchical reference connection  On
+  Number of analyzed Verilog modules      42 (38 synthesized)
+  Number of analyzed VHDL entities        0 (0 synthesized)
+  Advanced Incremental run mode           Off
+INFO (INL003): Clearing all state information (assumes, stopats, and so forth).
+tb
+[<embedded>] % 
+[<embedded>] % # specify the global clock and reset
+[<embedded>] % clock clk
+[<embedded>] % reset -init_state init_states.txt
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS010): Setting data file for "reset -init_state" to "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt".
+[<embedded>] % 
+[<embedded>] % # main side-channel assertion
+[<embedded>] % assert {@(posedge clk) disable iff (rst) ( a_out0_valid == b_out0_valid )} -name no_sidechannel
+no_sidechannel
+[<embedded>] % 
+[<embedded>] % # cover that design can finish execution
+[<embedded>] % cover {@(posedge clk) disable iff (rst) ( a_out0_valid )} -name cover_done_a
+cover_done_a
+[<embedded>] % cover {@(posedge clk) disable iff (rst) ( b_out0_valid )} -name cover_done_b
+cover_done_b
+[<embedded>] % 
+[<embedded>] % # address taint assertion
+[<embedded>] % assert {@(posedge clk) disable iff (rst) ( a_fn_arg_arrout_1_loadEn == b_fn_arg_arrout_1_loadEn )} -name address_enable_signals_equal_0
+address_enable_signals_equal_0
+[<embedded>] % assert {@(posedge clk) disable iff (rst || ~( a_fn_arg_arrout_1_loadEn && b_fn_arg_arrout_1_loadEn )) ( a_fn_arg_arrout_1_loadAddr == b_fn_arg_arrout_1_loadAddr )} -name no_address_taint_0
+no_address_taint_0
+[<embedded>] % assert {@(posedge clk) disable iff (rst) ( a_fn_arg_arrout_1_storeEn == b_fn_arg_arrout_1_storeEn )} -name address_enable_signals_equal_1
+address_enable_signals_equal_1
+[<embedded>] % assert {@(posedge clk) disable iff (rst || ~( a_fn_arg_arrout_1_storeEn && b_fn_arg_arrout_1_storeEn )) ( a_fn_arg_arrout_1_storeAddr == b_fn_arg_arrout_1_storeAddr )} -name no_address_taint_1
+no_address_taint_1
+[<embedded>] % 
+[<embedded>] % # stable inputs for the computiation
+[<embedded>] % assume -constant { a_fn_arg_0_secret }
+INFO (IPM005): The name "<embedded>::assume:0" is assigned to assumption " a_fn_arg_0_secret ".
+assume:0
+[<embedded>] % assume -constant { b_fn_arg_0_secret }
+INFO (IPM005): The name "<embedded>::assume:1" is assigned to assumption " b_fn_arg_0_secret ".
+assume:1
+[<embedded>] % assume -constant { fn_arg_0_secret_valid }
+INFO (IPM005): The name "<embedded>::assume:2" is assigned to assumption " fn_arg_0_secret_valid ".
+assume:2
+[<embedded>] % assume -constant { fn_arg_1 }
+INFO (IPM005): The name "<embedded>::assume:3" is assigned to assumption " fn_arg_1 ".
+assume:3
+[<embedded>] % assume -constant { fn_arg_1_valid }
+INFO (IPM005): The name "<embedded>::assume:4" is assigned to assumption " fn_arg_1_valid ".
+assume:4
+[<embedded>] % assume -constant { fn_arg_arrout_1_loadData }
+INFO (IPM005): The name "<embedded>::assume:5" is assigned to assumption " fn_arg_arrout_1_loadData ".
+assume:5
+[<embedded>] % assume -constant { fn_arg_arrout_1_start_valid }
+INFO (IPM005): The name "<embedded>::assume:6" is assigned to assumption " fn_arg_arrout_1_start_valid ".
+assume:6
+[<embedded>] % assume -constant { fn_arg_arrout_1_end_ready }
+INFO (IPM005): The name "<embedded>::assume:7" is assigned to assumption " fn_arg_arrout_1_end_ready ".
+assume:7
+[<embedded>] % 
+[<embedded>] % # reset assumes
+[<embedded>] % assume -bound 10 {rst == 1'b1} -name reset_design
+reset_design
+[<embedded>] % assume {rst == 1'b1 [*10] |=> always rst == 1'b0} -name no_more_reset
+no_more_reset
+[<embedded>] % set undriven_list [get_design_info -list undriven]
+List of undriven: 33 (681)
+-------------------
+a_fn_arg_0_secret (8)
+a_mysecretfunction.buffer1.fifo.i (32)
+a_mysecretfunction.buffer11.fifo.i (32)
+a_mysecretfunction.buffer12.fifo.i (32)
+a_mysecretfunction.buffer15.fifo.i (32)
+a_mysecretfunction.buffer16.fifo.i (32)
+a_mysecretfunction.buffer17.fifo.i (32)
+a_mysecretfunction.buffer19.fifo.i (32)
+a_mysecretfunction.buffer2.fifo.i (32)
+a_mysecretfunction.buffer7.fifo.i (32)
+a_mysecretfunction.buffer8.fifo.i (32)
+b_fn_arg_0_secret (8)
+b_mysecretfunction.buffer1.fifo.i (32)
+b_mysecretfunction.buffer11.fifo.i (32)
+b_mysecretfunction.buffer12.fifo.i (32)
+b_mysecretfunction.buffer15.fifo.i (32)
+b_mysecretfunction.buffer16.fifo.i (32)
+b_mysecretfunction.buffer17.fifo.i (32)
+b_mysecretfunction.buffer19.fifo.i (32)
+b_mysecretfunction.buffer2.fifo.i (32)
+b_mysecretfunction.buffer7.fifo.i (32)
+b_mysecretfunction.buffer8.fifo.i (32)
+clk (1)
+end_ready (1)
+fn_arg_0_secret_valid (1)
+fn_arg_1 (8)
+fn_arg_1_valid (1)
+fn_arg_arrout_1_end_ready (1)
+fn_arg_arrout_1_loadData (8)
+fn_arg_arrout_1_start_valid (1)
+out0_ready (1)
+rst (1)
+start_valid (1)
+
+a_fn_arg_0_secret a_mysecretfunction.buffer1.fifo.i a_mysecretfunction.buffer11.fifo.i a_mysecretfunction.buffer12.fifo.i a_mysecretfunction.buffer15.fifo.i a_mysecretfunction.buffer16.fifo.i a_mysecretfunction.buffer17.fifo.i a_mysecretfunction.buffer19.fifo.i a_mysecretfunction.buffer2.fifo.i a_mysecretfunction.buffer7.fifo.i a_mysecretfunction.buffer8.fifo.i b_fn_arg_0_secret b_mysecretfunction.buffer1.fifo.i b_mysecretfunction.buffer11.fifo.i b_mysecretfunction.buffer12.fifo.i b_mysecretfunction.buffer15.fifo.i b_mysecretfunction.buffer16.fifo.i b_mysecretfunction.buffer17.fifo.i b_mysecretfunction.buffer19.fifo.i b_mysecretfunction.buffer2.fifo.i b_mysecretfunction.buffer7.fifo.i b_mysecretfunction.buffer8.fifo.i clk end_ready fn_arg_0_secret_valid fn_arg_1 fn_arg_1_valid fn_arg_arrout_1_end_ready fn_arg_arrout_1_loadData fn_arg_arrout_1_start_valid out0_ready rst start_valid
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[0] == 0}}
+WARNING (WNL023): Expression sizes mismatch.
+INFO (IPM005): The name "<embedded>::assume:8" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[0] == 0".
+assume:8
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:9" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[0] == 0".
+assume:9
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:10" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[1] == 0".
+assume:10
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:11" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[1] == 0".
+assume:11
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:12" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[2] == 0".
+assume:12
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:13" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[2] == 0".
+assume:13
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[3]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[3] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:14" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[3] == 0".
+assume:14
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[3]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[3] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:15" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[3] == 0".
+assume:15
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[4]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[4] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:16" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[4] == 0".
+assume:16
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[4]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[4] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:17" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[4] == 0".
+assume:17
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[5]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[5] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:18" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[5] == 0".
+assume:18
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[5]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[5] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:19" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[5] == 0".
+assume:19
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[6]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[6] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:20" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[6] == 0".
+assume:20
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[6]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[6] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:21" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[6] == 0".
+assume:21
+[<embedded>] % if {{a_mysecretfunction.buffer1.fifo.Memory[7]} in $undriven_list } {assume {a_mysecretfunction.buffer1.fifo.Memory[7] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer1.fifo.Memory[7] == 0}}
+INFO (IPM005): The name "<embedded>::assume:22" is assigned to assumption "a_mysecretfunction.buffer1.fifo.Memory[7] == 0".
+assume:22
+[<embedded>] % if {{b_mysecretfunction.buffer1.fifo.Memory[7]} in $undriven_list } {assume {b_mysecretfunction.buffer1.fifo.Memory[7] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer1.fifo.Memory[7] == 0}}
+INFO (IPM005): The name "<embedded>::assume:23" is assigned to assumption "b_mysecretfunction.buffer1.fifo.Memory[7] == 0".
+assume:23
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[0] == 0}}
+WARNING (WNL023): Expression sizes mismatch.
+INFO (IPM005): The name "<embedded>::assume:24" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[0] == 0".
+assume:24
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:25" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[0] == 0".
+assume:25
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:26" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[1] == 0".
+assume:26
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:27" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[1] == 0".
+assume:27
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:28" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[2] == 0".
+assume:28
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:29" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[2] == 0".
+assume:29
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[3]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[3] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:30" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[3] == 0".
+assume:30
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[3]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[3] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:31" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[3] == 0".
+assume:31
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[4]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[4] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:32" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[4] == 0".
+assume:32
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[4]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[4] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:33" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[4] == 0".
+assume:33
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[5]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[5] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:34" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[5] == 0".
+assume:34
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[5]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[5] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:35" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[5] == 0".
+assume:35
+[<embedded>] % if {{a_mysecretfunction.buffer12.fifo.Memory[6]} in $undriven_list } {assume {a_mysecretfunction.buffer12.fifo.Memory[6] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer12.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:36" is assigned to assumption "a_mysecretfunction.buffer12.fifo.Memory[6] == 0".
+assume:36
+[<embedded>] % if {{b_mysecretfunction.buffer12.fifo.Memory[6]} in $undriven_list } {assume {b_mysecretfunction.buffer12.fifo.Memory[6] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer12.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:37" is assigned to assumption "b_mysecretfunction.buffer12.fifo.Memory[6] == 0".
+assume:37
+[<embedded>] % if {{a_mysecretfunction.buffer2.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer2.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer2.fifo.Memory[0] == 0}}
+WARNING (WNL023): Expression sizes mismatch.
+INFO (IPM005): The name "<embedded>::assume:38" is assigned to assumption "a_mysecretfunction.buffer2.fifo.Memory[0] == 0".
+assume:38
+[<embedded>] % if {{b_mysecretfunction.buffer2.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer2.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer2.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:39" is assigned to assumption "b_mysecretfunction.buffer2.fifo.Memory[0] == 0".
+assume:39
+[<embedded>] % if {{a_mysecretfunction.buffer7.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer7.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer7.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:40" is assigned to assumption "a_mysecretfunction.buffer7.fifo.Memory[0] == 0".
+assume:40
+[<embedded>] % if {{b_mysecretfunction.buffer7.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer7.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer7.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:41" is assigned to assumption "b_mysecretfunction.buffer7.fifo.Memory[0] == 0".
+assume:41
+[<embedded>] % if {{a_mysecretfunction.buffer7.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer7.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer7.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:42" is assigned to assumption "a_mysecretfunction.buffer7.fifo.Memory[1] == 0".
+assume:42
+[<embedded>] % if {{b_mysecretfunction.buffer7.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer7.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer7.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:43" is assigned to assumption "b_mysecretfunction.buffer7.fifo.Memory[1] == 0".
+assume:43
+[<embedded>] % if {{a_mysecretfunction.buffer7.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer7.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer7.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:44" is assigned to assumption "a_mysecretfunction.buffer7.fifo.Memory[2] == 0".
+assume:44
+[<embedded>] % if {{b_mysecretfunction.buffer7.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer7.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer7.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:45" is assigned to assumption "b_mysecretfunction.buffer7.fifo.Memory[2] == 0".
+assume:45
+[<embedded>] % if {{a_mysecretfunction.buffer15.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer15.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer15.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:46" is assigned to assumption "a_mysecretfunction.buffer15.fifo.Memory[0] == 0".
+assume:46
+[<embedded>] % if {{b_mysecretfunction.buffer15.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer15.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer15.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:47" is assigned to assumption "b_mysecretfunction.buffer15.fifo.Memory[0] == 0".
+assume:47
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:48" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[0] == 0".
+assume:48
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:49" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[0] == 0".
+assume:49
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:50" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[1] == 0".
+assume:50
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:51" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[1] == 0".
+assume:51
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:52" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[2] == 0".
+assume:52
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:53" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[2] == 0".
+assume:53
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[3]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[3] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:54" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[3] == 0".
+assume:54
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[3]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[3] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:55" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[3] == 0".
+assume:55
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[4]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[4] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:56" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[4] == 0".
+assume:56
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[4]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[4] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:57" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[4] == 0".
+assume:57
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[5]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[5] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:58" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[5] == 0".
+assume:58
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[5]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[5] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:59" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[5] == 0".
+assume:59
+[<embedded>] % if {{a_mysecretfunction.buffer11.fifo.Memory[6]} in $undriven_list } {assume {a_mysecretfunction.buffer11.fifo.Memory[6] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer11.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:60" is assigned to assumption "a_mysecretfunction.buffer11.fifo.Memory[6] == 0".
+assume:60
+[<embedded>] % if {{b_mysecretfunction.buffer11.fifo.Memory[6]} in $undriven_list } {assume {b_mysecretfunction.buffer11.fifo.Memory[6] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer11.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:61" is assigned to assumption "b_mysecretfunction.buffer11.fifo.Memory[6] == 0".
+assume:61
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:62" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[0] == 0".
+assume:62
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:63" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[0] == 0".
+assume:63
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:64" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[1] == 0".
+assume:64
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:65" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[1] == 0".
+assume:65
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:66" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[2] == 0".
+assume:66
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:67" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[2] == 0".
+assume:67
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[3]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[3] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:68" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[3] == 0".
+assume:68
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[3]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[3] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:69" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[3] == 0".
+assume:69
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[4]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[4] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:70" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[4] == 0".
+assume:70
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[4]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[4] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:71" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[4] == 0".
+assume:71
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[5]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[5] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:72" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[5] == 0".
+assume:72
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[5]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[5] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:73" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[5] == 0".
+assume:73
+[<embedded>] % if {{a_mysecretfunction.buffer8.fifo.Memory[6]} in $undriven_list } {assume {a_mysecretfunction.buffer8.fifo.Memory[6] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer8.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:74" is assigned to assumption "a_mysecretfunction.buffer8.fifo.Memory[6] == 0".
+assume:74
+[<embedded>] % if {{b_mysecretfunction.buffer8.fifo.Memory[6]} in $undriven_list } {assume {b_mysecretfunction.buffer8.fifo.Memory[6] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer8.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:75" is assigned to assumption "b_mysecretfunction.buffer8.fifo.Memory[6] == 0".
+assume:75
+[<embedded>] % if {{a_mysecretfunction.buffer16.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer16.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer16.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:76" is assigned to assumption "a_mysecretfunction.buffer16.fifo.Memory[0] == 0".
+assume:76
+[<embedded>] % if {{b_mysecretfunction.buffer16.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer16.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer16.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:77" is assigned to assumption "b_mysecretfunction.buffer16.fifo.Memory[0] == 0".
+assume:77
+[<embedded>] % if {{a_mysecretfunction.buffer17.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer17.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer17.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:78" is assigned to assumption "a_mysecretfunction.buffer17.fifo.Memory[0] == 0".
+assume:78
+[<embedded>] % if {{b_mysecretfunction.buffer17.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer17.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer17.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:79" is assigned to assumption "b_mysecretfunction.buffer17.fifo.Memory[0] == 0".
+assume:79
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[0]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[0] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:80" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[0] == 0".
+assume:80
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[0]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[0] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[0] == 0}}
+INFO (IPM005): The name "<embedded>::assume:81" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[0] == 0".
+assume:81
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[1]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[1] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:82" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[1] == 0".
+assume:82
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[1]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[1] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[1] == 0}}
+INFO (IPM005): The name "<embedded>::assume:83" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[1] == 0".
+assume:83
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[2]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[2] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:84" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[2] == 0".
+assume:84
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[2]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[2] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[2] == 0}}
+INFO (IPM005): The name "<embedded>::assume:85" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[2] == 0".
+assume:85
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[3]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[3] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:86" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[3] == 0".
+assume:86
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[3]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[3] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[3] == 0}}
+INFO (IPM005): The name "<embedded>::assume:87" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[3] == 0".
+assume:87
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[4]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[4] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:88" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[4] == 0".
+assume:88
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[4]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[4] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[4] == 0}}
+INFO (IPM005): The name "<embedded>::assume:89" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[4] == 0".
+assume:89
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[5]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[5] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:90" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[5] == 0".
+assume:90
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[5]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[5] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[5] == 0}}
+INFO (IPM005): The name "<embedded>::assume:91" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[5] == 0".
+assume:91
+[<embedded>] % if {{a_mysecretfunction.buffer19.fifo.Memory[6]} in $undriven_list } {assume {a_mysecretfunction.buffer19.fifo.Memory[6] == 0}} else {assume -bound 10 {a_mysecretfunction.buffer19.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:92" is assigned to assumption "a_mysecretfunction.buffer19.fifo.Memory[6] == 0".
+assume:92
+[<embedded>] % if {{b_mysecretfunction.buffer19.fifo.Memory[6]} in $undriven_list } {assume {b_mysecretfunction.buffer19.fifo.Memory[6] == 0}} else {assume -bound 10 {b_mysecretfunction.buffer19.fifo.Memory[6] == 0}}
+INFO (IPM005): The name "<embedded>::assume:93" is assigned to assumption "b_mysecretfunction.buffer19.fifo.Memory[6] == 0".
+assume:93
+[<embedded>] % 
+[<embedded>] % # missing module assumes
+[<embedded>] % 
+[<embedded>] % # prove the properties
+[<embedded>] % prove -all
+Bcustom1: Custom engine code is hT3Nm7hPr1Vp3Di1Ra2USNIGL4JypRnLKLAdF6JAyuavO2JfGCiY9OZJhcAcOUnLx5xwNdhILGrAWX9s+z2WDkKwNR7tAfClBEjRFVQeq6DU54boFgEA
+Mpcustom2: Custom engine code is hT3NZbhP9fmY2AbBQnsjfOxn6c+6e6yL+/e8fZFmaQrnlgEA
+Ncustom3: Custom engine code is hT3Ng7hPPfiYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSl+CwjiTMAQA
+AMcustom4: Custom engine code is hT3Ng7hP/feYQOTDZ3qhYOwGAM51eA+J/FjkM5shLioAsqhgLR4Ft+O1BuKG6ilQ83B9tLXSmmqwm7g9AQA
+INFO (IPF036): Starting proof on task: "<embedded>", 7 properties to prove with 0 already proven/unreachable
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[0]" received the value "0" (without radix). Using "4'd0" instead. (Line 1 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[0]" received the value "0" (without radix). Using "4'd0" instead. (Line 2 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[1]" received the value "0" (without radix). Using "4'd0" instead. (Line 3 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[1]" received the value "0" (without radix). Using "4'd0" instead. (Line 4 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[2]" received the value "0" (without radix). Using "4'd0" instead. (Line 5 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[2]" received the value "0" (without radix). Using "4'd0" instead. (Line 6 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[3]" received the value "0" (without radix). Using "4'd0" instead. (Line 7 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[3]" received the value "0" (without radix). Using "4'd0" instead. (Line 8 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[4]" received the value "0" (without radix). Using "4'd0" instead. (Line 9 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[4]" received the value "0" (without radix). Using "4'd0" instead. (Line 10 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[5]" received the value "0" (without radix). Using "4'd0" instead. (Line 11 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[5]" received the value "0" (without radix). Using "4'd0" instead. (Line 12 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[6]" received the value "0" (without radix). Using "4'd0" instead. (Line 13 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[6]" received the value "0" (without radix). Using "4'd0" instead. (Line 14 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer1.fifo.Memory[7]" received the value "0" (without radix). Using "4'd0" instead. (Line 15 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer1.fifo.Memory[7]" received the value "0" (without radix). Using "4'd0" instead. (Line 16 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[0]" received the value "0" (without radix). Using "1'd0" instead. (Line 17 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[0]" received the value "0" (without radix). Using "1'd0" instead. (Line 18 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[1]" received the value "0" (without radix). Using "1'd0" instead. (Line 19 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[1]" received the value "0" (without radix). Using "1'd0" instead. (Line 20 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[2]" received the value "0" (without radix). Using "1'd0" instead. (Line 21 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[2]" received the value "0" (without radix). Using "1'd0" instead. (Line 22 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[3]" received the value "0" (without radix). Using "1'd0" instead. (Line 23 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[3]" received the value "0" (without radix). Using "1'd0" instead. (Line 24 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[4]" received the value "0" (without radix). Using "1'd0" instead. (Line 25 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[4]" received the value "0" (without radix). Using "1'd0" instead. (Line 26 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[5]" received the value "0" (without radix). Using "1'd0" instead. (Line 27 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[5]" received the value "0" (without radix). Using "1'd0" instead. (Line 28 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer12.fifo.Memory[6]" received the value "0" (without radix). Using "1'd0" instead. (Line 29 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer12.fifo.Memory[6]" received the value "0" (without radix). Using "1'd0" instead. (Line 30 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer2.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 31 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer2.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 32 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer7.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 33 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer7.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 34 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer7.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 35 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer7.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 36 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer7.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 37 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer7.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 38 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer15.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 39 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer15.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 40 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 41 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 42 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 43 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 44 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 45 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 46 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[3]" received the value "0" (without radix). Using "8'd0" instead. (Line 47 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[3]" received the value "0" (without radix). Using "8'd0" instead. (Line 48 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[4]" received the value "0" (without radix). Using "8'd0" instead. (Line 49 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[4]" received the value "0" (without radix). Using "8'd0" instead. (Line 50 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[5]" received the value "0" (without radix). Using "8'd0" instead. (Line 51 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[5]" received the value "0" (without radix). Using "8'd0" instead. (Line 52 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer11.fifo.Memory[6]" received the value "0" (without radix). Using "8'd0" instead. (Line 53 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer11.fifo.Memory[6]" received the value "0" (without radix). Using "8'd0" instead. (Line 54 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 55 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 56 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 57 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[1]" received the value "0" (without radix). Using "8'd0" instead. (Line 58 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 59 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[2]" received the value "0" (without radix). Using "8'd0" instead. (Line 60 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[3]" received the value "0" (without radix). Using "8'd0" instead. (Line 61 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[3]" received the value "0" (without radix). Using "8'd0" instead. (Line 62 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[4]" received the value "0" (without radix). Using "8'd0" instead. (Line 63 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[4]" received the value "0" (without radix). Using "8'd0" instead. (Line 64 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[5]" received the value "0" (without radix). Using "8'd0" instead. (Line 65 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[5]" received the value "0" (without radix). Using "8'd0" instead. (Line 66 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer8.fifo.Memory[6]" received the value "0" (without radix). Using "8'd0" instead. (Line 67 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer8.fifo.Memory[6]" received the value "0" (without radix). Using "8'd0" instead. (Line 68 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer16.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 69 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer16.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 70 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer17.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 71 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer17.fifo.Memory[0]" received the value "0" (without radix). Using "8'd0" instead. (Line 72 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[0]" received the value "0" (without radix). Using "1'd0" instead. (Line 73 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[0]" received the value "0" (without radix). Using "1'd0" instead. (Line 74 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[1]" received the value "0" (without radix). Using "1'd0" instead. (Line 75 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[1]" received the value "0" (without radix). Using "1'd0" instead. (Line 76 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[2]" received the value "0" (without radix). Using "1'd0" instead. (Line 77 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[2]" received the value "0" (without radix). Using "1'd0" instead. (Line 78 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[3]" received the value "0" (without radix). Using "1'd0" instead. (Line 79 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[3]" received the value "0" (without radix). Using "1'd0" instead. (Line 80 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[4]" received the value "0" (without radix). Using "1'd0" instead. (Line 81 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[4]" received the value "0" (without radix). Using "1'd0" instead. (Line 82 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[5]" received the value "0" (without radix). Using "1'd0" instead. (Line 83 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[5]" received the value "0" (without radix). Using "1'd0" instead. (Line 84 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "a_mysecretfunction.buffer19.fifo.Memory[6]" received the value "0" (without radix). Using "1'd0" instead. (Line 85 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS024): The signal "b_mysecretfunction.buffer19.fifo.Memory[6]" received the value "0" (without radix). Using "1'd0" instead. (Line 86 of the file "/home/zdenis/masters_thesis/turboturtle_bot/jg/run_20250613103420_pipeline_00000000/init_states.txt").
+WARNING (WRS035): The declared reset file does not initialize all flops/latches. Use the command "reset -sequence" or reset files that contain internal signals to avoid spurious counterexamples. If your reset file already contains internal signals use the switch "-include_internal" to reset internal flops/latches.
+INFO (IRS021): Reset analysis using cached values. Assigned values for 428 of 4018 design flops, 0 of 0 design latches, 52 of 52 internal elements.
+INFO (IRS039): Reset analysis complete.
+INFO (IPF031): Settings used for proof thread 2:
+    orchestration                      = on
+    time_limit                         = 1800s
+    per_property_time_limit            = 1s * 10 ^ scan
+    engine_mode                        = auto
+    proofgrid_per_engine_max_jobs      = 1
+    max engine jobs                    = auto
+    proofgrid_mode                     = local
+    proofgrid_restarts                 = 10
+2: Using multistage preprocessing
+AMcustom5: Custom engine code is hT3N1rhP11/52HrFRS21ROp2LOjVTgPvT8L8BGXHgLhaIuqtT4nARFjUqrBL+7pLmaTOzBepZW/Jm8SSrHDybSQtoNiO3y43wk+dEoWlsZizu97Fih6O6lPVG/LpWP5SsUPwlGagLNa1FKEFvwVXyX7//8prySbvSxIHXr5er+z4RAEA
+2: Starting reduce
+Ncustom6: Custom engine code is hT3OXrhPByJp3TrFSTLhUmMH4KVtJgmTCnNDF46yMXOKY48m4LS5nE7yBzFjA7kDuwO/GhGUpEPiky3p3wmPn3dJZHxFMsafSoObRzSC+tn7sEY0WbTdZ/FV4hL3MYH/b1CIUvXSWR4wqEoVLsmMOD4xIPT4lI1LO6ZCO7PnnWQuLwetnvKlrXx6wCW/A+x+enqslg1YPobi4wEF/EvbzOvcTYdJvl2s4H2yZg2b2ofAVN5WvhWk1HoBAA
+ADcustom7: Custom engine code is hT3Nv7hPv1752HrFRa2kROx2f/ECJeZB2AZsLdlO8VwmIuqtT4nIDFXclhg+O+o+DMmQCekbheGk0kK28laA9gaOFDXsQp29J3X615HY1IPHJWd6FUFvCHjO+p1k652b5JJvZlShNpGlGSXAiQe/mEAj6tEBAA
+Tricustom8: Custom engine code is hT3Nu7hPt1752DvFRa0kNDiyIV97VyejwM9C/jCLJjdPvusZONHY42VYUy0Q1ZotnhcVtNc56tJ5wbxv6V2+XpdsaSlHck5vfnbYjdwj1OECy9U+7oSQ0SZE3g5ayD+Phuh4odCJTjeKa2k4elM9ldQfkAEA
+Gcustom9: Custom engine code is hT3NibhPDfeYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInncipMGcUXqAadachREE9F2PwhBUZUNw5kHnd4JdXkamORRgEA
+C2custom10: Custom engine code is hT3NirhPjfWYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInncgkrYMMXCYbdK0dUjZIF9d4cJ0rHoBDjwVLBKuG86XYVV00BAA
+AGcustom11: Custom engine code is hT3NirhP/fmYQADBZnYcglOvK9Pfd7EOeniIqP8jNsyIqInnckcwYMMXCYbdK0dUjZIF9d4cJ0rHoBDjwVLBKuHEZnZByh0BAA
+Bcustom12: Custom engine code is hT3NjrhPDfiYQADBZnYcglOvK9PfWxFtenjIyBqfrgr7if/jL/yPOuK1BAflEcW0DxNH2eDIoezN2gxlQFg81RZtiWXh7aiTAidvAQA
+Ncustom13: Custom engine code is hT3NR7hPByFp3TrFSTLhUmMH4KWtJglTyV/c51BHEeZWamnJv767nE6PCak26bd3gf3XGN3rIRheufhDieCJQVISo+gNYUKhiUedBKGtsP/a18svAnlMJZudHxDFwK5ufsyoxsIyiAeSY2oi3tEuoDHr5gw42DFKAG3PqO3CEsl8Azzdt3pl5nGA1Ifv2H02eYsFzWb/nfp8PMb3F0krE/EgBcm8TD9Div8BAA
+Tricustom14: Custom engine code is hT3Nu7hP3fiYQADBZnYcglNHp9bfd7EOeniIqP/ji8sGLQu8yhsFO+wxJ+O+R0bU8g/IewXFomyos+viQnWc2xYNYmMqpo3i40O7DaZR7qfp4YqNx26KRvQ/qx0BAA
+2: Finished reduce in 0.041s
+2.0.PRE: Performing Proof Simplification...
+2.0.Hp: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.Hp: Proof Simplification Iteration 1	[0.00 s]
+2.0.Hp: Proof Simplification Iteration 2	[0.08 s]
+2.0.Hp: Proof Simplification Iteration 3	[0.14 s]
+2.0.Hp: Proof Simplification Iteration 4	[0.19 s]
+2.0.Hp: Proof Simplification Iteration 5	[0.23 s]
+2.0.PRE: Proof Simplification completed in 0.37 s
+2: About to start ProofGrid in its own thread with a limit of 10000 pending notifications and a limit of 10 traces.
+2: ============================= ProofGrid (v3) start =============================
+2: ProofGrid usable level: 7
+2: Initial ProofGrid level: 1
+2: ProofGrid is starting event handling
+2: Computed task hash in 0.01ss
+2.0.Hp: Proofgrid shell started at 11028@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2: ProofGrid usable level: 7
+2.0.Hp: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2: ProofGrid usable level: 7
+2: ProofGrid usable level: 7
+2.0.Ht: Proofgrid shell started at 11045@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2: ProofGrid usable level: 7
+2.0.Bm: Proofgrid shell started at 11046@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2: ProofGrid usable level: 7
+2.0.Ht: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.Mpcustom2: Proofgrid shell started at 11047@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.Bm: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.Mpcustom2: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.Oh: Proofgrid shell started at 11060@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.Oh: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Proofgrid shell started at 11110@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.Bm: Trace Attempt  1	[0.11 s]
+2.0.L: Proofgrid shell started at 11107@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.N: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.L: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.AM: Proofgrid shell started at 11112@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.B: Proofgrid shell started at 11111@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.AM: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.B: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+2.0.N: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.L: Using trace diversification with seed 1 (0.05)
+2.0.L: Using LRU state removal heuristic
+2.0.Mpcustom2: Trace Attempt  1	[0.14 s]
+2.0.L: Using states from traces to { (reset) }
+2.0.N: Trace Attempt  1	[0.01 s]
+2.0.N: Trace Attempt  2	[0.01 s]
+2.0.N: Trace Attempt  3	[0.01 s]
+2.0.B: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+2.0.B: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.AM: Next scan (0) will use per property time limit: 1s * 10 ^ 0 = 1s
+2.0.AM: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.Ht: Trace Attempt  1	[0.18 s]
+2.0.Ht: Trace Attempt  2	[0.18 s]
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.Bm: Trace Attempt  2	[0.20 s]
+2.0.AM: Trace Attempt  3	[0.03 s]
+2.0.Mpcustom2: Trace Attempt  2	[0.20 s]
+2.0.AM: Trace Attempt  4	[0.04 s]
+2.0.Ht: Trace Attempt  3	[0.23 s]
+2.0.AM: Trace Attempt  5	[0.05 s]
+2.0.B: Trace Attempt  1	[0.06 s]
+2.0.Bm: Trace Attempt  3	[0.26 s]
+2.0.Ht: Trace Attempt  4	[0.26 s]
+2.0.Bm: Trace Attempt  4	[0.26 s]
+2.0.Bm: Trace Attempt  5	[0.26 s]
+2.0.Ht: Trace Attempt  5	[0.30 s]
+2.0.N: Trace Attempt  3	[0.15 s]
+2.0.B: Trace Attempt  2	[0.15 s]
+2.0.L: Trace Attempt  3	[0.21 s]
+2.0.N: Trace Attempt  4	[0.21 s]
+2.0.N: Trace Attempt  5	[0.21 s]
+2.0.B: Trace Attempt  3	[0.20 s]
+2.0.B: Trace Attempt  4	[0.21 s]
+2.0.B: Trace Attempt  5	[0.21 s]
+2.0.Bm: Trace Attempt 18	[0.49 s]
+2.0.Bm: A trace with 18 cycles was found. [0.56 s]
+INFO (IPF055): 2.0.Bm: A counterexample (cex) with 18 cycles was found for the property "no_address_taint_0" in 0.60 s.
+2.0.Bm: Trace Attempt 19	[0.59 s]
+2.0.N: Trace Attempt  5	[0.51 s]
+2.0.Bm: A trace with 19 cycles was found. [0.69 s]
+INFO (IPF055): 2.0.Bm: A counterexample (cex) with 19 cycles was found for the property "address_enable_signals_equal_0" in 0.66 s.
+2.0.Oh: bwd trail(1): 1 0.610832s
+2.0.L: Trace Attempt  4	[0.60 s]
+2: ProofGrid usable level: 5
+2.0.Oh: All properties either determined or skipped. [0.66 s]
+2.0.Oh: Exited with Success (@ 0.86 s)
+2.0.L: Trace Attempt  5	[0.65 s]
+2.0.AM: Trace Attempt 13	[0.51 s]
+2.0.AM: Per property time limit expired (1.00 s) [1.05 s]
+2.0.AM: Stopped processing property "no_sidechannel"	[1.05 s].
+2.0.AM: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.02 s]
+2.0.AM: Trace Attempt  2	[0.02 s]
+2.0.AM: Trace Attempt  3	[0.03 s]
+2.0.B: Trace Attempt 21	[0.77 s]
+2.0.B: Per property time limit expired (1.00 s) [1.08 s]
+2.0.B: Stopped processing property "no_sidechannel"	[1.08 s].
+2.0.B: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.AM: Trace Attempt  4	[0.04 s]
+2.0.AM: Trace Attempt  5	[0.06 s]
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.Ht: Trace Attempt 22	[1.10 s]
+2.0.Ht: A trace with 22 cycles was found. [1.34 s]
+INFO (IPF055): 2.0.Ht: A counterexample (cex) with 22 cycles was found for the property "no_address_taint_1" in 1.33 s.
+2.0.B: Trace Attempt  2	[0.15 s]
+2.0.Ht: Trace Attempt 23	[1.44 s]
+2.0.B: Trace Attempt  3	[0.21 s]
+2.0.B: Trace Attempt  4	[0.21 s]
+2.0.B: Trace Attempt  5	[0.21 s]
+2.0.N: Trace Attempt  9	[1.44 s]
+2.0.N: Stopped processing property "no_sidechannel"	[1.46 s].
+2.0.N: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.N: Trace Attempt  1	[0.01 s]
+2.0.N: Trace Attempt  2	[0.01 s]
+2.0.N: Trace Attempt  3	[0.01 s]
+2.0.N: Trace Attempt  3	[0.11 s]
+2: ProofGrid usable level: 4
+2.0.N: Trace Attempt  4	[0.15 s]
+2.0.N: Trace Attempt  5	[0.15 s]
+2.0.N: Trace Attempt  5	[0.41 s]
+2.0.L: Using states from traces to { no_address_taint_0 <17> }
+2.0.AM: Trace Attempt 14	[0.96 s]
+2.0.AM: Per property time limit expired (1.00 s) [1.07 s]
+2.0.AM: Stopped processing property "cover_done_a"	[1.07 s].
+2.0.AM: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.AM: Trace Attempt  3	[0.02 s]
+2.0.L: Trace Attempt  3	[2.21 s]
+2.0.AM: Trace Attempt  4	[0.03 s]
+2.0.AM: Trace Attempt  5	[0.04 s]
+2.0.L: Trace Attempt  4	[2.25 s]
+2.0.N: Trace Attempt  8	[0.49 s]
+2.0.N: Stopped processing property "cover_done_a"	[0.77 s].
+2.0.N: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.N: Trace Attempt  1	[0.01 s]
+2.0.N: Trace Attempt  2	[0.01 s]
+2.0.N: Trace Attempt  3	[0.01 s]
+2.0.L: Trace Attempt  5	[2.29 s]
+2.0.B: Trace Attempt 22	[0.96 s]
+2.0.B: Stopped processing property "cover_done_a"	[1.23 s].
+2.0.B: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.N: Trace Attempt  3	[0.12 s]
+2.0.N: Trace Attempt  4	[0.16 s]
+2.0.N: Trace Attempt  5	[0.16 s]
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.B: Trace Attempt  2	[0.15 s]
+2.0.B: Trace Attempt  3	[0.21 s]
+2.0.B: Trace Attempt  4	[0.21 s]
+2.0.B: Trace Attempt  5	[0.21 s]
+2.0.Mpcustom2: Trace Attempt  3	[2.69 s]
+2.0.N: Trace Attempt  5	[0.42 s]
+2.0.Mpcustom2: Trace Attempt  4	[2.98 s]
+2.0.Mpcustom2: Trace Attempt  3	[3.17 s]
+2.0.Mpcustom2: Trace Attempt  4	[3.23 s]
+2.0.AM: Trace Attempt 14	[0.96 s]
+2.0.AM: Per property time limit expired (1.00 s) [1.07 s]
+2.0.AM: Stopped processing property "cover_done_b"	[1.07 s].
+2.0.AM: Starting proof for property "address_enable_signals_equal_1"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.02 s]
+2.0.AM: Trace Attempt  2	[0.02 s]
+2.0.AM: Trace Attempt  3	[0.04 s]
+2.0.B: Trace Attempt 21	[0.75 s]
+2.0.B: Stopped processing property "cover_done_b"	[0.95 s].
+2.0.B: Starting proof for property "address_enable_signals_equal_1"	[0.00 s].
+2.0.AM: Trace Attempt  4	[0.08 s]
+2.0.AM: Trace Attempt  5	[0.12 s]
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.B: Trace Attempt  2	[0.15 s]
+2.0.N: Trace Attempt  9	[1.25 s]
+2.0.N: Stopped processing property "cover_done_b"	[1.25 s].
+2.0.N: Starting proof for property "address_enable_signals_equal_1"	[0.00 s].
+2.0.N: Trace Attempt  1	[0.01 s]
+2.0.N: Trace Attempt  2	[0.01 s]
+2.0.N: Trace Attempt  3	[0.01 s]
+2.0.B: Trace Attempt  3	[0.21 s]
+2.0.B: Trace Attempt  4	[0.21 s]
+2.0.B: Trace Attempt  5	[0.21 s]
+2.0.Mpcustom2: Trace Attempt  4	[3.65 s]
+2.0.N: Trace Attempt  3	[0.12 s]
+2.0.N: Trace Attempt  4	[0.17 s]
+2.0.N: Trace Attempt  5	[0.17 s]
+2.0.N: Trace Attempt  5	[0.43 s]
+2.0.Mpcustom2: Trace Attempt  5	[4.41 s]
+2.0.AM: Trace Attempt 12	[0.80 s]
+2.0.AM: Per property time limit expired (1.00 s) [1.09 s]
+2.0.AM: Stopped processing property "address_enable_signals_equal_1"	[1.09 s].
+2.0.B: Trace Attempt 22	[1.01 s]
+2.0.B: Stopped processing property "address_enable_signals_equal_1"	[1.29 s].
+2.0.Mpcustom2: Trace Attempt  4	[4.91 s]
+2.0.N: Trace Attempt  9	[1.29 s]
+2.0.N: Stopped processing property "address_enable_signals_equal_1"	[1.30 s].
+2.0.B: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.AM: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.N: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.03 s]
+2.0.AM: Trace Attempt  2	[0.03 s]
+2.0.AM: Trace Attempt  3	[0.04 s]
+2.0.AM: Trace Attempt  4	[0.05 s]
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.AM: Trace Attempt  5	[0.06 s]
+2.0.B: Trace Attempt  2	[0.14 s]
+2.0.B: Trace Attempt  3	[0.20 s]
+2.0.B: Trace Attempt  4	[0.20 s]
+2.0.B: Trace Attempt  5	[0.20 s]
+2.0.N: Trace Attempt  8	[0.50 s]
+2.0.Mpcustom2: Trace Attempt  5	[5.59 s]
+2.0.L: Trace Attempt 63	[6.34 s]
+2.0.Mpcustom2: Trace Attempt  4	[6.80 s]
+2.0.Bm: Trace Attempt 26	[7.43 s]
+2.0.Ht: Trace Attempt 26	[8.25 s]
+2.0.Mpcustom2: Trace Attempt  5	[8.28 s]
+2.0.B: Trace Attempt 26	[4.35 s]
+2.0.AM: Trace Attempt 16	[4.63 s]
+2.0.Ht: A trace with 26 cycles was found. [9.67 s]
+INFO (IPF055): 2.0.Ht: A counterexample (cex) with 26 cycles was found for the property "address_enable_signals_equal_1" in 9.66 s.
+2: ProofGrid usable level: 3
+2.0.L: Trace Attempt 98	[10.40 s]
+2.0.Mpcustom2: Trace Attempt  5	[11.15 s]
+2.0.N: Trace Attempt 20	[8.04 s]
+2.0.Ht: Trace Attempt 28	[13.33 s]
+2.0.N: Trace Attempt  1	[8.57 s]
+2.0.N: Trace Attempt  2	[8.76 s]
+2.0.N: Trace Attempt  3	[8.79 s]
+2.0.Bm: Trace Attempt 28	[13.79 s]
+2.0.N: Trace Attempt  4	[8.85 s]
+2.0.N: Trace Attempt  5	[9.04 s]
+2.0.L: Trace Attempt 126	[14.47 s]
+2.0.B: Trace Attempt 28	[9.67 s]
+2.0.Mpcustom2: Trace Attempt  5	[14.75 s]
+2.0.N: Per property time limit expired (10.00 s) [10.04 s]
+2.0.N: Stopped processing property "no_sidechannel"	[10.04 s].
+2.0.N: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.B: Per property time limit expired (10.00 s) [10.32 s]
+2.0.B: Stopped processing property "no_sidechannel"	[10.32 s].
+2.0.B: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.B: Trace Attempt  2	[0.14 s]
+2.0.B: Trace Attempt  3	[0.20 s]
+2.0.B: Trace Attempt  4	[0.20 s]
+2.0.B: Trace Attempt  5	[0.20 s]
+2.0.AM: Trace Attempt 17	[5.76 s]
+2.0.AM: Stopped processing property "no_sidechannel"	[10.54 s].
+2.0.AM: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.AM: Trace Attempt  3	[0.02 s]
+2.0.AM: Trace Attempt  4	[0.03 s]
+2.0.AM: Trace Attempt  5	[0.04 s]
+2.0.Ht: Trace Attempt 29	[18.21 s]
+2.0.Bm: Trace Attempt 29	[18.67 s]
+2.0.L: Trace Attempt 150	[18.57 s]
+2.0.N: Trace Attempt  1	[6.43 s]
+2.0.N: Trace Attempt  2	[6.51 s]
+2.0.N: Trace Attempt  3	[6.52 s]
+2.0.N: Trace Attempt  4	[6.55 s]
+2.0.N: Trace Attempt  5	[6.57 s]
+2.0.B: Trace Attempt 28	[6.36 s]
+2.0.AM: Trace Attempt 20	[6.87 s]
+2.0.L: Trace Attempt 172	[22.73 s]
+2.0.Mpcustom2: Trace Attempt  5	[23.41 s]
+2.0.N: Trace Attempt 12	[9.08 s]
+2.0.N: Per property time limit expired (10.00 s) [10.03 s]
+2.0.N: Stopped processing property "cover_done_a"	[10.03 s].
+2.0.N: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.AM: Trace Attempt 22	[9.28 s]
+2.0.AM: Stopped processing property "cover_done_a"	[9.72 s].
+2.0.AM: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.AM: Trace Attempt  3	[0.02 s]
+2.0.AM: Trace Attempt  4	[0.03 s]
+2.0.AM: Trace Attempt  5	[0.04 s]
+2.0.B: Trace Attempt 29	[8.34 s]
+2.0.B: Stopped processing property "cover_done_a"	[10.04 s].
+2.0.B: Starting proof for property "cover_done_b"	[0.00 s].
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.B: Trace Attempt  2	[0.14 s]
+2.0.B: Trace Attempt  3	[0.19 s]
+2.0.B: Trace Attempt  4	[0.19 s]
+2.0.B: Trace Attempt  5	[0.20 s]
+2.0.N: Trace Attempt  8	[0.50 s]
+2.0.L: Trace Attempt 192	[26.93 s]
+2.0.Bm: Trace Attempt 30	[27.78 s]
+2.0.Ht: Trace Attempt 30	[27.79 s]
+2.0.Mpcustom2: Trace Attempt  5	[30.06 s]
+2.0.B: Trace Attempt 27	[5.10 s]
+2.0.L: Trace Attempt 210	[31.02 s]
+2.0.N: Trace Attempt 20	[6.26 s]
+2.0.N: Trace Attempt  1	[6.61 s]
+2.0.N: Trace Attempt  2	[6.68 s]
+2.0.N: Trace Attempt  3	[6.69 s]
+2.0.N: Trace Attempt  4	[6.72 s]
+2.0.N: Trace Attempt  5	[6.87 s]
+2.0.AM: Trace Attempt 21	[8.29 s]
+2.0.B: Trace Attempt 29	[9.24 s]
+2.0.N: Trace Attempt 11	[9.49 s]
+2.0.N: Per property time limit expired (10.00 s) [10.03 s]
+2.0.N: Stopped processing property "cover_done_b"	[10.03 s].
+2.0.L: Trace Attempt 227	[35.19 s]
+2.0.B: Stopped processing property "cover_done_b"	[10.04 s].
+2.0.AM: Stopped processing property "cover_done_b"	[10.31 s].
+2.0.N: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.B: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.AM: Starting proof for property "no_sidechannel"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.AM: Trace Attempt  3	[0.02 s]
+2.0.AM: Trace Attempt  4	[0.03 s]
+2.0.AM: Trace Attempt  5	[0.04 s]
+2.0.B: Trace Attempt  1	[0.06 s]
+2.0.B: Trace Attempt  2	[0.15 s]
+2.0.B: Trace Attempt  3	[0.21 s]
+2.0.B: Trace Attempt  4	[0.21 s]
+2.0.B: Trace Attempt  5	[0.22 s]
+2.0.Mpcustom2: Trace Attempt  7	[35.82 s]
+2.0.N: Trace Attempt 19	[1.42 s]
+2.0.L: Trace Attempt 243	[39.30 s]
+2.0.AM: Trace Attempt 16	[4.34 s]
+2.0.Mpcustom2: Trace Attempt  5	[39.85 s]
+2.0.Bm: Trace Attempt 31	[40.16 s]
+2.0.N: Trace Attempt  1	[5.57 s]
+2.0.N: Trace Attempt  2	[5.76 s]
+2.0.N: Trace Attempt  3	[5.79 s]
+2.0.N: Trace Attempt  4	[5.86 s]
+2.0.B: Trace Attempt 27	[5.99 s]
+2.0.N: Trace Attempt  5	[6.25 s]
+2.0.L: Trace Attempt 258	[43.38 s]
+2.0.Ht: Trace Attempt 31	[44.08 s]
+2.0.L: Trace Attempt 273	[47.64 s]
+2.0.AM: Trace Attempt 18	[12.85 s]
+2.0.Mpcustom2: Trace Attempt  9	[50.65 s]
+2.0.N: Trace Attempt  8	[16.23 s]
+2.0.L: Trace Attempt 287	[51.86 s]
+2.0.Ht: Trace Attempt 32	[52.91 s]
+2.0.Bm: Trace Attempt 32	[53.29 s]
+2.0.AM: Trace Attempt 21	[18.02 s]
+2.0.B: Trace Attempt 29	[19.80 s]
+2.0.L: Trace Attempt 300	[55.88 s]
+2.0.N: Trace Attempt 11	[24.54 s]
+2.0.L: Trace Attempt 313	[60.05 s]
+2.0.Mpcustom2: Trace Attempt 13	[63.24 s]
+2.0.L: Trace Attempt 326	[64.36 s]
+2.0.B: Trace Attempt 30	[29.00 s]
+2.0.AM: Trace Attempt 22	[29.94 s]
+2.0.Ht: Trace Attempt 33	[66.02 s]
+2.0.Bm: Trace Attempt 33	[66.59 s]
+2.0.N: Trace Attempt 13	[32.29 s]
+2.0.L: Trace Attempt 338	[68.54 s]
+2.0.Mpcustom2: Trace Attempt 14	[72.18 s]
+2.0.L: Trace Attempt 350	[72.80 s]
+2.0.B: Trace Attempt 31	[38.93 s]
+2.0.Mpcustom2: Trace Attempt 15	[76.53 s]
+2.0.L: Trace Attempt 361	[76.81 s]
+2.0.AM: Trace Attempt 23	[42.49 s]
+2.0.N: Trace Attempt 15	[43.37 s]
+2.0.Ht: Trace Attempt 34	[79.51 s]
+2.0.L: Trace Attempt 372	[80.94 s]
+2.0.Bm: Trace Attempt 34	[81.87 s]
+2.0.Mpcustom2: Trace Attempt 13	[84.21 s]
+2.0.L: Trace Attempt 383	[85.16 s]
+2.0.B: Trace Attempt 32	[50.29 s]
+2.0.Mpcustom2: Trace Attempt 14	[89.44 s]
+2.0.L: Trace Attempt 394	[89.51 s]
+2.0.L: Using states from traces to { (reset) }
+2.0.L: Trace Attempt  3	[92.72 s]
+2.0.AM: Trace Attempt 24	[57.67 s]
+2.0.L: Trace Attempt  4	[93.10 s]
+2.0.L: Trace Attempt  5	[93.15 s]
+2.0.L: Using states from traces to { address_enable_signals_equal_0 <18> }
+2.0.L: Trace Attempt  3	[95.02 s]
+2.0.L: Trace Attempt  4	[95.06 s]
+2.0.L: Trace Attempt  5	[95.09 s]
+2.0.L: Using states from traces to { no_address_taint_1 <21> }
+2.0.L: Trace Attempt  3	[95.19 s]
+2.0.L: Trace Attempt  4	[95.23 s]
+2.0.L: Trace Attempt  5	[95.26 s]
+2.0.Ht: Trace Attempt 35	[96.14 s]
+2.0.Bm: Trace Attempt 35	[96.15 s]
+2.0.L: Trace Attempt 64	[99.35 s]
+2.0.L: Trace Attempt 99	[103.37 s]
+2.0.B: Trace Attempt 33	[69.66 s]
+2.0.L: Trace Attempt 128	[107.52 s]
+2.0.Mpcustom2: Trace Attempt 13	[108.57 s]
+2.0.L: Trace Attempt 152	[111.57 s]
+2.0.N: Trace Attempt 16	[79.11 s]
+2.0.L: Trace Attempt 174	[115.73 s]
+2.0.Bm: Trace Attempt 36	[120.05 s]
+2.0.L: Trace Attempt 194	[119.95 s]
+2.0.AM: Trace Attempt 25	[87.62 s]
+2.0.L: Trace Attempt 212	[124.06 s]
+2.0.Mpcustom2: Trace Attempt 16	[124.66 s]
+2.0.B: Trace Attempt 34	[90.11 s]
+2.0.L: Trace Attempt 229	[128.22 s]
+2.0.L: Trace Attempt 245	[132.34 s]
+2.0.N: Per property time limit expired (100.00 s) [100.10 s]
+2.0.N: Stopped processing property "no_sidechannel"	[100.10 s].
+2.0.N: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.AM: Stopped processing property "no_sidechannel"	[100.29 s].
+2.0.AM: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.AM: Trace Attempt  1	[0.01 s]
+2.0.AM: Trace Attempt  2	[0.01 s]
+2.0.AM: Trace Attempt  3	[0.02 s]
+2.0.AM: Trace Attempt  4	[0.03 s]
+2.0.AM: Trace Attempt  5	[0.04 s]
+2.0.B: Per property time limit expired (100.00 s) [100.53 s]
+2.0.B: Stopped processing property "no_sidechannel"	[100.53 s].
+2.0.B: Starting proof for property "cover_done_a"	[0.00 s].
+2.0.B: Trace Attempt  1	[0.05 s]
+2.0.B: Trace Attempt  2	[0.14 s]
+2.0.B: Trace Attempt  3	[0.19 s]
+2.0.B: Trace Attempt  4	[0.20 s]
+2.0.B: Trace Attempt  5	[0.20 s]
+2.0.L: Trace Attempt 260	[136.40 s]
+2.0.Mpcustom2: Trace Attempt 15	[136.66 s]
+2.0.N: Trace Attempt  1	[4.14 s]
+2.0.N: Trace Attempt  2	[4.22 s]
+2.0.N: Trace Attempt  3	[4.23 s]
+2.0.N: Trace Attempt  4	[4.25 s]
+2.0.N: Trace Attempt  5	[4.35 s]
+2.0.L: Trace Attempt 274	[140.41 s]
+2.0.AM: Trace Attempt 20	[6.51 s]
+2.0.B: Trace Attempt 28	[6.29 s]
+2.0.N: Trace Attempt 10	[8.49 s]
+2.0.L: Trace Attempt 288	[144.64 s]
+2.0.Ht: Trace Attempt 36	[146.72 s]
+2.0.B: Trace Attempt 30	[12.29 s]
+2.0.L: Trace Attempt 301	[148.68 s]
+2.0.AM: Trace Attempt 24	[14.67 s]
+2.0.Bm: Trace Attempt 37	[151.73 s]
+2.0.Mpcustom2: Trace Attempt 16	[152.80 s]
+2.0.L: Trace Attempt 314	[152.85 s]
+2.0.N: Trace Attempt 15	[19.04 s]
+2.0.AM: Trace Attempt 26	[18.89 s]
+2.0.L: Trace Attempt 326	[156.85 s]
+2.0.L: Trace Attempt 338	[161.01 s]
+2.0.AM: Trace Attempt 27	[26.52 s]
+2.0.B: Trace Attempt 31	[26.88 s]
+2.0.L: Trace Attempt 350	[165.26 s]
+2.0.Mpcustom2: Trace Attempt 15	[167.42 s]
+2.0.AM: Trace Attempt 28	[32.03 s]
+2.0.L: Trace Attempt 361	[169.27 s]
+2.0.L: Trace Attempt 372	[173.38 s]
+2.0.N: Trace Attempt 16	[38.05 s]
+2.0.B: Trace Attempt 32	[38.71 s]
+2.0.Mpcustom2: Trace Attempt 16	[176.35 s]
+2.0.AM: Trace Attempt 29	[41.65 s]
+2.0.L: Trace Attempt 383	[177.58 s]
+2: ProofGrid usable level: 3
+2: ProofGrid usable level: 3
+2: ProofGrid usable level: 3
+2.0.L: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.L: Using trace diversification with seed 1 (0.05)
+2.0.L: Using LRU state removal heuristic
+2.0.L: Using states from traces to { (reset) }
+2.0.U2: Proofgrid shell started at 11220@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.J: Proofgrid shell started at 11218@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2.0.U: Proofgrid shell started at 11219@ee-tik-eda3(local) jg_10949_ee-tik-eda3_1
+2: ProofGrid usable level: 3
+2.0.U2: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.J: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.U: clocks: 1, declared: 1, looping: 0, posedge: 1, negedge: 0, noedge: 0, bothedge: 0
+2.0.N: Stopped processing property "cover_done_a"	[45.97 s].
+2.0.U: Seed 1
+2.0.AM: Stopped processing property "cover_done_a"	[45.79 s].
+2.0.U2: Seed 1
+2.0.L: Trace Attempt  3	[0.23 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  2	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  3	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  4	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  1	[0.28 s]
+2.0.J: Trace Attempt  1	[0.29 s]
+2.0.J: Trace Attempt  1	[0.29 s]
+2.0.J: Trace Attempt  1	[0.30 s]
+2.0.J: Trace Attempt  1	[0.30 s]
+2.0.J: Trace Attempt  1	[0.32 s]
+2.0.J: Trace Attempt  1	[0.34 s]
+2.0.J: Trace Attempt  1	[0.36 s]
+2.0.B: Stopped processing property "cover_done_a"	[45.90 s].
+2.0.J: Trace Attempt  1	[0.41 s]
+2.0.J: Trace Attempt  1	[0.47 s]
+2.0.L: Trace Attempt  4	[0.62 s]
+2.0.U: Trace Attempt  1	[0.51 s]
+2.0.L: Trace Attempt  5	[0.67 s]
+2.0.J: Trace Attempt  1	[0.56 s]
+2.0.U2: Trace Attempt  1	[0.58 s]
+2.0.J: Trace Attempt  1	[0.70 s]
+2.0.J: Trace Attempt 50	[0.71 s]
+2.0.J: A trace with 50 cycles was found. [0.71 s]
+INFO (IPF055): 2.0.J: A counterexample (cex) with 50 cycles was found for the property "no_sidechannel" in 0.70 s.
+INFO (IPF047): 2.0.J: The cover property "cover_done_a" was covered in 50 cycles in 0.70 s.
+2.0.J: Trace Attempt 53	[0.74 s]
+2: ProofGrid usable level: 1
+2.0.J: A trace with 53 cycles was found. [0.74 s]
+INFO (IPF047): 2.0.J: The cover property "cover_done_b" was covered in 53 cycles in 0.72 s.
+2.0.J: All properties determined. [0.76 s]
+INFO (IPF144): 2: Initiating shutdown of proof [182.44 s]
+2.0.Ht: Requesting engine job to terminate
+2.0.Hp: Requesting engine job to terminate
+2.0.U: Requesting engine job to terminate
+2.0.Bm: Requesting engine job to terminate
+2.0.Mpcustom2: Requesting engine job to terminate
+2.0.L: Requesting engine job to terminate
+2.0.N: Requesting engine job to terminate
+2.0.B: Requesting engine job to terminate
+2.0.AM: Requesting engine job to terminate
+2.0.J: Requesting engine job to terminate
+2.0.U2: Requesting engine job to terminate
+2.0.J: Exited with Success (@ 182.45 s)
+2: ProofGrid usable level: 0
+2.0.B: Interrupted. [46.29 s]
+2.0.AM: Interrupted. [46.53 s]
+2.0.N: Interrupted. [46.72 s]
+2.0.U: Trace Attempt  2	[0.80 s]
+2.0.B: Exited with Success (@ 182.49 s)
+2.0.AM: Exited with Success (@ 182.50 s)
+2.0.N: Exited with Success (@ 182.50 s)
+2.0.L: Trace Attempt  9	[0.90 s]
+2.0.L: All properties determined. [0.00 s]
+2.0.L: Exited with Success (@ 182.54 s)
+2.0.U: All properties determined. [0.00 s]
+2.0.U2: All properties determined. [0.00 s]
+2.0.U: Exited with Success (@ 182.68 s)
+2.0.U2: Exited with Success (@ 182.68 s)
+2.0.Hp: Interrupted (multi)
+2.0.Hp: Interrupted. [0.00 s]
+2.0.Ht: Interrupted (multi)
+2.0.Ht: All properties determined. [0.00 s]
+2.0.Hp: Exited with Success (@ 182.90 s)
+2.0.Ht: Exited with Success (@ 182.96 s)
+2.0.Bm: All properties determined. [0.00 s]
+2.0.Bm: Exited with Success (@ 183.03 s)
+2.0.Mpcustom2: All properties determined. [0.00 s]
+2.0.Mpcustom2: Exited with Success (@ 183.18 s)
+2: --------------------------------------------------------------
+ProofGrid Summary (utilization 99.90 %)
+--------------------------------------------------------------
+     engines started                               :    12
+     engine jobs started                           :    12
+
+    Time in state (seconds)
+    --------------------------------------------
+               Pending     Running        Dead
+    --------------------------------------------
+    min           0.00        0.00        0.00
+    mean          0.13      121.63        0.00
+    median        0.13      181.88        0.00
+    max           0.14      182.31        0.00
+    sum           1.51     1459.58        0.00
+
+    Data read    : 571.69 kiB
+    Data written : 30.29 kiB
+
+INFO (IPF180): 2: ProofGrid utilization: 99.90% slot-seconds: 1459.58
+2: ProofGrid usable level: 0
+2: All pending notifications were processed.
+INFO (IPF059): 2: Completed proof on task: "<embedded>"
+
+==============================================================
+SUMMARY
+==============================================================
+           Properties Considered              : 7
+                 assertions                   : 5
+                  - proven                    : 0 (0%)
+                  - bounded_proven (user)     : 0 (0%)
+                  - bounded_proven (auto)     : 0 (0%)
+                  - marked_proven             : 0 (0%)
+                  - cex                       : 5 (100%)
+                  - ar_cex                    : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+                 covers                       : 2
+                  - unreachable               : 0 (0%)
+                  - bounded_unreachable (user): 0 (0%)
+                  - covered                   : 2 (100%)
+                  - ar_covered                : 0 (0%)
+                  - undetermined              : 0 (0%)
+                  - unknown                   : 0 (0%)
+                  - error                     : 0 (0%)
+determined
+[<embedded>] % 
+[<embedded>] % # export report
+[<embedded>] % report -task . -csv -file report.csv
+[<embedded>] % # export the violation traces
+[<embedded>] % set_trace_optimization standard
+[<embedded>] % exec mkdir cex_waves
+[<embedded>] % foreach prop [get_property_list -include {status {cex}}] {
+  set name [string range $prop 12 end]
+  visualize -batch -violation -property $prop -window 0
+  visualize -save -force -vcd cex_waves/$name.vcd -window 0
+}
+INFO (IVS015): Setting Visualize task to "<embedded>".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::no_sidechannel".
+INFO (ISIM008): Simulation is processing trace data. Total number of nets in analysis 96944.
+INFO (ITR004): Writing vcd data to file "cex_waves/no_sidechannel.vcd"...
+INFO (ITR005): Writing trace data to vcd file took Time = 0.000.
+INFO (IVS015): Setting Visualize task to "<embedded>".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::address_enable_signals_equal_0".
+INFO (ISIM008): Simulation is processing trace data. Total number of nets in analysis 96944.
+INFO (ITR004): Writing vcd data to file "cex_waves/address_enable_signals_equal_0.vcd"...
+INFO (ITR005): Writing trace data to vcd file took Time = 0.000.
+INFO (IVS015): Setting Visualize task to "<embedded>".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::no_address_taint_0".
+INFO (ISIM008): Simulation is processing trace data. Total number of nets in analysis 96949.
+INFO (ITR004): Writing vcd data to file "cex_waves/no_address_taint_0.vcd"...
+INFO (ITR005): Writing trace data to vcd file took Time = 0.000.
+INFO (IVS015): Setting Visualize task to "<embedded>".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::address_enable_signals_equal_1".
+INFO (ISIM008): Simulation is processing trace data. Total number of nets in analysis 96944.
+INFO (ITR004): Writing vcd data to file "cex_waves/address_enable_signals_equal_1.vcd"...
+INFO (ITR005): Writing trace data to vcd file took Time = 0.000.
+INFO (IVS015): Setting Visualize task to "<embedded>".
+INFO (IVS008): Expanding analysis region to enable visualization of "<embedded>::no_address_taint_1".
+INFO (ISIM008): Simulation is processing trace data. Total number of nets in analysis 96949.
+INFO (ITR004): Writing vcd data to file "cex_waves/no_address_taint_1.vcd"...
+INFO (ITR005): Writing trace data to vcd file took Time = 0.000.
+[<embedded>] % 
+[<embedded>] % exit 0
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.
+INFO (IPL018): The peak resident set memory use for this session was 6.305 GB.
+INFO (IPL014): Waiting for the Tcl-thread to exit.
+INFO (IPL015): The Tcl-thread exited with status 0.
+INFO (IPL016): Exiting the analysis session with status 0.

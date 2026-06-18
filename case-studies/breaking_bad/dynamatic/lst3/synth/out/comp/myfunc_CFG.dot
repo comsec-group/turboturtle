@@ -1,0 +1,4 @@
+digraph "myfunc" {
+  node [shape=box];
+  "^bb0" [label="^bb0", shape="oval"];
+}

@@ -1,0 +1,28 @@
+# syntax=docker/dockerfile:1
+
+FROM ubuntu:20.04
+
+# install dependencies
+RUN apt update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        wget \
+        tar \
+        xz-utils \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /tmp
+
+# install oss-cad-suite
+RUN wget https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2025-06-13/oss-cad-suite-linux-x64-20250613.tgz && \
+    tar -xvf oss-cad-suite-linux-x64-20250613.tgz && \
+    mv oss-cad-suite /opt
+
+COPY utils/rootwrap.sh /usr/local/bin/rootwrap.sh
+COPY oss-cad-suite/userwrap.sh /usr/local/bin/userwrap.sh
+RUN chmod +x /usr/local/bin/rootwrap.sh
+RUN chmod +x /usr/local/bin/userwrap.sh
+
+WORKDIR /work
+
+ENTRYPOINT [ "/usr/local/bin/rootwrap.sh" ]

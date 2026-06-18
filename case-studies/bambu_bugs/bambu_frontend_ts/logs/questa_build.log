@@ -1,0 +1,642 @@
+QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+Start time: 17:47:33 on Sep 24,2025
+vlog rtl/myfunc.v 
+-- Compiling module constant_value
+-- Compiling module register_STD
+-- Compiling module register_SRSE
+-- Compiling module read_cond_FU
+-- Compiling module UIconvert_expr_FU
+-- Compiling module ASSIGN_REAL_FU
+-- Compiling module fp_cond_expr_FU
+-- Compiling module fp_eq_expr_FU
+-- Compiling module fp_ne_expr_FU
+-- Compiling module MUX_GATE
+-- Compiling module IIdata_converter_FU
+-- Compiling module datapath_myfunc
+-- Compiling module controller_myfunc
+-- Compiling module flipflop_SR
+-- Compiling module _myfunc
+-- Compiling module myfunc
+
+Top level modules:
+	myfunc
+End time: 17:47:33 on Sep 24,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+Start time: 17:47:33 on Sep 24,2025
+vlog rtl/*.sv 
+** Error: (vlog-7) Failed to open design unit file "rtl/*.sv" in read mode.
+No such file or directory. (errno = ENOENT)
+End time: 17:47:33 on Sep 24,2025, Elapsed time: 0:00:00
+Errors: 1, Warnings: 0
+QuestaSim-64 vcom 2022.3_1 Compiler 2022.08 Aug 12 2022
+Start time: 17:47:33 on Sep 24,2025
+vcom rtl/FFdata_converter_FU_32_64.vhdl rtl/FFdata_converter_FU_64_32.vhdl rtl/FloPoCo_common.vhdl rtl/fp_float_expr_32_32_FU_32_32_500.vhdl rtl/fp_float_expr_32_64_FU_32_64_500.vhdl rtl/fp_ge_expr_FU_64_1_500.vhdl rtl/fp_gt_expr_FU_64_1_500.vhdl rtl/fp_le_expr_FU_64_1_500.vhdl rtl/fp_lt_expr_FU_64_1_500.vhdl rtl/fp_minus_expr_FU_64_64_500.vhdl rtl/fp_mult_expr_FU_32_32_500.vhdl rtl/fp_mult_expr_FU_64_64_500.vhdl rtl/fp_plus_expr_FU_64_64_500.vhdl rtl/myfunc.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity wrapped_FFdata_converter_FU_32_64
+-- Compiling architecture arch of wrapped_FFdata_converter_FU_32_64
+-- Compiling entity in_wrap_FFdata_converter_FU_32_64
+-- Compiling architecture arch of in_wrap_FFdata_converter_FU_32_64
+-- Compiling entity out_wrap_FFdata_converter_FU_32_64
+-- Compiling architecture arch of out_wrap_FFdata_converter_FU_32_64
+-- Loading package NUMERIC_STD
+-- Compiling entity FFdata_converter_FU_32_64
+-- Compiling architecture arch of FFdata_converter_FU_32_64
+-- Compiling entity wrapped_FFdata_converter_FU_64_32
+-- Compiling architecture arch of wrapped_FFdata_converter_FU_64_32
+-- Compiling entity in_wrap_FFdata_converter_FU_64_32
+-- Compiling architecture arch of in_wrap_FFdata_converter_FU_64_32
+-- Compiling entity out_wrap_FFdata_converter_FU_64_32
+-- Compiling architecture arch of out_wrap_FFdata_converter_FU_64_32
+-- Compiling entity FFdata_converter_FU_64_32
+-- Compiling architecture arch of FFdata_converter_FU_64_32
+-- Compiling entity Compressor_3_2
+-- Compiling architecture arch of Compressor_3_2
+-- Compiling entity Compressor_6_3
+-- Compiling architecture arch of Compressor_6_3
+-- Compiling entity Compressor_14_3
+-- Compiling architecture arch of Compressor_14_3
+-- Compiling entity Compressor_4_3
+-- Compiling architecture arch of Compressor_4_3
+-- Compiling entity Compressor_23_3
+-- Compiling architecture arch of Compressor_23_3
+-- Compiling entity Compressor_13_3
+-- Compiling architecture arch of Compressor_13_3
+-- Compiling entity Fix2FP_0_31_S_8_23_LZOCS
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23_LZOCS
+-- Compiling entity Fix2FP_0_31_S_8_23exponentConversion
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23exponentConversion
+-- Compiling entity Fix2FP_0_31_S_8_23exponentFinal
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23exponentFinal
+-- Compiling entity Fix2FP_0_31_S_8_23zeroD
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23zeroD
+-- Compiling entity Fix2FP_0_31_S_8_23_fractionConvert
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23_fractionConvert
+-- Compiling entity Fix2FP_0_31_S_8_23_oneSubstracter
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23_oneSubstracter
+-- Compiling entity Fix2FP_0_31_S_8_23roundingAdder
+-- Compiling architecture arch of Fix2FP_0_31_S_8_23roundingAdder
+-- Compiling entity wrapped_fp_float_expr_32_32_FU_32_32_500
+-- Compiling architecture arch of wrapped_fp_float_expr_32_32_FU_32_32_500
+-- Compiling entity out_wrap_fp_float_expr_32_32_FU_32_32_500
+-- Compiling architecture arch of out_wrap_fp_float_expr_32_32_FU_32_32_500
+-- Compiling entity fp_float_expr_32_32_FU_32_32_500
+-- Compiling architecture arch of fp_float_expr_32_32_FU_32_32_500
+-- Compiling entity Fix2FP_0_31_S_11_52zeroD
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52zeroD
+-- Compiling entity Fix2FP_0_31_S_11_52_LZCS
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52_LZCS
+-- Compiling entity Fix2FP_0_31_S_11_52_fractionConvert
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52_fractionConvert
+-- Compiling entity Fix2FP_0_31_S_11_52exponentConversion
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52exponentConversion
+-- Compiling entity Fix2FP_0_31_S_11_52exponentFinal
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52exponentFinal
+-- Compiling entity Fix2FP_0_31_S_11_52expCorrect
+-- Compiling architecture arch of Fix2FP_0_31_S_11_52expCorrect
+-- Compiling entity wrapped_fp_float_expr_32_64_FU_32_64_500
+-- Compiling architecture arch of wrapped_fp_float_expr_32_64_FU_32_64_500
+-- Compiling entity out_wrap_fp_float_expr_32_64_FU_32_64_500
+-- Compiling architecture arch of out_wrap_fp_float_expr_32_64_FU_32_64_500
+-- Compiling entity fp_float_expr_32_64_FU_32_64_500
+-- Compiling architecture arch of fp_float_expr_32_64_FU_32_64_500
+-- Compiling entity IntAdder_66_f500_uid98
+-- Compiling architecture arch of IntAdder_66_f500_uid98
+-- Compiling entity FPAdder_11_52_uid96_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid96_RightShifter
+-- Compiling entity IntAdder_56_f500_uid108
+-- Compiling architecture arch of IntAdder_56_f500_uid108
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid115
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid115
+-- Compiling entity IntAdder_66_f500_uid118
+-- Compiling architecture arch of IntAdder_66_f500_uid118
+-- Compiling entity FPge_expr_11_52value_difference
+-- Compiling architecture arch of FPge_expr_11_52value_difference
+-- Compiling entity wrapped_fp_ge_expr_FU_64_1_500
+-- Compiling architecture arch of wrapped_fp_ge_expr_FU_64_1_500
+-- Compiling entity in_wrap_fp_ge_expr_FU_64_1_500
+-- Compiling architecture arch of in_wrap_fp_ge_expr_FU_64_1_500
+-- Compiling entity fp_ge_expr_FU_64_1_500
+-- Compiling architecture arch of fp_ge_expr_FU_64_1_500
+-- Compiling entity IntAdder_66_f500_uid130
+-- Compiling architecture arch of IntAdder_66_f500_uid130
+-- Compiling entity FPAdder_11_52_uid128_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid128_RightShifter
+-- Compiling entity IntAdder_56_f500_uid140
+-- Compiling architecture arch of IntAdder_56_f500_uid140
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid147
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid147
+-- Compiling entity IntAdder_66_f500_uid150
+-- Compiling architecture arch of IntAdder_66_f500_uid150
+-- Compiling entity FPgt_expr_11_52value_difference
+-- Compiling architecture arch of FPgt_expr_11_52value_difference
+-- Compiling entity wrapped_fp_gt_expr_FU_64_1_500
+-- Compiling architecture arch of wrapped_fp_gt_expr_FU_64_1_500
+-- Compiling entity in_wrap_fp_gt_expr_FU_64_1_500
+-- Compiling architecture arch of in_wrap_fp_gt_expr_FU_64_1_500
+-- Compiling entity fp_gt_expr_FU_64_1_500
+-- Compiling architecture arch of fp_gt_expr_FU_64_1_500
+-- Compiling entity IntAdder_66_f500_uid162
+-- Compiling architecture arch of IntAdder_66_f500_uid162
+-- Compiling entity FPAdder_11_52_uid160_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid160_RightShifter
+-- Compiling entity IntAdder_56_f500_uid172
+-- Compiling architecture arch of IntAdder_56_f500_uid172
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid179
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid179
+-- Compiling entity IntAdder_66_f500_uid182
+-- Compiling architecture arch of IntAdder_66_f500_uid182
+-- Compiling entity FPle_expr_11_52value_difference
+-- Compiling architecture arch of FPle_expr_11_52value_difference
+-- Compiling entity wrapped_fp_le_expr_FU_64_1_500
+-- Compiling architecture arch of wrapped_fp_le_expr_FU_64_1_500
+-- Compiling entity in_wrap_fp_le_expr_FU_64_1_500
+-- Compiling architecture arch of in_wrap_fp_le_expr_FU_64_1_500
+-- Compiling entity fp_le_expr_FU_64_1_500
+-- Compiling architecture arch of fp_le_expr_FU_64_1_500
+-- Compiling entity IntAdder_66_f500_uid194
+-- Compiling architecture arch of IntAdder_66_f500_uid194
+-- Compiling entity FPAdder_11_52_uid192_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid192_RightShifter
+-- Compiling entity IntAdder_56_f500_uid204
+-- Compiling architecture arch of IntAdder_56_f500_uid204
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid211
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid211
+-- Compiling entity IntAdder_66_f500_uid214
+-- Compiling architecture arch of IntAdder_66_f500_uid214
+-- Compiling entity FPlt_expr_11_52value_difference
+-- Compiling architecture arch of FPlt_expr_11_52value_difference
+-- Compiling entity wrapped_fp_lt_expr_FU_64_1_500
+-- Compiling architecture arch of wrapped_fp_lt_expr_FU_64_1_500
+-- Compiling entity in_wrap_fp_lt_expr_FU_64_1_500
+-- Compiling architecture arch of in_wrap_fp_lt_expr_FU_64_1_500
+-- Compiling entity fp_lt_expr_FU_64_1_500
+-- Compiling architecture arch of fp_lt_expr_FU_64_1_500
+-- Compiling entity IntAdder_66_f500_uid225
+-- Compiling architecture arch of IntAdder_66_f500_uid225
+-- Compiling entity FPAdder_11_52_uid223_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid223_RightShifter
+-- Compiling entity IntAdder_56_f500_uid235
+-- Compiling architecture arch of IntAdder_56_f500_uid235
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid242
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid242
+-- Compiling entity IntAdder_66_f500_uid245
+-- Compiling architecture arch of IntAdder_66_f500_uid245
+-- Compiling entity wrapped_fp_minus_expr_FU_64_64_500
+-- Compiling architecture arch of wrapped_fp_minus_expr_FU_64_64_500
+-- Compiling entity in_wrap_fp_minus_expr_FU_64_64_500
+-- Compiling architecture arch of in_wrap_fp_minus_expr_FU_64_64_500
+-- Compiling entity out_wrap_fp_minus_expr_FU_64_64_500
+-- Compiling architecture arch of out_wrap_fp_minus_expr_FU_64_64_500
+-- Compiling entity fp_minus_expr_FU_64_64_500
+-- Compiling architecture arch of fp_minus_expr_FU_64_64_500
+-- Compiling entity IntAdder_42_f500_uid267
+-- Compiling architecture arch of IntAdder_42_f500_uid267
+-- Compiling entity IntMultiplier_UsingDSP_24_24_48_unsigned_uid256
+-- Compiling architecture arch of IntMultiplier_UsingDSP_24_24_48_unsigned_uid256
+-- Compiling entity IntAdder_33_f500_uid275
+-- Compiling architecture arch of IntAdder_33_f500_uid275
+-- Compiling entity wrapped_fp_mult_expr_FU_32_32_500
+-- Compiling architecture arch of wrapped_fp_mult_expr_FU_32_32_500
+-- Compiling entity in_wrap_fp_mult_expr_FU_32_32_500
+-- Compiling architecture arch of in_wrap_fp_mult_expr_FU_32_32_500
+-- Compiling entity out_wrap_fp_mult_expr_FU_32_32_500
+-- Compiling architecture arch of out_wrap_fp_mult_expr_FU_32_32_500
+-- Compiling entity fp_mult_expr_FU_32_32_500
+-- Compiling architecture arch of fp_mult_expr_FU_32_32_500
+-- Compiling entity IntAdder_106_f500_uid420
+-- Compiling architecture arch of IntAdder_106_f500_uid420
+-- Compiling entity IntMultiplier_UsingDSP_53_53_106_unsigned_uid286
+-- Compiling architecture arch of IntMultiplier_UsingDSP_53_53_106_unsigned_uid286
+-- Compiling entity IntAdder_65_f500_uid428
+-- Compiling architecture arch of IntAdder_65_f500_uid428
+-- Compiling entity wrapped_fp_mult_expr_FU_64_64_500
+-- Compiling architecture arch of wrapped_fp_mult_expr_FU_64_64_500
+-- Compiling entity in_wrap_fp_mult_expr_FU_64_64_500
+-- Compiling architecture arch of in_wrap_fp_mult_expr_FU_64_64_500
+-- Compiling entity out_wrap_fp_mult_expr_FU_64_64_500
+-- Compiling architecture arch of out_wrap_fp_mult_expr_FU_64_64_500
+-- Compiling entity fp_mult_expr_FU_64_64_500
+-- Compiling architecture arch of fp_mult_expr_FU_64_64_500
+-- Compiling entity IntAdder_66_f500_uid439
+-- Compiling architecture arch of IntAdder_66_f500_uid439
+-- Compiling entity FPAdder_11_52_uid437_RightShifter
+-- Compiling architecture arch of FPAdder_11_52_uid437_RightShifter
+-- Compiling entity IntAdder_56_f500_uid449
+-- Compiling architecture arch of IntAdder_56_f500_uid449
+-- Compiling entity LZCShifter_57_to_57_counting_64_uid456
+-- Compiling architecture arch of LZCShifter_57_to_57_counting_64_uid456
+-- Compiling entity IntAdder_66_f500_uid459
+-- Compiling architecture arch of IntAdder_66_f500_uid459
+-- Compiling entity wrapped_fp_plus_expr_FU_64_64_500
+-- Compiling architecture arch of wrapped_fp_plus_expr_FU_64_64_500
+-- Compiling entity in_wrap_fp_plus_expr_FU_64_64_500
+-- Compiling architecture arch of in_wrap_fp_plus_expr_FU_64_64_500
+-- Compiling entity out_wrap_fp_plus_expr_FU_64_64_500
+-- Compiling architecture arch of out_wrap_fp_plus_expr_FU_64_64_500
+-- Compiling entity fp_plus_expr_FU_64_64_500
+-- Compiling architecture arch of fp_plus_expr_FU_64_64_500
+-- Compiling package panda_pkg
+-- Compiling package body panda_pkg
+-- Loading package panda_pkg
+End time: 17:47:33 on Sep 24,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim-64 vlog 2022.3_1 Compiler 2022.08 Aug 12 2022
+Start time: 17:47:33 on Sep 24,2025
+vlog tb.sv 
+-- Compiling module tb
+
+Top level modules:
+	tb
+End time: 17:47:33 on Sep 24,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim-64 vopt 2022.3_1 Compiler 2022.08 Aug 12 2022
+Start time: 17:47:34 on Sep 24,2025
+vopt -access=r+/. tb -o tb_opt 
+
+Top level modules:
+	tb
+
+Analyzing design...
+-- Loading module tb
+-- Loading module myfunc
+-- Loading module _myfunc
+-- Loading module controller_myfunc
+-- Loading module datapath_myfunc
+-- Loading module MUX_GATE
+-- Loading module constant_value
+-- Loading module IIdata_converter_FU
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading entity fp_ge_expr_FU_64_1_500
+-- Loading architecture arch of fp_ge_expr_FU_64_1_500
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity wrapped_fp_ge_expr_FU_64_1_500
+-- Loading entity in_wrap_fp_ge_expr_FU_64_1_500
+-- Loading entity fp_le_expr_FU_64_1_500
+-- Loading architecture arch of fp_le_expr_FU_64_1_500
+-- Loading entity wrapped_fp_le_expr_FU_64_1_500
+-- Loading entity in_wrap_fp_le_expr_FU_64_1_500
+-- Loading entity fp_mult_expr_FU_64_64_500
+-- Loading architecture arch of fp_mult_expr_FU_64_64_500
+-- Loading entity wrapped_fp_mult_expr_FU_64_64_500
+-- Loading entity in_wrap_fp_mult_expr_FU_64_64_500
+-- Loading entity out_wrap_fp_mult_expr_FU_64_64_500
+-- Loading entity fp_plus_expr_FU_64_64_500
+-- Loading architecture arch of fp_plus_expr_FU_64_64_500
+-- Loading entity wrapped_fp_plus_expr_FU_64_64_500
+-- Loading entity in_wrap_fp_plus_expr_FU_64_64_500
+-- Loading entity out_wrap_fp_plus_expr_FU_64_64_500
+-- Loading module read_cond_FU
+-- Loading entity FFdata_converter_FU_64_32
+-- Loading architecture arch of FFdata_converter_FU_64_32
+-- Loading entity wrapped_FFdata_converter_FU_64_32
+-- Loading entity in_wrap_FFdata_converter_FU_64_32
+-- Loading entity out_wrap_FFdata_converter_FU_64_32
+-- Loading entity FFdata_converter_FU_32_64
+-- Loading architecture arch of FFdata_converter_FU_32_64
+-- Loading entity wrapped_FFdata_converter_FU_32_64
+-- Loading entity in_wrap_FFdata_converter_FU_32_64
+-- Loading entity out_wrap_FFdata_converter_FU_32_64
+-- Loading module fp_ne_expr_FU
+-- Loading entity fp_minus_expr_FU_64_64_500
+-- Loading architecture arch of fp_minus_expr_FU_64_64_500
+-- Loading entity wrapped_fp_minus_expr_FU_64_64_500
+-- Loading entity in_wrap_fp_minus_expr_FU_64_64_500
+-- Loading entity out_wrap_fp_minus_expr_FU_64_64_500
+-- Loading module UIconvert_expr_FU
+-- Loading entity fp_float_expr_32_64_FU_32_64_500
+-- Loading architecture arch of fp_float_expr_32_64_FU_32_64_500
+-- Loading entity wrapped_fp_float_expr_32_64_FU_32_64_500
+-- Loading entity out_wrap_fp_float_expr_32_64_FU_32_64_500
+-- Loading entity fp_float_expr_32_32_FU_32_32_500
+-- Loading architecture arch of fp_float_expr_32_32_FU_32_32_500
+-- Loading entity wrapped_fp_float_expr_32_32_FU_32_32_500
+-- Loading entity out_wrap_fp_float_expr_32_32_FU_32_32_500
+-- Loading entity fp_mult_expr_FU_32_32_500
+-- Loading architecture arch of fp_mult_expr_FU_32_32_500
+-- Loading entity wrapped_fp_mult_expr_FU_32_32_500
+-- Loading entity in_wrap_fp_mult_expr_FU_32_32_500
+-- Loading entity out_wrap_fp_mult_expr_FU_32_32_500
+-- Loading entity fp_lt_expr_FU_64_1_500
+-- Loading architecture arch of fp_lt_expr_FU_64_1_500
+-- Loading entity wrapped_fp_lt_expr_FU_64_1_500
+-- Loading entity in_wrap_fp_lt_expr_FU_64_1_500
+-- Loading module fp_eq_expr_FU
+-- Loading entity fp_gt_expr_FU_64_1_500
+-- Loading architecture arch of fp_gt_expr_FU_64_1_500
+-- Loading entity wrapped_fp_gt_expr_FU_64_1_500
+-- Loading entity in_wrap_fp_gt_expr_FU_64_1_500
+-- Loading module fp_cond_expr_FU
+-- Loading module ASSIGN_REAL_FU
+-- Loading module register_STD
+-- Loading module register_SRSE
+-- Loading module flipflop_SR
+-- Loading architecture arch of wrapped_fp_ge_expr_FU_64_1_500
+-- Loading entity FPge_expr_11_52value_difference
+-- Loading architecture arch of FPge_expr_11_52value_difference
+-- Loading entity IntAdder_66_f500_uid98
+-- Loading entity FPAdder_11_52_uid96_RightShifter
+-- Loading entity IntAdder_56_f500_uid108
+-- Loading entity LZCShifter_57_to_57_counting_64_uid115
+-- Loading entity IntAdder_66_f500_uid118
+-- Loading architecture arch of IntAdder_66_f500_uid98
+-- Loading architecture arch of FPAdder_11_52_uid96_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid108
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid115
+-- Loading architecture arch of IntAdder_66_f500_uid118
+-- Loading architecture arch of in_wrap_fp_ge_expr_FU_64_1_500
+-- Loading architecture arch of wrapped_fp_le_expr_FU_64_1_500
+-- Loading entity FPle_expr_11_52value_difference
+-- Loading architecture arch of FPle_expr_11_52value_difference
+-- Loading entity IntAdder_66_f500_uid162
+-- Loading entity FPAdder_11_52_uid160_RightShifter
+-- Loading entity IntAdder_56_f500_uid172
+-- Loading entity LZCShifter_57_to_57_counting_64_uid179
+-- Loading entity IntAdder_66_f500_uid182
+-- Loading architecture arch of IntAdder_66_f500_uid162
+-- Loading architecture arch of FPAdder_11_52_uid160_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid172
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid179
+-- Loading architecture arch of IntAdder_66_f500_uid182
+-- Loading architecture arch of in_wrap_fp_le_expr_FU_64_1_500
+-- Loading architecture arch of wrapped_fp_mult_expr_FU_64_64_500
+-- Loading entity IntMultiplier_UsingDSP_53_53_106_unsigned_uid286
+-- Loading entity IntAdder_65_f500_uid428
+-- Loading architecture arch of IntMultiplier_UsingDSP_53_53_106_unsigned_uid286
+-- Loading entity Compressor_6_3
+-- Loading entity Compressor_14_3
+-- Loading entity Compressor_4_3
+-- Loading entity Compressor_23_3
+-- Loading entity Compressor_13_3
+-- Loading entity Compressor_3_2
+-- Loading entity IntAdder_106_f500_uid420
+-- Loading architecture arch of Compressor_6_3
+-- Loading architecture arch of Compressor_14_3
+-- Loading architecture arch of Compressor_4_3
+-- Loading architecture arch of Compressor_23_3
+-- Loading architecture arch of Compressor_13_3
+-- Loading architecture arch of Compressor_3_2
+-- Loading architecture arch of IntAdder_106_f500_uid420
+-- Loading architecture arch of IntAdder_65_f500_uid428
+-- Loading architecture arch of in_wrap_fp_mult_expr_FU_64_64_500
+-- Loading architecture arch of out_wrap_fp_mult_expr_FU_64_64_500
+-- Loading architecture arch of wrapped_fp_plus_expr_FU_64_64_500
+-- Loading entity IntAdder_66_f500_uid439
+-- Loading entity FPAdder_11_52_uid437_RightShifter
+-- Loading entity IntAdder_56_f500_uid449
+-- Loading entity LZCShifter_57_to_57_counting_64_uid456
+-- Loading entity IntAdder_66_f500_uid459
+-- Loading architecture arch of IntAdder_66_f500_uid439
+-- Loading architecture arch of FPAdder_11_52_uid437_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid449
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid456
+-- Loading architecture arch of IntAdder_66_f500_uid459
+-- Loading architecture arch of in_wrap_fp_plus_expr_FU_64_64_500
+-- Loading architecture arch of out_wrap_fp_plus_expr_FU_64_64_500
+-- Loading architecture arch of wrapped_FFdata_converter_FU_64_32
+-- Loading architecture arch of in_wrap_FFdata_converter_FU_64_32
+-- Loading architecture arch of out_wrap_FFdata_converter_FU_64_32
+-- Loading architecture arch of wrapped_FFdata_converter_FU_32_64
+-- Loading architecture arch of in_wrap_FFdata_converter_FU_32_64
+-- Loading architecture arch of out_wrap_FFdata_converter_FU_32_64
+-- Loading architecture arch of wrapped_fp_minus_expr_FU_64_64_500
+-- Loading entity IntAdder_66_f500_uid225
+-- Loading entity FPAdder_11_52_uid223_RightShifter
+-- Loading entity IntAdder_56_f500_uid235
+-- Loading entity LZCShifter_57_to_57_counting_64_uid242
+-- Loading entity IntAdder_66_f500_uid245
+-- Loading architecture arch of IntAdder_66_f500_uid225
+-- Loading architecture arch of FPAdder_11_52_uid223_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid235
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid242
+-- Loading architecture arch of IntAdder_66_f500_uid245
+-- Loading architecture arch of in_wrap_fp_minus_expr_FU_64_64_500
+-- Loading architecture arch of out_wrap_fp_minus_expr_FU_64_64_500
+-- Loading architecture arch of wrapped_fp_float_expr_32_64_FU_32_64_500
+-- Loading entity Fix2FP_0_31_S_11_52zeroD
+-- Loading entity Fix2FP_0_31_S_11_52_LZCS
+-- Loading entity Fix2FP_0_31_S_11_52_fractionConvert
+-- Loading entity Fix2FP_0_31_S_11_52exponentConversion
+-- Loading entity Fix2FP_0_31_S_11_52exponentFinal
+-- Loading entity Fix2FP_0_31_S_11_52expCorrect
+-- Loading architecture arch of Fix2FP_0_31_S_11_52zeroD
+-- Loading architecture arch of Fix2FP_0_31_S_11_52_LZCS
+-- Loading architecture arch of Fix2FP_0_31_S_11_52_fractionConvert
+-- Loading architecture arch of Fix2FP_0_31_S_11_52exponentConversion
+-- Loading architecture arch of Fix2FP_0_31_S_11_52exponentFinal
+-- Loading architecture arch of Fix2FP_0_31_S_11_52expCorrect
+-- Loading architecture arch of out_wrap_fp_float_expr_32_64_FU_32_64_500
+-- Loading architecture arch of wrapped_fp_float_expr_32_32_FU_32_32_500
+-- Loading entity Fix2FP_0_31_S_8_23_LZOCS
+-- Loading entity Fix2FP_0_31_S_8_23exponentConversion
+-- Loading entity Fix2FP_0_31_S_8_23exponentFinal
+-- Loading entity Fix2FP_0_31_S_8_23zeroD
+-- Loading entity Fix2FP_0_31_S_8_23_fractionConvert
+-- Loading entity Fix2FP_0_31_S_8_23_oneSubstracter
+-- Loading entity Fix2FP_0_31_S_8_23roundingAdder
+-- Loading architecture arch of Fix2FP_0_31_S_8_23_LZOCS
+-- Loading architecture arch of Fix2FP_0_31_S_8_23exponentConversion
+-- Loading architecture arch of Fix2FP_0_31_S_8_23exponentFinal
+-- Loading architecture arch of Fix2FP_0_31_S_8_23zeroD
+-- Loading architecture arch of Fix2FP_0_31_S_8_23_fractionConvert
+-- Loading architecture arch of Fix2FP_0_31_S_8_23_oneSubstracter
+-- Loading architecture arch of Fix2FP_0_31_S_8_23roundingAdder
+-- Loading architecture arch of out_wrap_fp_float_expr_32_32_FU_32_32_500
+-- Loading architecture arch of wrapped_fp_mult_expr_FU_32_32_500
+-- Loading entity IntMultiplier_UsingDSP_24_24_48_unsigned_uid256
+-- Loading entity IntAdder_33_f500_uid275
+-- Loading architecture arch of IntMultiplier_UsingDSP_24_24_48_unsigned_uid256
+-- Loading entity IntAdder_42_f500_uid267
+-- Loading architecture arch of IntAdder_42_f500_uid267
+-- Loading architecture arch of IntAdder_33_f500_uid275
+-- Loading architecture arch of in_wrap_fp_mult_expr_FU_32_32_500
+-- Loading architecture arch of out_wrap_fp_mult_expr_FU_32_32_500
+-- Loading architecture arch of wrapped_fp_lt_expr_FU_64_1_500
+-- Loading entity FPlt_expr_11_52value_difference
+-- Loading architecture arch of FPlt_expr_11_52value_difference
+-- Loading entity IntAdder_66_f500_uid194
+-- Loading entity FPAdder_11_52_uid192_RightShifter
+-- Loading entity IntAdder_56_f500_uid204
+-- Loading entity LZCShifter_57_to_57_counting_64_uid211
+-- Loading entity IntAdder_66_f500_uid214
+-- Loading architecture arch of IntAdder_66_f500_uid194
+-- Loading architecture arch of FPAdder_11_52_uid192_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid204
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid211
+-- Loading architecture arch of IntAdder_66_f500_uid214
+-- Loading architecture arch of in_wrap_fp_lt_expr_FU_64_1_500
+-- Loading architecture arch of wrapped_fp_gt_expr_FU_64_1_500
+-- Loading entity FPgt_expr_11_52value_difference
+-- Loading architecture arch of FPgt_expr_11_52value_difference
+-- Loading entity IntAdder_66_f500_uid130
+-- Loading entity FPAdder_11_52_uid128_RightShifter
+-- Loading entity IntAdder_56_f500_uid140
+-- Loading entity LZCShifter_57_to_57_counting_64_uid147
+-- Loading entity IntAdder_66_f500_uid150
+-- Loading architecture arch of IntAdder_66_f500_uid130
+-- Loading architecture arch of FPAdder_11_52_uid128_RightShifter
+-- Loading architecture arch of IntAdder_56_f500_uid140
+-- Loading architecture arch of LZCShifter_57_to_57_counting_64_uid147
+-- Loading architecture arch of IntAdder_66_f500_uid150
+-- Loading architecture arch of in_wrap_fp_gt_expr_FU_64_1_500
+Optimizing 143 design-units (inlining 204/205 module instances, 452/508 architecture instances):
+-- Inlining module controller_myfunc(fast)
+-- Inlining module MUX_GATE(fast)
+-- Inlining module MUX_GATE(fast__1)
+-- Inlining module MUX_GATE(fast__2)
+-- Inlining module MUX_GATE(fast__3)
+-- Inlining module MUX_GATE(fast__4)
+-- Inlining module MUX_GATE(fast__5)
+-- Inlining module MUX_GATE(fast__6)
+-- Inlining module MUX_GATE(fast__7)
+-- Inlining module MUX_GATE(fast__8)
+-- Inlining module constant_value(fast)
+-- Inlining module constant_value(fast__1)
+-- Inlining module constant_value(fast__2)
+-- Inlining module constant_value(fast__3)
+-- Inlining module constant_value(fast__4)
+-- Inlining module IIdata_converter_FU(fast)
+-- Inlining module read_cond_FU(fast)
+-- Inlining module fp_ne_expr_FU(fast)
+-- Inlining module UIconvert_expr_FU(fast)
+-- Inlining module fp_ne_expr_FU(fast__1)
+-- Inlining module fp_ne_expr_FU(fast__2)
+-- Inlining module fp_eq_expr_FU(fast)
+-- Inlining module fp_cond_expr_FU(fast)
+-- Inlining module fp_cond_expr_FU(fast__1)
+-- Inlining module ASSIGN_REAL_FU(fast)
+-- Inlining module register_STD(fast)
+-- Inlining module register_SRSE(fast)
+-- Inlining module register_SRSE(fast__1)
+-- Inlining module register_SRSE(fast__2)
+-- Inlining module register_SRSE(fast__3)
+-- Inlining module register_SRSE(fast__4)
+-- Inlining module register_STD(fast__1)
+-- Inlining module register_SRSE(fast__5)
+-- Inlining module register_SRSE(fast__6)
+-- Inlining module register_STD(fast__2)
+-- Inlining module register_SRSE(fast__7)
+-- Inlining module register_STD(fast__3)
+-- Inlining module datapath_myfunc(fast)
+-- Inlining module flipflop_SR(fast)
+-- Inlining module _myfunc(fast)
+-- Inlining module myfunc(fast)
+-- Optimizing module tb(fast)
+** Warning: tb.sv(24): (vopt-2685) [TFMPC] - Too few port connections for 'a_myfunc'.  Expected 9, found 7.
+** Warning: tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'return_port'.
+** Warning: tb.sv(24): (vopt-2718) [TFMPC] - Missing connection for port 'done_port'.
+** Warning: tb.sv(35): (vopt-2685) [TFMPC] - Too few port connections for 'b_myfunc'.  Expected 9, found 7.
+** Warning: tb.sv(35): (vopt-2718) [TFMPC] - Missing connection for port 'return_port'.
+** Warning: tb.sv(35): (vopt-2718) [TFMPC] - Missing connection for port 'done_port'.
+-- Inlining architecture arch of Compressor_6_3
+-- Inlining architecture arch of Compressor_14_3
+-- Inlining architecture arch of Compressor_4_3
+-- Inlining architecture arch of Compressor_23_3
+-- Inlining architecture arch of Compressor_13_3
+-- Inlining architecture arch of Compressor_3_2
+-- Inlining architecture arch of IntAdder_106_f500_uid420
+-- Optimizing architecture arch of IntMultiplier_UsingDSP_53_53_106_unsigned_uid286
+-- Inlining architecture arch of IntAdder_66_f500_uid98
+-- Inlining architecture arch of FPAdder_11_52_uid96_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid108
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid115
+-- Inlining architecture arch of IntAdder_66_f500_uid118
+-- Optimizing architecture arch of FPge_expr_11_52value_difference
+-- Inlining architecture arch of IntAdder_66_f500_uid162
+-- Inlining architecture arch of FPAdder_11_52_uid160_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid172
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid179
+-- Inlining architecture arch of IntAdder_66_f500_uid182
+-- Optimizing architecture arch of FPle_expr_11_52value_difference
+-- Inlining architecture arch of IntAdder_66_f500_uid439
+-- Inlining architecture arch of FPAdder_11_52_uid437_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid449
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid456
+-- Inlining architecture arch of IntAdder_66_f500_uid459
+-- Optimizing architecture arch of wrapped_fp_plus_expr_FU_64_64_500
+-- Inlining architecture arch of IntAdder_66_f500_uid225
+-- Inlining architecture arch of FPAdder_11_52_uid223_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid235
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid242
+-- Inlining architecture arch of IntAdder_66_f500_uid245
+-- Optimizing architecture arch of wrapped_fp_minus_expr_FU_64_64_500
+-- Inlining architecture arch of IntAdder_66_f500_uid194
+-- Inlining architecture arch of FPAdder_11_52_uid192_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid204
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid211
+-- Inlining architecture arch of IntAdder_66_f500_uid214
+-- Optimizing architecture arch of FPlt_expr_11_52value_difference
+-- Inlining architecture arch of IntAdder_66_f500_uid130
+-- Inlining architecture arch of FPAdder_11_52_uid128_RightShifter
+-- Inlining architecture arch of IntAdder_56_f500_uid140
+-- Inlining architecture arch of LZCShifter_57_to_57_counting_64_uid147
+-- Inlining architecture arch of IntAdder_66_f500_uid150
+-- Optimizing architecture arch of FPgt_expr_11_52value_difference
+-- Inlining architecture arch of IntAdder_42_f500_uid267
+-- Inlining architecture arch of IntMultiplier_UsingDSP_24_24_48_unsigned_uid256
+-- Inlining architecture arch of IntAdder_33_f500_uid275
+-- Inlining architecture arch of wrapped_fp_mult_expr_FU_32_32_500
+-- Inlining architecture arch of in_wrap_fp_mult_expr_FU_32_32_500
+-- Inlining architecture arch of out_wrap_fp_mult_expr_FU_32_32_500
+-- Optimizing architecture arch of fp_mult_expr_FU_32_32_500
+-- Inlining architecture arch of IntAdder_65_f500_uid428
+-- Inlining architecture arch of wrapped_fp_mult_expr_FU_64_64_500
+-- Inlining architecture arch of in_wrap_fp_mult_expr_FU_64_64_500
+-- Inlining architecture arch of out_wrap_fp_mult_expr_FU_64_64_500
+-- Optimizing architecture arch of fp_mult_expr_FU_64_64_500
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23_LZOCS
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23exponentConversion
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23exponentFinal
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23zeroD
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23_fractionConvert
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23_oneSubstracter
+-- Inlining architecture arch of Fix2FP_0_31_S_8_23roundingAdder
+-- Optimizing architecture arch of wrapped_fp_float_expr_32_32_FU_32_32_500
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52zeroD
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52_LZCS
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52_fractionConvert
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52exponentConversion
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52exponentFinal
+-- Inlining architecture arch of Fix2FP_0_31_S_11_52expCorrect
+-- Optimizing architecture arch of wrapped_fp_float_expr_32_64_FU_32_64_500
+-- Inlining architecture arch of in_wrap_fp_minus_expr_FU_64_64_500
+-- Inlining architecture arch of out_wrap_fp_minus_expr_FU_64_64_500
+-- Optimizing architecture arch of fp_minus_expr_FU_64_64_500
+-- Inlining architecture arch of in_wrap_fp_plus_expr_FU_64_64_500
+-- Inlining architecture arch of out_wrap_fp_plus_expr_FU_64_64_500
+-- Optimizing architecture arch of fp_plus_expr_FU_64_64_500
+-- Inlining architecture arch of wrapped_fp_ge_expr_FU_64_1_500
+-- Inlining architecture arch of in_wrap_fp_ge_expr_FU_64_1_500
+-- Optimizing architecture arch of fp_ge_expr_FU_64_1_500
+-- Inlining architecture arch of wrapped_fp_le_expr_FU_64_1_500
+-- Inlining architecture arch of in_wrap_fp_le_expr_FU_64_1_500
+-- Optimizing architecture arch of fp_le_expr_FU_64_1_500
+-- Inlining architecture arch of wrapped_fp_lt_expr_FU_64_1_500
+-- Inlining architecture arch of in_wrap_fp_lt_expr_FU_64_1_500
+-- Optimizing architecture arch of fp_lt_expr_FU_64_1_500
+-- Inlining architecture arch of wrapped_fp_gt_expr_FU_64_1_500
+-- Inlining architecture arch of in_wrap_fp_gt_expr_FU_64_1_500
+-- Optimizing architecture arch of fp_gt_expr_FU_64_1_500
+-- Inlining architecture arch of wrapped_FFdata_converter_FU_64_32
+-- Inlining architecture arch of in_wrap_FFdata_converter_FU_64_32
+-- Inlining architecture arch of out_wrap_FFdata_converter_FU_64_32
+-- Optimizing architecture arch of FFdata_converter_FU_64_32
+-- Inlining architecture arch of wrapped_FFdata_converter_FU_32_64
+-- Inlining architecture arch of in_wrap_FFdata_converter_FU_32_64
+-- Inlining architecture arch of out_wrap_FFdata_converter_FU_32_64
+-- Optimizing architecture arch of FFdata_converter_FU_32_64
+-- Inlining architecture arch of out_wrap_fp_float_expr_32_64_FU_32_64_500
+-- Optimizing architecture arch of fp_float_expr_32_64_FU_32_64_500
+-- Inlining architecture arch of out_wrap_fp_float_expr_32_32_FU_32_32_500
+-- Optimizing architecture arch of fp_float_expr_32_32_FU_32_32_500
+Optimized design name is tb_opt
+End time: 17:47:35 on Sep 24,2025, Elapsed time: 0:00:01
+Errors: 0, Warnings: 6

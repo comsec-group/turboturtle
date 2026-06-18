@@ -1,0 +1,17 @@
+
+Gurobi 13.0.0 (linux64, gurobi_cl) logging started Thu Jun 18 22:56:47 2026
+
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2749886
+Set parameter LogFile to value "gurobi.log"
+Using license file /local/home/kceesay/gurobi.lic
+Academic license 2749886 - for non-commercial use only - registered to kc___@ethz.ch
+
+Gurobi 13.0.0 (linux64, gurobi_cl) logging started Thu Jun 18 23:03:42 2026
+
+Set parameter WLSAccessID
+Set parameter WLSSecret
+Set parameter LicenseID to value 2749886
+Set parameter LogFile to value "gurobi.log"
+Using license file /local/home/kceesay/gurobi.lic

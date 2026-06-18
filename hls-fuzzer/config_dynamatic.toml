@@ -1,0 +1,226 @@
+#####################
+## ~ TurboTurtle ~ ##
+#####################
+
+# fuzzing output working directory
+working_dir = "/local/home/kceesay/turboturtle/fuzzing"
+# enable cleanup of working directory
+cleanup = false
+# fuzzing output backup directory
+backup_dir = "/user/turboturtle_backup"
+# enable backup
+backup = true
+
+# List of HLS compilers to invoke:
+# allowed design types:
+# - BambuDesign
+
+
+# - DynamaticDesign
+design_types = ["DynamaticDesign"]
+
+# num. C programs generated during a fuzzing run
+num_designs = 1
+proggen_max_retries = 1000
+proggen_timeout_s = 300
+
+top_fn_name = "myfunc"
+
+# disable reduction process
+disable_reduction = false
+
+# num. parallel processes
+# - limit this to 8 because eda_server does not allow more parallel ssh connections
+num_processes = 25
+# num. parallel processes during C program generation
+num_processes_proggen = 25
+
+# path to dynamatic directory
+# - dynamatic is invoked with <dynamatic_path>/bin/dynamatic
+
+# a fixed branch
+dynamatic_path = "/local/home/kceesay/dynamatic"
+
+# originally fuzzed version (need to checkout the matching polygeist version?)
+# dynamatic_path = "/data/user/workspace/dynamatic_9204faf2"
+
+# EDA CONFIG
+# eda_server_remote = "username@host-address"
+eda_server_remote = "user@edaserver"
+eda_server_remote_python_version = "python3.10"
+eda_server_remote_dir_base = "/user/turboturtle_bot"
+
+# num. processes used on eda_server for questa simulation for a single design
+# - careful, max processes on eda_server can be <num_processes> * <eda_server_remote_multi_sim_num_processes>
+eda_server_remote_multi_sim_num_processes = 30
+
+# Bambu HLS rules
+# - preventing the given combinations of HLS args to be chosen randomly
+# - currently only available for Bambu
+# - example:
+
+bambu_hls_rules = []
+
+#################
+## ~ CTurtle ~ ##
+#################
+
+# Enables the shuffling of the generation and data flow strategies for each new C program
+# The strategy settings below are ignored if shuffle_strategies is true
+shuffle_strategies = true
+
+# allowed generation strategies"
+# - "RANDOM"
+# - "RANDOM_RESOLVE"
+# - "DEPENDENCY_CHAIN"
+generation_strategy = "RANDOM"
+
+# allowed dataflow strategies
+# - "SEPARATED"
+# - "MIXED"
+dataflow_strategy = "SEPARATED"
+# dataflow_strategy = "MIXED"
+
+# enable random amount of fn args
+# - if false, 2 public and 2 secret fn args are generated
+randomize_num_fn_args = true
+
+min_num_statements = 50
+max_num_statements = 200
+
+#### Constant-time rules ####
+# if false, only public data is used to influence control flow
+secret_control_flow = false
+# if false, only public data is used in memory accesses
+secret_memory_accesses = false
+linearization = false
+# To avoid the C short-circuiting side channel
+has_logical_and_expression = false
+has_logical_or_expression = false
+
+#### Rules to generate only supported programs ####
+allow_sub_functions = false
+internal_arrays = false
+
+# needs to be set to true if floats are used in <all_data_types>
+# - ensures that at least one float is used when randomly selecting data types
+# To avoid floats at all, you must need to remove them from all_data_types
+has_float = false
+
+## These options are implemented to filter out programs that Dynamatic cannot handle, because otherwise we get mostly errors
+# Dis-allow explicit and implicit casts between certain types
+# The following are not yet implemented for function argumentes
+has_float_unsigned_casts = false
+has_float_long_casts = false
+float_to_base_int_casts_only = true # Maybe we should weigh the generation of casts/selection of data types to speed up program generation
+base_int_div_only = true
+base_int_mod_only = true
+no_mod_in_array_access = false
+guarded_array_accesses = true
+
+
+# selection of all available data types
+# - a random subset is selected for each new C program
+# allowed data types:
+# - CHAR
+# - U_CHAR
+# - SHORT_INT
+# - U_SHORT_INT
+# - INT
+# - U_INT
+# - LONG_INT
+# - U_LONG_INT
+# - LONG_LONG_INT
+# - U_LONG_LONG_INT
+# - FLOAT
+# - DOUBLE
+# - LONG_DOUBLE
+all_data_types = [
+    "CHAR",
+    "U_CHAR",
+    "SHORT_INT",
+    "U_SHORT_INT",
+    "INT",
+    "U_INT",
+    "LONG_INT",
+    "U_LONG_INT",
+    "LONG_LONG_INT",
+    "U_LONG_LONG_INT",
+    # "FLOAT",
+    # "DOUBLE",
+    # "LONG_DOUBLE",
+]
+
+# selection of all available expression types
+allowed_expressions = [
+    "EmptyExpression",
+    "FnCallExpression",
+    "CastExpression",
+    "MultOperationExpression",
+    "DivOperationExpression",
+    # "ModOperationExpression",
+    "AddOperationExpression",
+    "SubOperationExpression",
+    "ShiftLeftOperationExpression",
+    "ShiftRightOperationExpression",
+    "LessThanOperationExpression",
+    "GreaterThanOperationExpression",
+    "LessEqualThanOperationExpression",
+    "GreaterEqualThanOperationExpression",
+    "EqualOperationExpression",
+    "NotEqualOperationExpression",
+    "ANDOperationExpression",
+    "XOROperationExpression",
+    "OROperationExpression",
+    "LogicalANDOperationExpression",
+    "LogicalOROperationExpression",
+    "AssignmentExpression",
+    "LinearizedExpression",
+]
+
+# weights for each statement to appear
+# weight = 0 disables the statement
+
+[[all_statements_and_weigths]]
+name = "ExpressionStatement"
+weight = 10
+
+[[all_statements_and_weigths]]
+name = "CompoundStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "IfSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "IfElseSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "SwitchSelectionStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "WhileIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "DoWhileIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "ForLoopIterationStatement"
+weight = 1
+
+[[all_statements_and_weigths]]
+name = "ReturnJumpStatement"
+weight = 1
+
+[[all_expressions_and_weights]]
+name = "CastExpression"
+weight = 1
+
+[[all_expressions_and_weights]]
+name = "Expression"
+weight = 10

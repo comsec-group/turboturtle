@@ -1,0 +1,149 @@
+Sim-Name,Sim-Status,Formal-Name,Formal-Status
+run_20250430174538_pipeline_00080002,UNDETERMINED,7500.096713066101,,run_20250430174538_pipeline_00080002,CEX,
+run_20250430174538_pipeline_00410002,UNDETERMINED,7509.69257235527,,run_20250430174538_pipeline_00410002,CEX,
+run_20250430174538_pipeline_00050002,UNDETERMINED,7504.948807954788,,run_20250430174538_pipeline_00050002,CEX,
+run_20250430174538_pipeline_00530002,UNDETERMINED,7504.601582527161,,run_20250430174538_pipeline_00530002,CEX,
+run_20250430174538_pipeline_00570002,UNDETERMINED,7508.314623832703,,run_20250430174538_pipeline_00570002,CEX,
+run_20250430174538_pipeline_01290002,UNDETERMINED,7505.763413190842,,run_20250430174538_pipeline_01290002,CEX,
+run_20250430174538_pipeline_01300002,UNDETERMINED,7506.390584945679,,run_20250430174538_pipeline_01300002,CEX,
+run_20250430174538_pipeline_01290000,UNDETERMINED,7525.999087095261,,run_20250430174538_pipeline_01290000,CEX,
+run_20250430174538_pipeline_01340002,CEX,4545.074182510376,,run_20250430174538_pipeline_01340002,CEX,
+run_20250430174538_pipeline_01360000,UNDETERMINED,7503.911463499069,,run_20250430174538_pipeline_01360000,CEX,
+run_20250430174538_pipeline_01360002,UNDETERMINED,7506.065985441208,,run_20250430174538_pipeline_01360002,CEX,
+run_20250430174538_pipeline_01530000,UNDETERMINED,7505.413017749786,,run_20250430174538_pipeline_01530000,CEX,
+run_20250430174538_pipeline_01660002,CEX,65.55428147315979,,run_20250430174538_pipeline_01660002,CEX,
+run_20250430174538_pipeline_01530002,UNDETERMINED,7501.648208856583,,run_20250430174538_pipeline_01530002,CEX,
+run_20250430174538_pipeline_01530001,UNDETERMINED,7500.630676746368,,run_20250430174538_pipeline_01530001,CEX,
+run_20250430174538_pipeline_01590000,UNDETERMINED,7506.766062259674,,run_20250430174538_pipeline_01590000,CEX,
+run_20250430174538_pipeline_01790002,CEX,2.374805450439453,,run_20250430174538_pipeline_01790002,CEX,
+run_20250430174538_pipeline_01790001,CEX,29.16474151611328,,run_20250430174538_pipeline_01790001,CEX,
+run_20250430174538_pipeline_01710000,UNDETERMINED,7503.875454902649,,run_20250430174538_pipeline_01710000,CEX,
+run_20250430174538_pipeline_01710002,UNDETERMINED,7503.224024772644,,run_20250430174538_pipeline_01710002,CEX,
+run_20250430174538_pipeline_02070002,UNDETERMINED,7501.9192271232605,,run_20250430174538_pipeline_02070002,CEX,
+run_20250430174538_pipeline_02040002,UNDETERMINED,7502.838173627853,,run_20250430174538_pipeline_02040002,CEX,
+run_20250430174538_pipeline_02200000,UNDETERMINED,7502.51953959465,,run_20250430174538_pipeline_02200000,CEX,
+run_20250430174538_pipeline_02200002,UNDETERMINED,7501.280715465546,,run_20250430174538_pipeline_02200002,CEX,
+run_20250430174538_pipeline_02350000,CEX,197.8681342601776,,run_20250430174538_pipeline_02350000,CEX,
+run_20250430174538_pipeline_02320000,UNDETERMINED,7501.0874581336975,,run_20250430174538_pipeline_02320000,CEX,
+run_20250430174538_pipeline_02320001,UNDETERMINED,7501.2196707725525,,run_20250430174538_pipeline_02320001,CEX,
+run_20250430174538_pipeline_02320002,UNDETERMINED,7501.437555074692,,run_20250430174538_pipeline_02320002,CEX,
+run_20250430174538_pipeline_02510001,UNDETERMINED,7673.57112121582,,run_20250430174538_pipeline_02510001,CEX,
+run_20250430174538_pipeline_03000002,CEX,83.87310886383057,,run_20250430174538_pipeline_03000002,CEX,
+run_20250430174538_pipeline_03000001,CEX,316.5233428478241,,run_20250430174538_pipeline_03000001,CEX,
+run_20250430174538_pipeline_02540001,UNDETERMINED,7509.958241701126,,run_20250430174538_pipeline_02540001,CEX,
+run_20250430174538_pipeline_02710002,UNDETERMINED,7503.893521308899,,run_20250430174538_pipeline_02710002,CEX,
+run_20250430174538_pipeline_02860002,UNDETERMINED,7503.094846725464,,run_20250430174538_pipeline_02860002,CEX,
+run_20250430174538_pipeline_03310000,ERROR,0.0,"%Error: ../rtl/mysecretfunction_sdiv_10ns_9ns_8_7_1.v:46:1: Cannot find file containing module: 'mysecretfunction_sdiv_10ns_9ns_8_7_1_ip'
+   46 | mysecretfunction_sdiv_10ns_9ns_8_7_1_ip mysecretfunction_sdiv_10ns_9ns_8_7_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.036 for more assistance.
+%Error: ../rtl/mysecretfunction_sdiv_10ns_9ns_8_7_1.v:46:1: This may be because there's no search path specified with -I<dir>.
+   46 | mysecretfunction_sdiv_10ns_9ns_8_7_1_ip mysecretfunction_sdiv_10ns_9ns_8_7_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ... Looked in:
+             mysecretfunction_sdiv_10ns_9ns_8_7_1_ip
+             mysecretfunction_sdiv_10ns_9ns_8_7_1_ip.v
+             mysecretfunction_sdiv_10ns_9ns_8_7_1_ip.sv
+             obj_dir/mysecretfunction_sdiv_10ns_9ns_8_7_1_ip
+             obj_dir/mysecretfunction_sdiv_10ns_9ns_8_7_1_ip.v
+             obj_dir/mysecretfunction_sdiv_10ns_9ns_8_7_1_ip.sv
+%Error: ../rtl/mysecretfunction_sdiv_11s_16ns_10_9_1.v:46:1: Cannot find file containing module: 'mysecretfunction_sdiv_11s_16ns_10_9_1_ip'
+   46 | mysecretfunction_sdiv_11s_16ns_10_9_1_ip mysecretfunction_sdiv_11s_16ns_10_9_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_udiv_8ns_8ns_8_5_1.v:46:1: Cannot find file containing module: 'mysecretfunction_udiv_8ns_8ns_8_5_1_ip'
+   46 | mysecretfunction_udiv_8ns_8ns_8_5_1_ip mysecretfunction_udiv_8ns_8ns_8_5_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_srem_8ns_8s_8_7_1.v:46:1: Cannot find file containing module: 'mysecretfunction_srem_8ns_8s_8_7_1_ip'
+   46 | mysecretfunction_srem_8ns_8s_8_7_1_ip mysecretfunction_srem_8ns_8s_8_7_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_srem_32ns_9ns_10_13_1.v:46:1: Cannot find file containing module: 'mysecretfunction_srem_32ns_9ns_10_13_1_ip'
+   46 | mysecretfunction_srem_32ns_9ns_10_13_1_ip mysecretfunction_srem_32ns_9ns_10_13_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_srem_9ns_9ns_8_7_1.v:46:1: Cannot find file containing module: 'mysecretfunction_srem_9ns_9ns_8_7_1_ip'
+   46 | mysecretfunction_srem_9ns_9ns_8_7_1_ip mysecretfunction_srem_9ns_9ns_8_7_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_srem_10ns_9ns_10_7_1.v:46:1: Cannot find file containing module: 'mysecretfunction_srem_10ns_9ns_10_7_1_ip'
+   46 | mysecretfunction_srem_10ns_9ns_10_7_1_ip mysecretfunction_srem_10ns_9ns_10_7_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_srem_32ns_8s_9_13_1.v:46:1: Cannot find file containing module: 'mysecretfunction_srem_32ns_8s_9_13_1_ip'
+   46 | mysecretfunction_srem_32ns_8s_9_13_1_ip mysecretfunction_srem_32ns_8s_9_13_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: ../rtl/mysecretfunction_urem_8ns_8ns_8_5_1.v:46:1: Cannot find file containing module: 'mysecretfunction_urem_8ns_8ns_8_5_1_ip'
+   46 | mysecretfunction_urem_8ns_8ns_8_5_1_ip mysecretfunction_urem_8ns_8ns_8_5_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Error: Exiting due to 10 error(s)
+",run_20250430174538_pipeline_03310000,CEX,
+run_20250430174538_pipeline_03420000,CEX,5.207729816436768,,run_20250430174538_pipeline_03420000,CEX,
+run_20250430174538_pipeline_03440002,CEX,1.7927029132843018,,run_20250430174538_pipeline_03440002,CEX,
+run_20250430174538_pipeline_03230001,CEX,538.3467104434967,,run_20250430174538_pipeline_03230001,CEX,
+run_20250430174538_pipeline_03020000,UNDETERMINED,7500.506536483765,,run_20250430174538_pipeline_03020000,CEX,
+run_20250430174538_pipeline_03050000,UNDETERMINED,7501.709558010101,,run_20250430174538_pipeline_03050000,CEX,
+run_20250430174538_pipeline_03410002,UNDETERMINED,7505.649062871933,,run_20250430174538_pipeline_03410002,CEX,
+run_20250430174538_pipeline_03590002,UNDETERMINED,7500.431367397308,,run_20250430174538_pipeline_03590002,CEX,
+run_20250430174538_pipeline_03810002,UNDETERMINED,7503.138619422913,,run_20250430174538_pipeline_03810002,CEX,
+run_20250430174538_pipeline_03910002,UNDETERMINED,7501.349678516388,,run_20250430174538_pipeline_03910002,CEX,
+run_20250430174538_pipeline_04030002,UNDETERMINED,7501.4286687374115,,run_20250430174538_pipeline_04030002,CEX,
+run_20250430174538_pipeline_04300002,UNDETERMINED,7503.17285823822,,run_20250430174538_pipeline_04300002,CEX,
+run_20250430174538_pipeline_04460001,UNDETERMINED,7501.527636528015,,run_20250430174538_pipeline_04460001,CEX,
+run_20250430174538_pipeline_04590001,UNDETERMINED,7529.795023918152,,run_20250430174538_pipeline_04590001,CEX,
+run_20250430174538_pipeline_04600002,UNDETERMINED,7504.224830627441,,run_20250430174538_pipeline_04600002,CEX,
+run_20250430174538_pipeline_05080002,UNDETERMINED,7503.393362522125,,run_20250430174538_pipeline_05080002,CEX,
+run_20250430174538_pipeline_05100002,UNDETERMINED,7501.777197360992,,run_20250430174538_pipeline_05100002,CEX,
+run_20250430174538_pipeline_05180000,UNDETERMINED,7501.425484418869,,run_20250430174538_pipeline_05180000,CEX,
+run_20250430174538_pipeline_05180002,UNDETERMINED,7504.38630604744,,run_20250430174538_pipeline_05180002,CEX,
+run_20250430174538_pipeline_05190000,UNDETERMINED,7505.680563688278,,run_20250430174538_pipeline_05190000,CEX,
+run_20250430174538_pipeline_05180001,UNDETERMINED,7521.107138872147,,run_20250430174538_pipeline_05180001,CEX,
+run_20250430174538_pipeline_05190002,UNDETERMINED,7502.775497913361,,run_20250430174538_pipeline_05190002,CEX,
+run_20250430174538_pipeline_05190001,UNDETERMINED,7501.540315151215,,run_20250430174538_pipeline_05190001,CEX,
+run_20250430174538_pipeline_05250002,UNDETERMINED,7500.941553354263,,run_20250430174538_pipeline_05250002,CEX,
+run_20250430174538_pipeline_05400001,UNDETERMINED,7503.401119709015,,run_20250430174538_pipeline_05400001,CEX,
+run_20250430174538_pipeline_05390000,UNDETERMINED,7500.53663277626,,run_20250430174538_pipeline_05390000,CEX,
+run_20250430174538_pipeline_05440002,UNDETERMINED,7500.064498186111,,run_20250430174538_pipeline_05440002,CEX,
+run_20250430174538_pipeline_05440000,UNDETERMINED,7506.375446557999,,run_20250430174538_pipeline_05440000,CEX,
+run_20250430174538_pipeline_05390001,UNDETERMINED,7516.48629117012,,run_20250430174538_pipeline_05390001,CEX,
+run_20250430174538_pipeline_05630002,UNDETERMINED,7503.162719488144,,run_20250430174538_pipeline_05630002,CEX,
+run_20250430174538_pipeline_05720000,UNDETERMINED,7502.737760782242,,run_20250430174538_pipeline_05720000,CEX,
+run_20250430174538_pipeline_05730000,UNDETERMINED,7500.599632263184,,run_20250430174538_pipeline_05730000,CEX,
+run_20250430174538_pipeline_05730001,UNDETERMINED,7506.4358723163605,,run_20250430174538_pipeline_05730001,CEX,
+run_20250430174538_pipeline_05790001,UNDETERMINED,7512.483706235886,,run_20250430174538_pipeline_05790001,CEX,
+run_20250430174538_pipeline_05790002,UNDETERMINED,7502.928819179535,,run_20250430174538_pipeline_05790002,CEX,
+run_20250430174538_pipeline_05790000,UNDETERMINED,7502.420354127884,,run_20250430174538_pipeline_05790000,CEX,
+run_20250430174538_pipeline_06440001,UNDETERMINED,7506.109875917435,,run_20250430174538_pipeline_06440001,CEX,
+run_20250430174538_pipeline_06440002,UNDETERMINED,7503.441280603409,,run_20250430174538_pipeline_06440002,CEX,
+run_20250430174538_pipeline_06450002,UNDETERMINED,7501.204423904419,,run_20250430174538_pipeline_06450002,CEX,
+run_20250430174538_pipeline_06950000,UNDETERMINED,7502.86012339592,,run_20250430174538_pipeline_06950000,CEX,
+run_20250430174538_pipeline_06950001,UNDETERMINED,7509.766757726669,,run_20250430174538_pipeline_06950001,CEX,
+run_20250430174538_pipeline_06980002,UNDETERMINED,7500.958305835724,,run_20250430174538_pipeline_06980002,CEX,
+run_20250430174538_pipeline_07280000,ERROR,0.0,"%Error: ../rtl/mysecretfunction_udiv_64ns_64ns_64_13_1.v:46:1: Cannot find file containing module: 'mysecretfunction_udiv_64ns_64ns_64_13_1_ip'
+   46 | mysecretfunction_udiv_64ns_64ns_64_13_1_ip mysecretfunction_udiv_64ns_64ns_64_13_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ... See the manual at https://verilator.org/verilator_doc.html?v=5.036 for more assistance.
+%Error: ../rtl/mysecretfunction_udiv_64ns_64ns_64_13_1.v:46:1: This may be because there's no search path specified with -I<dir>.
+   46 | mysecretfunction_udiv_64ns_64ns_64_13_1_ip mysecretfunction_udiv_64ns_64ns_64_13_1_ip_u (
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        ... Looked in:
+             mysecretfunction_udiv_64ns_64ns_64_13_1_ip
+             mysecretfunction_udiv_64ns_64ns_64_13_1_ip.v
+             mysecretfunction_udiv_64ns_64ns_64_13_1_ip.sv
+             obj_dir/mysecretfunction_udiv_64ns_64ns_64_13_1_ip
+             obj_dir/mysecretfunction_udiv_64ns_64ns_64_13_1_ip.v
+             obj_dir/mysecretfunction_udiv_64ns_64ns_64_13_1_ip.sv
+%Error: Exiting due to 2 error(s)
+",run_20250430174538_pipeline_07280000,CEX,
+run_20250430174538_pipeline_07040002,UNDETERMINED,7501.949316740036,,run_20250430174538_pipeline_07040002,CEX,
+run_20250430174538_pipeline_07040001,UNDETERMINED,7515.016373157501,,run_20250430174538_pipeline_07040001,CEX,
+run_20250430174538_pipeline_07280001,UNDETERMINED,7511.360806941986,,run_20250430174538_pipeline_07280001,CEX,
+run_20250430174538_pipeline_07360002,UNDETERMINED,7500.113425731659,,run_20250430174538_pipeline_07360002,CEX,
+run_20250430174538_pipeline_07360001,UNDETERMINED,7512.593856096268,,run_20250430174538_pipeline_07360001,CEX,
+run_20250430174538_pipeline_07400000,UNDETERMINED,7502.215108633041,,run_20250430174538_pipeline_07400000,CEX,
+run_20250430174538_pipeline_07810000,CEX,600.7718596458435,,run_20250430174538_pipeline_07810000,CEX,
+run_20250430174538_pipeline_07810001,CEX,2402.0415337085724,,run_20250430174538_pipeline_07810001,CEX,
+run_20250430174538_pipeline_07580000,UNDETERMINED,7501.80654335022,,run_20250430174538_pipeline_07580000,CEX,
+run_20250430174538_pipeline_07580001,UNDETERMINED,7512.041869878769,,run_20250430174538_pipeline_07580001,CEX,
+run_20250430174538_pipeline_07580002,UNDETERMINED,7502.160468578339,,run_20250430174538_pipeline_07580002,CEX,
+run_20250430174538_pipeline_08180000,UNDETERMINED,7501.148817777634,,run_20250430174538_pipeline_08180000,CEX,
+run_20250430174538_pipeline_08630002,UNDETERMINED,7503.945331335068,,run_20250430174538_pipeline_08630002,CEX,
+run_20250430174538_pipeline_08770002,UNDETERMINED,7501.604723930359,,run_20250430174538_pipeline_08770002,CEX,
+run_20250430174538_pipeline_09600002,UNDETERMINED,7501.905814647675,,run_20250430174538_pipeline_09600002,CEX,
+run_20250430174538_pipeline_09680002,UNDETERMINED,7503.2027587890625,,run_20250430174538_pipeline_09680002,CEX,
+run_20250430174538_pipeline_09850002,UNDETERMINED,7502.461672782898,,run_20250430174538_pipeline_09850002,CEX,
