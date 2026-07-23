@@ -1,5 +1,12 @@
 # It's About Time: Detecting Timing Side-Channel Vulnerabilities in High-Level Synthesis Designs
 
+High-level synthesis (HLS) is becoming increasingly popular because it allows the specification of hardware accelerators in a higher level of abstraction than Register Transfer Level (RTL), for example, in C/C++. Common scenarios include acceleration of machine learning inference and even cryptographic functions. But is HLS secure for such scenarios?
+Constant-time (CT) programming is a common approach for mitigating timing side channels when executing sensitive software
+on CPUs. It is unclear whether generic CT rules such as not passing secret-dependent data to memory addresses or branching decisions provide adequate protection when an HLS flow turns CT software into hardware. Furthermore, CPU vendors and instruction set architectures (ISAs) often specify which instructions execute in data-independent time and are safe to use for CT programming, which is currently missing for HLS. To address this gap, we introduce CTurtle, the first C program generator that generates random, yet valid, C programs that follow customizable CT rules, making them CT with respect to certain inputs marked as secret. We further introduce TurboTurtle, an HLS fuzzer that can discover cases where HLS flows turn CT software into hardware that is vulnerable to timing side channels. TurboTurtle detects timing vulnerabilities in the HLS generated Register Transfer Level (RTL) designs, using a miter test bench that can detect when the generated accelerator may take a variable amount of time caused by different secret inputs.
+Applying TurboTurtle on four different HLS flows, we discover 12 new vulnerabilities where HLS flows produce non-CT hardware
+from CT software, for which we got two CVEs. Eight of these vulnerabilities establish unsafe operators for a particular HLS flow,
+and three persist in two HLS flows even after applying generic and tool-specific CT rules.
+
 ## TurboTurtle and CTurtle
 
 CTurtle is a constant-time C program generator that generates random programs following configurable constant-time programming rules. TurboTurtle uses CTurtle to fuzz High-Level Synthesis (HLS) compiler toolchains with the goal of detecting timing side channels that were inserted by the HLS synthesis flow.
