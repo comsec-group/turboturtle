@@ -10,38 +10,44 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+# ensure plots directory exists
+(Path(__file__).parent / "plots").mkdir(parents=True, exist_ok=True)
+
+from dataset_paths import hls_fuzzing_data_set_root, pipelines_root, run_path
 from datavis.utils import RC_PARAMS, TEXTWIDTH_INCHES, DPI
 
 
-backup_location = Path("/data/zdenis/pipelines/")
+backup_location = pipelines_root()
 fuzzing_runs = [
-    "/data/zdenis/pipelines/run_20251103172548",
-    "/data/zdenis/pipelines/run_20251103135445",
+    run_path("run_20251103172548"),
+    run_path("run_20251103135445"),
     # "run_20251105192134",
-    "/data/zdenis/pipelines/run_20251103182938",
-    "/data/zdenis/pipelines/run_20251103220510",
-    "/data/zdenis/pipelines/run_20251103151233",
-    "/data/zdenis/pipelines/run_20251103225349",
-    "/data/zdenis/pipelines/run_20251105172816",
-    "/data/zdenis/pipelines/run_20251104122319",  # Bambu CT + HLS rules
-    "/data/zdenis/pipelines/run_20251112155105",
-    "/data/zdenis/pipelines/run_20251112131627",
-    "/data/zdenis/pipelines/run_20251113002507",
-    "/data/zdenis/pipelines/run_20251113030129",  # Bambu CT + HLS rules + linearisation
-    "/data/zdenis/pipelines/run_20251113134635",
+    run_path("run_20251103182938"),
+    run_path("run_20251103220510"),
+    run_path("run_20251103151233"),
+    run_path("run_20251103225349"),
+    run_path("run_20251105172816"),
+    run_path("run_20251104122319"),  # Bambu CT + HLS rules
+    run_path("run_20251112155105"),
+    run_path("run_20251112131627"),
+    run_path("run_20251113002507"),
+    run_path("run_20251113030129"),  # Bambu CT + HLS rules + linearisation
+    run_path("run_20251113134635"),
 ]
 
 bambu_int_all_rules_runs = [
     # Bambu integer with all Bambu rules active
-    "/data/hls_fuzzing/data_set/run_20260112114545_bambu_int",
-    "/data/hls_fuzzing/data_set/run_20260112153936_bamub_int",
-    "/data/hls_fuzzing/data_set/run_20260112191222_bambu_int",
-    "/data/hls_fuzzing/data_set/run_20260113143138_bambu_int",
+    hls_fuzzing_data_set_root() / "run_20260112114545_bambu_int",
+    hls_fuzzing_data_set_root() / "run_20260112153936_bamub_int",
+    hls_fuzzing_data_set_root() / "run_20260112191222_bambu_int",
+    hls_fuzzing_data_set_root() / "run_20260113143138_bambu_int",
 ]
 
 dynamatic_int_all_rules_runs = [
     # Dynamatic integer with all Dynamatic rules active
-    "/data/hls_fuzzing/data_set/run_20260114143604_dynamatic_int",
+    hls_fuzzing_data_set_root() / "run_20260114143604_dynamatic_int",
 ]
 
 fuzzing_runs.extend(bambu_int_all_rules_runs)
@@ -118,7 +124,7 @@ for fuzzing_run in fuzzing_runs:
     if (
         not config["secret_control_flow"]
         and not config["secret_memory_accesses"]
-        and fuzzing_run in ["/data/zdenis/pipelines/run_20251104122319", "/data/zdenis/pipelines/run_20251113030129"]
+        and fuzzing_run in {run_path("run_20251104122319"), run_path("run_20251113030129")}
     ):
         is_cts.append("D_BAMBU")
 

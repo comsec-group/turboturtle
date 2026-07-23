@@ -117,14 +117,28 @@ Copy a config file from one of our fuzzing runs, or adapt one. Remove some const
 ### Reproducing figures and tables
 
 To reproduce the figures and tables from our fuzzing output follow the following instructions. Note that you will need access to our dataset, which we may be able to share upon request.
+The scripts now read all dataset paths from a single configurable prefix. By default this is set to /data/turboturtle/dataset via dataset_paths.py. If you need a different location, set TURBOTURTLE_DATASET_ROOT before running the scripts.
+
+To populate the dataset directory from the original locations, run python3 utils/copy_reproduction_dataset.py from the project root.
+
+Before executing the Python scripts, make sure to activate the Python environment with `source .venv/bin/activate`.
 
 #### Table 2
 You find the output in `formal_vs_sim.csv`.
 
 To regenerate:
 
-In the root of the project, run `python3 utils/eval_formal_vs_sim.py`. This generates a file called `formal_vs_sim.csv`, which stores verification name and status. The script prints `formal stop at FNR`, where FNR means how many formal verification attempts we could perform in 6 hours and `sim stop at SNR`, where SNR means how many simulations we could run in 6 hours.
+In the root of the project, run `python3 utils/eval_formal_vs_sim.py`. This generates a file called `formal_vs_sim.csv`, which stores verification name and status. The script prints `formal stop at FNR`, where FNR means how many formal verification attempts we could perform in 6 hours and `sim stop at SNR`, where SNR means how many simulations we could run in 6 hours. (If this line it is not shown, then all of the runs were performed within the 6 hour window).
 Count total failures as follows: E.g., if FNR = 68, then count the number of CEX in the Formal-Status column in `formal_vs_sim.csv` until run 68. Average verification time per verification method can be calculated as 6h / total RTL designs verified per method.
+
+Using the open source data set, we obtained these results:
+
+Formal vs. sim with Bambu only:
+
+Formal: 278 designs, Simulation: 647 designs (2.3x)
+Formal: 81 CEX, Simulation: 130 CEX (1.6x)
+
+While the difference is less pronounced, these numbers still show the benefit of using simulation over formal verification for our fuzzing campaign.
 
 #### Figure 6
 In the root of the project, run `python3 datavis/best_fuzzing_strategy_v4.py` and find the result in `datavis/plots/best_fuzzing_strategy_v4.png`.

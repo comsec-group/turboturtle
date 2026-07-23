@@ -26,7 +26,7 @@ series = {CCS '26},
 ### Installation
 Follow the installation instructions for TurboTurtle:
 
-See instructions [here](./hls-fuzzer/README.md) in section *Installation*.
+See instructions [here](./turboturtle/README.md) in section *Installation*.
 
 ### Case studies
 
@@ -48,7 +48,7 @@ Waveform: [./case-studies/bambu_bugs/vulnerability1/div_default_args/verif/sim/t
 
 ### Reproduce the plots from the paper
 
-See instructions [here](./hls-fuzzer/README.md), section "Artifact evaluation - Reproducing results of the paper".
+See instructions [here](./turboturtle/README.md), section "Artifact evaluation - Reproducing results of the paper".
 
 ## Dataset
 We might be able to provide the dataset that we generated during our fuzzing campaign for the paper upon request. We do not host it publicly to avoid de-anonymizing the commercial tool names and violating licenses.

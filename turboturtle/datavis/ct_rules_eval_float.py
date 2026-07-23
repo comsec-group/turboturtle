@@ -10,10 +10,16 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+# ensure plots directory exists
+(Path(__file__).parent / "plots").mkdir(parents=True, exist_ok=True)
+
+from dataset_paths import pipelines_root
 from datavis.utils import RC_PARAMS, LINEWIDTH_INCHES, DPI
 
 
-backup_location = Path("/data/zdenis/pipelines")
+backup_location = pipelines_root()
 fuzzing_runs = [
     "run_20251110223525",
     "run_20251113035947",
@@ -117,10 +123,10 @@ for fuzzing_run in fuzzing_runs:
 print("Fuzzed number of C programs:", nr_c_programs)
 print("Fuzzed number of designs synthesized with 2 tools:", nr_designs_2_tools)
 print("Fuzzed number of designs synthesized with Bambu:", nr_designs_bambu)
-print("Fuzzed number of designs synthesized with TOOL_A:", nr_designs_TOOL_A)
+print("Fuzzed number of designs synthesized with TOOL_A:", nr_designs_2_tools)
 print("Fuzzed number of C programs synthesized with 2 tools:", nr_c_programs_2_tools)
 print("Fuzzed number of C programs synthesized with Bambu:", nr_c_programs_bambu)
-print("Fuzzed number of C programs synthesized with TOOL_A:", nr_c_programs_TOOL_A)
+print("Fuzzed number of C programs synthesized with TOOL_A:", nr_c_programs_2_tools)
 
 plt.rcParams.update(RC_PARAMS)
 fig, ax = plt.subplots(figsize=(LINEWIDTH_INCHES, 1.5), layout="constrained", dpi=DPI)

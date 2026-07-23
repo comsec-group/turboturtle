@@ -12,10 +12,15 @@ import matplotlib.patches as mpatches
 import numpy as np
 
 sys.path.append(str(Path(__file__).parent.parent))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
+# ensure plots directory exists
+(Path(__file__).parent / "plots").mkdir(parents=True, exist_ok=True)
+
+from dataset_paths import pipelines_root, re_verif_root
 from datavis.utils import RC_PARAMS, LINEWIDTH_INCHES, DPI
 
-backup_location = Path("/data/zdenis/pipelines")
+backup_location = pipelines_root()
 # fuzzing_runs = [
 #     # --
 #     # "run_20250928105020",
@@ -58,7 +63,7 @@ fuzzing_runs = [
 ]
 
 
-re_verify_file = Path("/data/zdenis/re_verif/re_verif_results.json")
+re_verify_file = re_verif_root() / "re_verif_results.json"
 with open(re_verify_file, "r") as fp:
     re_verify = json.load(fp)
 

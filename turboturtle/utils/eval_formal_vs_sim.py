@@ -6,8 +6,12 @@ from pathlib import Path
 from tinydb import TinyDB
 from tinydb import Query
 
-json_file = Path("/data/zdenis/pipelines/formal_vs_sim_v5/results.json")
-formal_run_db_path = Path("/data/zdenis/pipelines/run_20250430174538/db.json")
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
+from dataset_paths import pipelines_root, run_path
+
+json_file = pipelines_root() / "formal_vs_sim_1" / "results.json"
+formal_run_db_path = run_path("run_20250430174538") / "db.json"
 
 db = TinyDB(formal_run_db_path)
 query = Query()
@@ -45,13 +49,13 @@ with open("formal_vs_sim.csv", "w") as fp:
 
         formal_pipeline = old_pipeline_table.get(query.name == result["name"])
 
-        csv_file = Path(f"/data/zdenis/pipelines/run_20250430174538/{result['name']}/verif/report.csv")
+        csv_file = run_path("run_20250430174538") / result["name"] / "verif" / "report.csv"
 
         formal_time = 0.0
         if csv_file.exists():
             with open(csv_file, "r") as formal_fp:
                 csv_reader = csv.reader(formal_fp)
-                
+
                 for i, row in enumerate(csv_reader):
                     if i == 1:
                         formal_time = row[5]
