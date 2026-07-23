@@ -9,7 +9,7 @@ The paper can be found at https://comsec.ethz.ch/research/hardware-design-securi
 Please cite as
 
 ```
-@inproceedings{2024_ceesay-seitz_mucfi,
+@inproceedings{2026_turboturtle,
 title="It's About Time: Detecting Timing Side-Channel Vulnerabilities in High-Level Synthesis Designs",
 author="Zuppiger, Denis and Ceesay-Seitz, Katharina and Xu, Jiahui and Josipović, Lana and Razavi, Kaveh",
 booktitle = {Proceedings of the 2026 ACM SIGSAC Conference on Computer and Communications Security},
