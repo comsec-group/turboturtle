@@ -13,7 +13,7 @@ CTurtle is a constant-time C program generator that generates random programs fo
 
 This project is maintained at https://github.com/comsec-group/turboturtle/.
 
-The paper can be found at https://comsec.ethz.ch/research/hardware-design-security/turboturtle.
+The paper can be found [here](https://comsec.ethz.ch/research/hardware-design-security/its-about-time-detecting-timing-side-channel-vulnerabilities-in-high-level-synthesis-designs/).
 
 Please cite as
 
